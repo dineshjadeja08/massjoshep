@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-tech-navy: #0B1F3A;
+  --color-electric-blue: #2563EB;
+  --color-teal: #14B8A6;
+  --color-amber: #F59E0B;
+  --color-graphite: #111827;
+  --color-cloud-grey: #F5F7FA;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #111827;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+    color: #0B1F3A;
+  }
+
+  /* High-Authority Veluno Brand Buttons */
+  .btn-primary {
+    background-color: #0B1F3A;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px 0 rgba(11, 31, 58, 0.05);
+  }
+  .btn-primary:hover {
+    background-color: #11284d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px rgba(11, 31, 58, 0.25);
+  }
+
+  .btn-blue {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-blue:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.35);
+  }
+
+  .btn-teal {
+    background-color: #14B8A6;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-teal:hover {
+    background-color: #0d9488;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px rgba(20, 184, 166, 0.35);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #0B1F3A;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid #CBD5E1;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-outline:hover {
+    background-color: #F8FAFC;
+    border-color: #94A3B8;
+  }
+
+  /* Backwards-compatibility aliases */
+  .btn-dark {
+    background-color: #0B1F3A;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-dark:hover {
+    background-color: #11284d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px rgba(11, 31, 58, 0.25);
+  }
+
+  .btn-lime {
+    background-color: #14B8A6;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-lime:hover {
+    background-color: #0d9488;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -2px rgba(20, 184, 166, 0.35);
+  }
+}
+
+/* Subtle tech grid background utility */
+.tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 31, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 31, 58, 0.04) 1px, transparent 1px);
+}
+
+.tech-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}

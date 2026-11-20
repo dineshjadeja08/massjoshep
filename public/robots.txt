@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.velunosofttech.com/sitemap.xml

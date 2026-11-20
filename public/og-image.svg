@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="60%" stop-color="#08162B"/>
+      <stop offset="100%" stop-color="#050E1B"/>
+    </linearGradient>
+    <linearGradient id="ogBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="ogTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g stroke="#2563EB" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+
+  <!-- Glowing background orb -->
+  <circle cx="1000" cy="180" r="300" fill="#2563EB" opacity="0.12" filter="blur(80px)"/>
+  <circle cx="200" cy="450" r="250" fill="#14B8A6" opacity="0.1" filter="blur(70px)"/>
+
+  <!-- Logo Lockup -->
+  <g transform="translate(100, 110)">
+    <g transform="scale(0.35)">
+      <path d="M 40 40 L 155 40 L 115 140 L 0 140 Z" fill="#FFFFFF" opacity="0.95" />
+      <path d="M 155 40 L 210 175 L 145 340 L 90 205 Z" fill="url(#ogBlue)" />
+      <path d="M 210 175 L 375 40 L 416 140 L 251 275 L 210 380 L 145 340 Z" fill="url(#ogTeal)" />
+      <path d="M 210 175 L 251 275 L 210 380 Z" fill="#0D9488" />
+    </g>
+    <text x="180" y="85" font-family="'Sora', 'Inter', sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" letter-spacing="4">VELUNO</text>
+    <text x="184" y="128" font-family="'Inter', sans-serif" font-size="18" font-weight="600" fill="#14B8A6" letter-spacing="10">SOFTTECH</text>
+  </g>
+
+  <!-- Tagline & Value Prop -->
+  <text x="100" y="340" font-family="'Sora', 'Inter', sans-serif" font-size="52" font-weight="700" fill="#FFFFFF" letter-spacing="-1">
+    Software that moves business forward.
+  </text>
+  <text x="100" y="410" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#94A3B8" letter-spacing="0">
+    Custom Software · Web Applications · Connected Systems · Automation
+  </text>
+
+  <!-- Badges row -->
+  <g transform="translate(100, 480)">
+    <rect width="180" height="44" rx="8" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="90" y="27" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#60A5FA" text-anchor="middle">VELUNO WEB</text>
+
+    <rect x="200" width="200" height="44" rx="8" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="300" y="27" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#14B8A6" text-anchor="middle">VELUNO PRODUCTS</text>
+
+    <rect x="420" width="200" height="44" rx="8" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="520" y="27" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#60A5FA" text-anchor="middle">VELUNO SYSTEMS</text>
+
+    <rect x="640" width="190" height="44" rx="8" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="735" y="27" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#14B8A6" text-anchor="middle">VELUNO GROWTH</text>
+
+    <rect x="850" width="170" height="44" rx="8" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="935" y="27" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#60A5FA" text-anchor="middle">VELUNO CARE</text>
+  </g>
+</svg>

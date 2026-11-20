@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160">
+  <defs>
+    <linearGradient id="lBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="lTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="lNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- V Icon scaled -->
+  <g transform="translate(20, 20) scale(0.3)">
+    <path d="M 40 40 L 155 40 L 115 140 L 0 140 Z" fill="url(#lNavy)" />
+    <path d="M 155 40 L 210 175 L 145 340 L 90 205 Z" fill="url(#lBlue)" />
+    <path d="M 210 175 L 375 40 L 416 140 L 251 275 L 210 380 L 145 340 Z" fill="url(#lTeal)" />
+    <path d="M 210 175 L 251 275 L 210 380 Z" fill="#0D9488" opacity="0.9" />
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="175" y="88" font-family="'Sora', 'Inter', -apple-system, sans-serif" font-size="58" font-weight="800" fill="#0B1F3A" letter-spacing="4">VELUNO</text>
+  <text x="178" y="125" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="600" fill="#2563EB" letter-spacing="9">SOFTTECH</text>
+</svg>
