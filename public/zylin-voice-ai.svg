@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071324"/>
+      <stop offset="55%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#112240"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="50%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0A192F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="600" cy="375" r="320" fill="url(#glow)"/>
+  <g stroke="#1E3A5F" stroke-width="1" opacity="0.45">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="750"/>
+    <line x1="400" y1="0" x2="400" y2="750"/>
+    <line x1="600" y1="0" x2="600" y2="750"/>
+    <line x1="800" y1="0" x2="800" y2="750"/>
+    <line x1="1000" y1="0" x2="1000" y2="750"/>
+  </g>
+  <g fill="url(#wave)" rx="6">
+    <rect x="260" y="345" width="14" height="60" rx="7" opacity="0.6"/>
+    <rect x="292" y="315" width="14" height="120" rx="7" opacity="0.75"/>
+    <rect x="324" y="280" width="14" height="190" rx="7" opacity="0.85"/>
+    <rect x="356" y="330" width="14" height="90" rx="7" opacity="0.7"/>
+    <rect x="388" y="245" width="14" height="260" rx="7" opacity="0.9"/>
+    <rect x="420" y="295" width="14" height="160" rx="7" opacity="0.8"/>
+    <rect x="452" y="210" width="14" height="330" rx="7"/>
+    <rect x="484" y="265" width="14" height="220" rx="7" opacity="0.9"/>
+    <rect x="516" y="180" width="14" height="390" rx="7"/>
+    <rect x="548" y="235" width="14" height="280" rx="7" opacity="0.95"/>
+    <rect x="580" y="155" width="14" height="440" rx="7"/>
+    <rect x="612" y="220" width="14" height="310" rx="7" opacity="0.95"/>
+    <rect x="644" y="190" width="14" height="370" rx="7"/>
+    <rect x="676" y="275" width="14" height="200" rx="7" opacity="0.85"/>
+    <rect x="708" y="230" width="14" height="290" rx="7" opacity="0.9"/>
+    <rect x="740" y="300" width="14" height="150" rx="7" opacity="0.8"/>
+    <rect x="772" y="260" width="14" height="230" rx="7" opacity="0.85"/>
+    <rect x="804" y="325" width="14" height="100" rx="7" opacity="0.7"/>
+    <rect x="836" y="295" width="14" height="160" rx="7" opacity="0.75"/>
+    <rect x="868" y="340" width="14" height="70" rx="7" opacity="0.6"/>
+    <rect x="900" y="355" width="14" height="40" rx="7" opacity="0.5"/>
+  </g>
+  <rect x="410" y="595" width="380" height="48" rx="24" fill="#112240" stroke="#1E3A5F" stroke-width="1.5"/>
+  <circle cx="444" cy="619" r="6" fill="#14B8A6"/>
+  <text x="612" y="625" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" letter-spacing="1.8">ZYLIN REAL-TIME VOICE ENGINE</text>
+</svg>

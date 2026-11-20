@@ -32,8 +32,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'zylinn-ai',
     category: 'product',
-    categoryLabel: 'Conversational Voice AI',
-    status: 'Live Beta / Voice Intelligence',
+    categoryLabel: 'Voice AI',
+    status: 'Live Beta',
     clientName: 'Zylin Voice AI',
     industry: 'Multilingual Voice Intelligence & Telephony Automation',
     services: [
@@ -43,27 +43,27 @@ export const caseStudies: CaseStudy[] = [
       'CRM & WhatsApp Webhook Automation'
     ],
     region: 'Global / Multilingual',
-    heroImage: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200',
+    heroImage: '/zylin-voice-ai.svg',
     summary: 'AI-powered multilingual voice agents engineered by Veluno for automated customer support, lead qualification, appointment booking, and enterprise workflow automation.',
     challenge: 'Businesses lose high-intent customer leads and face surging support costs when constrained by standard office hours and manual call agents. Traditional IVR telephone trees frustrate users with rigid numbered menus. Zylin Voice AI delivers natural, human-speed conversational agents fluent in regional accents and business logic.',
     velunoRole: 'Veluno is the architect and core engineering partner for Zylin Voice AI, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
     xenFirmRole: 'Veluno is the architect and core engineering partner for Zylin Voice AI, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
     approach: [
-      { 
-        title: 'Sub-Second Voice Processing Engine', 
-        description: 'Engineered real-time speech-to-speech pipelines using WebRTC streaming for human-grade conversational turn-taking with less than 600ms latency.' 
+      {
+        title: 'Sub-Second Voice Processing Engine',
+        description: 'Engineered real-time speech-to-speech pipelines using WebRTC streaming for human-grade conversational turn-taking with less than 600ms latency.'
       },
-      { 
-        title: 'Trilingual Regional Intelligence', 
-        description: 'Trained and fine-tuned conversational models to understand and speak naturally in English, Tamil, and Hindi, catering to regional Indian and global enterprise requirements.' 
+      {
+        title: 'Trilingual Regional Intelligence',
+        description: 'Trained and fine-tuned conversational models to understand and speak naturally in English, Tamil, and Hindi, catering to regional Indian and global enterprise requirements.'
       },
-      { 
-        title: 'Automated CRM & WhatsApp Handoffs', 
-        description: 'Structured bidirectional integrations that immediately extract lead details during phone calls, schedule calendar bookings, and dispatch instant WhatsApp confirmation messages.' 
+      {
+        title: 'Automated CRM & WhatsApp Handoffs',
+        description: 'Structured bidirectional integrations that immediately extract lead details during phone calls, schedule calendar bookings, and dispatch instant WhatsApp confirmation messages.'
       },
-      { 
-        title: 'Executive Analytics & Call Telemetry', 
-        description: 'Constructed an interactive web portal featuring real-time call logs, sentiment analysis, audio recordings, and automated conversion summaries.' 
+      {
+        title: 'Executive Analytics & Call Telemetry',
+        description: 'Constructed an interactive web portal featuring real-time call logs, sentiment analysis, audio recordings, and automated conversion summaries.'
       }
     ],
     techStack: ['Python', 'FastAPI', 'WebRTC', 'OpenAI Realtime API', 'Twilio / SIP', 'PostgreSQL', 'React', 'Tailwind CSS'],
@@ -86,7 +86,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: '24/7 Availability', label: 'Zero missed inbound calls with 100% CRM record synchronization.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200'
+      '/zylin-voice-ai.svg'
     ],
     timeline: 'Live Product Beta / Continuous Iteration',
     relatedCaseStudies: ['linksync', 'xenbill', 'fleet-tracking-platform']
@@ -113,21 +113,21 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'Veluno is the creator and owner of LinkSynk Pro. We handled end-to-end product architecture, UI/UX design, frontend development, and serverless hosting on Vercel.',
     xenFirmRole: 'Veluno is the creator and owner of LinkSynk Pro. We handled end-to-end product architecture, UI/UX design, frontend development, and serverless hosting on Vercel.',
     approach: [
-      { 
-        title: 'Sub-Second Edge Rendering', 
-        description: 'Engineered server-rendered profile pages to ensure instantaneous initial paint when opened within mobile social media in-app browsers (Instagram, TikTok, LinkedIn).' 
+      {
+        title: 'Sub-Second Edge Rendering',
+        description: 'Engineered server-rendered profile pages to ensure instantaneous initial paint when opened within mobile social media in-app browsers (Instagram, TikTok, LinkedIn).'
       },
-      { 
-        title: 'Componentized Theme Engine', 
-        description: 'Developed an extensible theming architecture enabling users to toggle custom color palettes, glassmorphism cards, gradients, and custom brand typography.' 
+      {
+        title: 'Componentized Theme Engine',
+        description: 'Developed an extensible theming architecture enabling users to toggle custom color palettes, glassmorphism cards, gradients, and custom brand typography.'
       },
-      { 
-        title: 'Lead Capture & WhatsApp Integration', 
-        description: 'Integrated inline email lead capture forms and direct WhatsApp chat triggers directly on profile pages without requiring page reloads.' 
+      {
+        title: 'Lead Capture & WhatsApp Integration',
+        description: 'Integrated inline email lead capture forms and direct WhatsApp chat triggers directly on profile pages without requiring page reloads.'
       },
-      { 
-        title: 'Analytics & Click Telemetry', 
-        description: 'Constructed privacy-compliant event telemetry tracking outbound click rates, geographic distribution, and referrer sources in real time.' 
+      {
+        title: 'Analytics & Click Telemetry',
+        description: 'Constructed privacy-compliant event telemetry tracking outbound click rates, geographic distribution, and referrer sources in real time.'
       }
     ],
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel Edge', 'Supabase', 'PostgreSQL'],
@@ -177,17 +177,17 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'Veluno is designing the brand identity system, crafting the responsive storefront UI, and architecting the headless product catalog schema.',
     xenFirmRole: 'Veluno is designing the brand identity system, crafting the responsive storefront UI, and architecting the headless product catalog schema.',
     approach: [
-      { 
-        title: 'Editorial Typography & Spacing', 
-        description: 'Implemented a bespoke typography scale, high-resolution imagery aspect ratios, and minimal distraction layouts.' 
+      {
+        title: 'Editorial Typography & Spacing',
+        description: 'Implemented a bespoke typography scale, high-resolution imagery aspect ratios, and minimal distraction layouts.'
       },
-      { 
-        title: 'Visual Collection Filtering', 
-        description: 'Designed intuitive category, size, and seasonal collection navigation allowing shoppers to browse apparel effortlessly.' 
+      {
+        title: 'Visual Collection Filtering',
+        description: 'Designed intuitive category, size, and seasonal collection navigation allowing shoppers to browse apparel effortlessly.'
       },
-      { 
-        title: 'Fast Client-Side Experience', 
-        description: 'Built on React and Vite with optimized image lazy-loading to ensure rapid browsing across lookbook galleries.' 
+      {
+        title: 'Fast Client-Side Experience',
+        description: 'Built on React and Vite with optimized image lazy-loading to ensure rapid browsing across lookbook galleries.'
       }
     ],
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Headless API Design', 'PostgreSQL'],
@@ -234,21 +234,21 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
     xenFirmRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
     approach: [
-      { 
-        title: 'Workflow Mapping', 
-        description: 'Mapped dispatcher decision trees to understand where communication delays and misallocations occur during peak delivery hours.' 
+      {
+        title: 'Workflow Mapping',
+        description: 'Mapped dispatcher decision trees to understand where communication delays and misallocations occur during peak delivery hours.'
       },
-      { 
-        title: 'Unified Operational Console', 
-        description: 'Designed a consolidated dashboard with interactive map views, vehicle statuses, and route history.' 
+      {
+        title: 'Unified Operational Console',
+        description: 'Designed a consolidated dashboard with interactive map views, vehicle statuses, and route history.'
       },
-      { 
-        title: 'API Integration Design', 
-        description: 'Architected secure RESTful endpoints connecting GPS telemetry feeds directly to inventory and order records in PostgreSQL.' 
+      {
+        title: 'API Integration Design',
+        description: 'Architected secure RESTful endpoints connecting GPS telemetry feeds directly to inventory and order records in PostgreSQL.'
       },
-      { 
-        title: 'Role-Based Permissions', 
-        description: 'Structured granular access controls for dispatchers, fleet managers, and warehouse supervisors.' 
+      {
+        title: 'Role-Based Permissions',
+        description: 'Structured granular access controls for dispatchers, fleet managers, and warehouse supervisors.'
       }
     ],
     techStack: ['React', 'Node.js', 'PostgreSQL', 'REST APIs', 'Leaflet', 'Tailwind CSS'],
@@ -294,21 +294,21 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine.',
     xenFirmRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine.',
     approach: [
-      { 
-        title: 'GST-Compliant Invoicing Engine', 
-        description: 'Implemented calculation routines for HSN codes, multi-slab GST rates, line-item discounts, and auto-computed totals.' 
+      {
+        title: 'GST-Compliant Invoicing Engine',
+        description: 'Implemented calculation routines for HSN codes, multi-slab GST rates, line-item discounts, and auto-computed totals.'
       },
-      { 
-        title: 'Integrated Inventory & Stock Control', 
-        description: 'Connected billing directly to warehouse inventory levels to update stock balances automatically upon invoice issuance.' 
+      {
+        title: 'Integrated Inventory & Stock Control',
+        description: 'Connected billing directly to warehouse inventory levels to update stock balances automatically upon invoice issuance.'
       },
-      { 
-        title: 'Customer & Supplier Management', 
-        description: 'Structured relational records tracking client credit limits, pending payment balances, and supplier purchase orders.' 
+      {
+        title: 'Customer & Supplier Management',
+        description: 'Structured relational records tracking client credit limits, pending payment balances, and supplier purchase orders.'
       },
-      { 
-        title: 'Multi-Device Responsiveness', 
-        description: 'Engineered responsive interfaces optimized for desktop billing counters, tablets, and mobile owner oversight.' 
+      {
+        title: 'Multi-Device Responsiveness',
+        description: 'Engineered responsive interfaces optimized for desktop billing counters, tablets, and mobile owner oversight.'
       }
     ],
     techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST APIs'],
@@ -356,17 +356,17 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'Veluno is designing and building StaffPulse HRMS as a proprietary internal tool and upcoming SaaS platform for agile teams.',
     xenFirmRole: 'Veluno is designing and building StaffPulse HRMS as a proprietary internal tool and upcoming SaaS platform for agile teams.',
     approach: [
-      { 
-        title: 'Role-Based Permission Matrix', 
-        description: 'Engineered granular access levels ensuring employees, managers, and administrators see only appropriate operational data.' 
+      {
+        title: 'Role-Based Permission Matrix',
+        description: 'Engineered granular access levels ensuring employees, managers, and administrators see only appropriate operational data.'
       },
-      { 
-        title: 'Leave Approval Workflow', 
-        description: 'Designed a multi-stage request and approval system with automated status notifications.' 
+      {
+        title: 'Leave Approval Workflow',
+        description: 'Designed a multi-stage request and approval system with automated status notifications.'
       },
-      { 
-        title: 'Department Hierarchy Mapping', 
-        description: 'Structured visual organization charts mapping reporting structures across technical pods.' 
+      {
+        title: 'Department Hierarchy Mapping',
+        description: 'Structured visual organization charts mapping reporting structures across technical pods.'
       }
     ],
     techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
@@ -413,21 +413,21 @@ export const caseStudies: CaseStudy[] = [
     velunoRole: 'System design and data schema blueprint created by Veluno to guide custom retail software builds.',
     xenFirmRole: 'System design and data schema blueprint created by Veluno to guide custom retail software builds.',
     approach: [
-      { 
-        title: 'Domain Modeling', 
-        description: 'Mapped entity relationships between products, warehouse stock levels, payment intents, and fulfillment states.' 
+      {
+        title: 'Domain Modeling',
+        description: 'Mapped entity relationships between products, warehouse stock levels, payment intents, and fulfillment states.'
       },
-      { 
-        title: 'Event-Driven Synchronization', 
-        description: 'Outlined webhook-based syncing between payment gateways and inventory allocation services to eliminate stock over-selling.' 
+      {
+        title: 'Event-Driven Synchronization',
+        description: 'Outlined webhook-based syncing between payment gateways and inventory allocation services to eliminate stock over-selling.'
       },
-      { 
-        title: 'Modular Backend APIs', 
-        description: 'Designed documented REST endpoints decoupling frontend customer experience from underlying database logic.' 
+      {
+        title: 'Modular Backend APIs',
+        description: 'Designed documented REST endpoints decoupling frontend customer experience from underlying database logic.'
       },
-      { 
-        title: 'Audit & Reconciliation', 
-        description: 'Created transactional logs to trace every price adjustment and inventory mutation.' 
+      {
+        title: 'Audit & Reconciliation',
+        description: 'Created transactional logs to trace every price adjustment and inventory mutation.'
       }
     ],
     techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe API', 'Tailwind CSS'],

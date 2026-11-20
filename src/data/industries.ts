@@ -158,5 +158,9 @@ export const industries: Industry[] = [
 ];
 
 export const getIndustryBySlug = (slug: string) => {
-  return industries.find(i => i.slug === slug);
+  if (!slug) return undefined;
+  const normalized = slug.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return industries.find(
+    (i) => i.slug === slug || i.slug.toLowerCase().replace(/[^a-z0-9]/g, '') === normalized
+  );
 };

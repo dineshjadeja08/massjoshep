@@ -2,41 +2,41 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
-import { ArrowRight, Layers, Cpu, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import PageBanner from '../../components/ui/PageBanner';
 
 type FilterCategory = 'all' | 'product' | 'concept';
 
-const Work = () => {
+const Work: React.FC = () => {
   const [filter, setFilter] = useState<FilterCategory>('all');
 
-  const filtered = filter === 'all' 
-    ? caseStudies 
+  const filtered = filter === 'all'
+    ? caseStudies
     : caseStudies.filter(cs => cs.category === filter);
 
   return (
     <>
       <Helmet>
         <title>Portfolio & Case Studies | Veluno Softtech</title>
-        <meta 
-          name="description" 
-          content="Explore Veluno Softtech's production software, conversational AI voice agents, SaaS products, and enterprise architecture blueprints." 
+        <meta
+          name="description"
+          content="Explore Veluno Softtech's production software, conversational AI voice agents, SaaS products, and enterprise architecture blueprints."
         />
         <link rel="canonical" href="https://www.velunosofttech.com/work" />
       </Helmet>
-      
+
       {/* Top Banner */}
-      <PageBanner 
-        title="Portfolio Works" 
-        breadcrumb="Case Studies" 
+      <PageBanner
+        title="Portfolio Works"
+        breadcrumb="Case Studies"
         subtitle="Software that moves business forward — from sub-second conversational voice intelligence to scalable commerce and logistics architectures."
       />
 
       {/* Main Portfolio Grid */}
       <div className="container mx-auto px-4 md:px-8 py-14 md:py-16 max-w-7xl">
-        
+
         {/* Intro & Filter Bar */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12 border-b border-slate-200 pb-8">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8 border-b border-slate-200 pb-8">
           <div>
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-1">
               Curated Deliveries & Systems
@@ -55,10 +55,11 @@ const Work = () => {
             ].map(tab => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setFilter(tab.id as FilterCategory)}
-                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all inline-flex items-center gap-2 ${
-                  filter === tab.id 
-                    ? 'bg-[#0B1F3A] text-white shadow-xs' 
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all inline-flex items-center gap-2 cursor-pointer ${
+                  filter === tab.id
+                    ? 'bg-[#0B1F3A] text-white shadow-xs'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
@@ -73,32 +74,41 @@ const Work = () => {
           </div>
         </div>
 
+        {/* Engineering Integrity Note */}
+        <div className="mb-10 p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs flex items-center gap-3 text-xs text-slate-600">
+          <ShieldCheck className="w-4 h-4 text-[#14B8A6] shrink-0" />
+          <span>
+            <strong>Client Governance:</strong> Veluno strictly honors mutual NDAs. Proprietary external client source repositories are never published publicly. Portfolio items below represent internal SaaS products and architectural engineering blueprints.
+          </span>
+        </div>
+
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filtered.map(cs => (
-            <div 
+            <div
               key={cs.slug}
               className="rounded-xl bg-white border border-slate-200/90 overflow-hidden flex flex-col justify-between group hover:border-[#14B8A6] hover:shadow-lg transition-all duration-300"
             >
               <div>
-                {/* Image & Tags */}
+                {/* Image & Badges Container */}
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src={cs.heroImage} 
-                    alt={cs.clientName} 
+                  <img
+                    src={cs.heroImage}
+                    alt={cs.clientName}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
-                  
-                  {/* Category Badge */}
-                  <span className="absolute top-3 left-3 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] shadow-xs">
-                    {cs.categoryLabel}
-                  </span>
 
-                  {/* Status Indicator */}
-                  <span className="absolute top-3 right-3 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-black/75 text-slate-200 backdrop-blur-xs border border-white/10">
-                    {cs.status}
-                  </span>
+                  {/* Shared Badge Wrapper to prevent collisions */}
+                  <div className="absolute top-3 inset-x-3 flex flex-wrap items-start justify-between gap-2 pointer-events-none z-10">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-mono font-bold tracking-wide uppercase bg-[#14B8A6] text-[#0B1F3A] shadow-xs">
+                      {cs.categoryLabel}
+                    </span>
+                    <span className="px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-mono font-bold tracking-wide uppercase bg-[#0B1F3A]/90 text-slate-100 border border-slate-700/80 shadow-xs backdrop-blur-xs">
+                      {cs.status}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Card Body */}
@@ -106,11 +116,11 @@ const Work = () => {
                   <span className="text-[11px] font-mono font-bold text-[#2563EB] uppercase tracking-wider block mb-1">
                     {cs.industry}
                   </span>
-                  
+
                   <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5 group-hover:text-[#2563EB] transition-colors">
                     {cs.clientName}
                   </h3>
-                  
+
                   <p className="text-xs text-slate-600 leading-relaxed font-light mb-5 line-clamp-3">
                     {cs.summary}
                   </p>
@@ -157,10 +167,10 @@ const Work = () => {
                 </div>
               </div>
 
-              {/* Card Footer Button (Internal navigation only) */}
+              {/* Card Footer Button */}
               <div className="p-6 pt-0">
-                <Link 
-                  to={`/work/${cs.slug}`} 
+                <Link
+                  to={`/work/${cs.slug}`}
                   className="btn-primary w-full text-center py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs group-hover:bg-[#2563EB] transition-all"
                 >
                   <span>Read Case Study</span>
