@@ -3,6 +3,16 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { EnterpriseLogos } from '../components/ui/EnterpriseLogos';
 import { 
+  WebsiteDevIcon, 
+  WebAppIcon, 
+  MobileDevIcon, 
+  EcommerceIcon, 
+  UiUxIcon, 
+  CustomSoftwareIcon, 
+  CrmErpIcon, 
+  AiAutomationIcon 
+} from '../components/ui/CustomServiceIcons';
+import { 
   Globe, 
   Layers, 
   Workflow, 
@@ -165,10 +175,10 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Card 1: Website Development */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Globe className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <WebsiteDevIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   Website Development
@@ -187,10 +197,10 @@ const Home = () => {
             </div>
 
             {/* Card 2: Web Application Development */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Layers className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <WebAppIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   Web Application Development
@@ -209,10 +219,10 @@ const Home = () => {
             </div>
 
             {/* Card 3: Mobile App Development */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Smartphone className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <MobileDevIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   Mobile App Development
@@ -231,10 +241,10 @@ const Home = () => {
             </div>
 
             {/* Card 4: E-Commerce Development */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <ShoppingBag className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <EcommerceIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   E-Commerce Development
@@ -253,10 +263,10 @@ const Home = () => {
             </div>
 
             {/* Card 5: UI/UX Design & Branding */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Palette className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <UiUxIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   UI/UX Design
@@ -275,10 +285,10 @@ const Home = () => {
             </div>
 
             {/* Card 6: Custom Software Development */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Code2 className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <CustomSoftwareIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   Custom Software Development
@@ -297,10 +307,10 @@ const Home = () => {
             </div>
 
             {/* Card 7: CRM & ERP Solutions */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Building2 className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <CrmErpIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   CRM & ERP Solutions
@@ -319,10 +329,10 @@ const Home = () => {
             </div>
 
             {/* Card 8: AI & Business Automation */}
-            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
-                  <Sparkles className="w-6 h-6 stroke-[2]" />
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <AiAutomationIcon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
                   AI & Business Automation
