@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Loader2, CheckCircle2, ArrowRight, AlertCircle, Mail, MessageSquare, Phone, MapPin } from 'lucide-react';
+import { Loader2, CheckCircle2, ArrowRight, AlertCircle, Mail, Clock, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import PageBanner from '../components/ui/PageBanner';
 
@@ -48,7 +48,7 @@ const Contact = () => {
       setIsSuccess(true);
       reset();
     } catch (err: any) {
-      setErrorMessage('Unable to dispatch enquiry automatically. Please email contact@velunosofttech.com or message via WhatsApp.');
+      setErrorMessage('Unable to dispatch enquiry automatically. Please email contact@velunosofttech.com.');
     } finally {
       setIsSubmitting(false);
     }
@@ -248,13 +248,13 @@ const Contact = () => {
 
                   <li className="flex items-start">
                     <div className="w-10 h-10 rounded-xl bg-[#2A2A2A] text-[#14B8A6] flex items-center justify-center mr-4 flex-shrink-0">
-                      <MessageSquare className="w-5 h-5" />
+                      <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-xs text-gray-400 uppercase font-mono block">WhatsApp Chat</span>
-                      <a href="https://wa.me/919080824626" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-[#14B8A6] transition-colors">
-                        +91 90808 24626
-                      </a>
+                      <span className="text-xs text-gray-400 uppercase font-mono block">Response SLA</span>
+                      <span className="font-bold text-white">
+                        Under 4 Business Hours
+                      </span>
                     </div>
                   </li>
 

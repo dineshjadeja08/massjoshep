@@ -99,7 +99,7 @@ const Resources = () => {
 ${report.title}
 Document Type: ${report.type}
 Published by: Veluno Softtech (https://velunosofttech.com)
-Direct Contact: contact@velunosofttech.com | WhatsApp: +91 90808 24626
+Direct Contact: contact@velunosofttech.com
 ================================================================================
 
 EXECUTIVE SUMMARY:

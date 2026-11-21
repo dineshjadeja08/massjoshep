@@ -123,16 +123,6 @@ const ServiceDetail = () => {
                 Choose Plan
               </Link>
 
-              {/* Direct WhatsApp Option */}
-              <a 
-                href="https://wa.me/919080824626" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="mt-3 block w-full text-center text-xs font-semibold py-3 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white transition-colors"
-              >
-                Instant WhatsApp Chat →
-              </a>
-
               {/* Other Services Navigation */}
               <div className="mt-8 pt-6 border-t border-slate-800">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-gray-400 block mb-3">

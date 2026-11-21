@@ -21,40 +21,29 @@ export const VelunoLogo: React.FC<VelunoLogoProps> = ({
 }) => {
   const [imgFailed, setImgFailed] = useState(false);
   const isDarkBg = variant === 'light' || variant === 'white';
-  const logoSrc = isDarkBg ? '/veluno-logo-white.png' : '/veluno-logo.png';
+  const logoSrc = isDarkBg ? '/logo-white.svg' : '/logo.svg';
 
   return (
     <div className={`inline-flex flex-col select-none opacity-100 visible ${className}`}>
-      <div className="inline-flex items-center gap-2.5">
-        {!imgFailed ? (
-          <img
-            src={logoSrc}
-            alt="Veluno Softtech"
-            onError={() => setImgFailed(true)}
-            className={`${SIZE_CLASSES[size]} w-auto object-contain block opacity-100`}
-            loading="eager"
-            decoding="sync"
-          />
-        ) : (
-          <div
-            className={`inline-flex h-9 w-9 items-center justify-center rounded-lg font-heading font-black text-xs tracking-wider shadow-xs ${
-              isDarkBg ? 'bg-[#14B8A6] text-[#0B1F3A]' : 'bg-[#0B1F3A] text-white'
-            }`}
-            aria-hidden="true"
-          >
-            VS
-          </div>
-        )}
-        <div className="flex flex-col leading-none">
-          <span
-            className={`font-heading font-extrabold tracking-tight text-base sm:text-lg ${
-              isDarkBg ? 'text-white' : 'text-[#0B1F3A]'
-            }`}
-          >
-            VELUNO <span className="text-[#2563EB]">SOFTTECH</span>
-          </span>
+      {!imgFailed ? (
+        <img
+          src={logoSrc}
+          alt="Veluno Softtech"
+          onError={() => setImgFailed(true)}
+          className={`${SIZE_CLASSES[size]} w-auto object-contain block opacity-100`}
+          loading="eager"
+          decoding="sync"
+        />
+      ) : (
+        <div
+          className={`inline-flex h-9 items-center justify-center px-3 rounded-lg font-heading font-extrabold text-sm tracking-wider shadow-xs ${
+            isDarkBg ? 'bg-[#0B1F3A] text-white border border-slate-700' : 'bg-[#0B1F3A] text-white'
+          }`}
+          aria-hidden="true"
+        >
+          VELUNO <span className="text-[#2563EB] ml-1">SOFTTECH</span>
         </div>
-      </div>
+      )}
       {showTagline && (
         <span
           className={`text-[10px] mt-1 font-normal tracking-wide ${

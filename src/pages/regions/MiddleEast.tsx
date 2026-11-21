@@ -30,9 +30,6 @@ const MiddleEast = () => {
               <Link to="/contact" className="btn btn-primary text-base px-8 py-4 inline-flex items-center justify-center">
                 Discuss Your Project <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a href="https://wa.me/919080824626" target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-sm transition-colors flex items-center justify-center text-base">
-                Chat on WhatsApp
-              </a>
             </div>
           </div>
         </div>
@@ -90,7 +87,7 @@ const MiddleEast = () => {
                   <CheckCircle2 className="w-5 h-5 text-accent-500 mr-3" /> Full timezone overlap with Dubai & Riyadh
                 </li>
                 <li className="flex items-center text-navy-900 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-accent-500 mr-3" /> Direct WhatsApp communication channel
+                  <CheckCircle2 className="w-5 h-5 text-accent-500 mr-3" /> Direct dedicated communication channel
                 </li>
                 <li className="flex items-center text-navy-900 font-medium">
                   <CheckCircle2 className="w-5 h-5 text-accent-500 mr-3" /> Executive-level architectural consulting
