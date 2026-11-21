@@ -75,6 +75,12 @@ const Contact = () => {
       // In production with EmailJS configured or API backend
       await new Promise(resolve => setTimeout(resolve, 800));
       setIsSuccess(true);
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead', {
+          content_name: data.service,
+          value: data.budget,
+        });
+      }
       reset();
     } catch (err: any) {
       setErrorMessage('Unable to dispatch enquiry automatically. Please email contact@velunosofttech.com or message us on WhatsApp.');

@@ -31,8 +31,28 @@
     <meta name="twitter:title" content="Veluno Softtech | Software that moves business forward." />
     <meta name="twitter:description" content="We build websites, custom applications and connected digital systems that help businesses work smarter and grow faster." />
     <meta name="twitter:image" content="https://www.velunosofttech.com/og-image.png" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1495482865791230');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
   </head>
   <body class="bg-[#F5F7FA] text-[#111827] antialiased selection:bg-[#2563EB]/20 selection:text-[#0B1F3A]">
+    <!-- Meta Pixel NoScript Fallback -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1495482865791230&ev=PageView&noscript=1"
+      alt=""
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
