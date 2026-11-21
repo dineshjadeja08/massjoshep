@@ -15,28 +15,6 @@ import {
 } from 'lucide-react';
 import PageBanner from '../components/ui/PageBanner';
 
-// Editable placeholders for corporate leadership
-const LEADERSHIP_TEAM = [
-  {
-    name: '[Founder / Managing Director Name]',
-    title: 'Founder & Chief Architect',
-    focus: 'Enterprise system design, distributed cloud reliability, and global client governance.',
-    note: 'Replace with verified founder name'
-  },
-  {
-    name: '[Head of Engineering Name]',
-    title: 'Head of Engineering',
-    focus: 'Full-stack SaaS execution, microservices architecture, and automated CI/CD pipelines.',
-    note: 'Replace with verified engineering lead'
-  },
-  {
-    name: '[AI Systems Lead Name]',
-    title: 'Lead AI & Voice Infrastructure Engineer',
-    focus: 'Sub-second conversational voice pipelines, WebRTC streaming, and RAG knowledge systems.',
-    note: 'Replace with verified AI lead'
-  }
-];
-
 const CORE_STACK = [
   { category: 'Frontend Platforms', technologies: ['React 19', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vite'] },
   { category: 'Distributed Backends', technologies: ['Node.js', 'Python / FastAPI', 'PostgreSQL', 'Redis', 'REST & GraphQL'] },
@@ -146,7 +124,7 @@ export const About: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-bold text-white block text-xs uppercase font-mono">Headquarters</span>
-                    <span className="text-slate-300 text-xs">Chennai, Tamil Nadu, India (IST / UTC+5:30)</span>
+                    <span className="text-slate-300 text-xs">Chennai, India</span>
                   </div>
                 </li>
 
@@ -218,55 +196,6 @@ export const About: React.FC = () => {
                 To become the most dependable software engineering partner for fast-growing global enterprises, recognized worldwide for transparent delivery governance, deep technical excellence, and rapid time-to-market.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Leadership & Founding Team (With Clearly Identified Placeholders) */}
-      <section className="py-16 md:py-24 bg-white border-b border-slate-200">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="max-w-3xl mb-12">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider mb-2">
-              <Users className="w-4 h-4" />
-              <span>Leadership Governance</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B1F3A]">
-              Accountable Technical Leadership
-            </h2>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              Every client engagement is directed by senior technical practitioners who write code, review architecture, and enforce engineering discipline.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {LEADERSHIP_TEAM.map((leader, idx) => (
-              <div
-                key={idx}
-                className="bg-[#F8FAFC] p-7 rounded-2xl border border-slate-200/90 shadow-xs flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center font-heading font-bold text-sm mb-5 shadow-xs">
-                    0{idx + 1}
-                  </div>
-                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-1">
-                    {leader.name}
-                  </h3>
-                  <div className="text-xs font-mono font-semibold text-[#2563EB] mb-3">
-                    {leader.title}
-                  </div>
-                  <p className="text-xs text-slate-600 leading-relaxed font-light">
-                    {leader.focus}
-                  </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-slate-200 text-[11px] font-mono text-slate-400">
-                  {leader.note}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500 font-mono">
-            <strong>Governance Note:</strong> To customize executive biographies with your exact officers, update <code>LEADERSHIP_TEAM</code> in <code>src/pages/About.tsx</code>.
           </div>
         </div>
       </section>
@@ -436,30 +365,20 @@ export const About: React.FC = () => {
                 <span className="text-[#0B1F3A] font-bold text-base">Veluno Softtech</span>
               </div>
               <div>
-                <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Registered Legal Entity</span>
-                <span className="text-slate-700 font-medium">[Add registered legal entity name, e.g. Veluno Softtech Pvt. Ltd.]</span>
-              </div>
-              <div>
-                <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Business Registration / CIN</span>
-                <span className="text-slate-700 font-medium">[Add verified CIN / GSTIN registration details]</span>
+                <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Core Specialization</span>
+                <span className="text-slate-700 font-medium">Enterprise Web, Mobile Applications & Conversational AI Systems</span>
               </div>
             </div>
 
             <div className="space-y-4 text-xs sm:text-sm">
               <div>
                 <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Registered Office</span>
-                <span className="text-slate-700 font-medium">Chennai, Tamil Nadu, India (PIN: 600001)</span>
+                <span className="text-slate-700 font-medium">Chennai, India</span>
               </div>
               <div>
                 <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Official Inquiry Email</span>
                 <a href="mailto:contact@velunosofttech.com" className="text-[#2563EB] font-bold hover:underline">
                   contact@velunosofttech.com
-                </a>
-              </div>
-              <div>
-                <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Direct Phone / WhatsApp</span>
-                <a href="tel:+919080824626" className="text-[#0B1F3A] font-bold hover:text-[#2563EB]">
-                  +91 90808 24626
                 </a>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import CookieBanner from './CookieBanner';
+import FloatingWhatsApp from '../ui/FloatingWhatsApp';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
       <Footer />
+      <FloatingWhatsApp />
       <CookieBanner />
     </div>
   );

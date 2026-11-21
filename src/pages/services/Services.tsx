@@ -16,7 +16,10 @@ import {
   Clock,
   Sparkles,
   Zap,
-  Server
+  Server,
+  Smartphone,
+  Palette,
+  Share2
 } from 'lucide-react';
 import PageBanner from '../../components/ui/PageBanner';
 
@@ -58,10 +61,10 @@ const Services = () => {
             </h2>
           </div>
 
-          {/* 6-Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 8-Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Card 1: Dark Charcoal (#0B1F3A) with Lime Icon */}
+            {/* Card 1: Veluno Web */}
             <div className="rounded-xl bg-[#0B1F3A] text-white p-7 md:p-8 shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-1 border border-slate-800">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-[#14B8A6] text-[#0B1F3A] flex items-center justify-center mb-5 shadow-xs">
@@ -83,7 +86,29 @@ const Services = () => {
               </Link>
             </div>
 
-            {/* Card 2: Electric Lime (#14B8A6) */}
+            {/* Card 2: Veluno Mobile (NEW) */}
+            <div className="rounded-xl bg-white border border-gray-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1 hover:border-[#14B8A6]">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
+                  <Smartphone className="w-6 h-6 stroke-[2.2]" />
+                </div>
+                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
+                  Veluno Mobile
+                </h3>
+                <p className="text-xs text-gray-600 leading-relaxed font-light mb-5">
+                  Native iOS & Android, React Native, and Flutter mobile apps engineered for fluid 60fps performance and offline-first sync.
+                </p>
+              </div>
+              <Link 
+                to="/services/veluno-mobile" 
+                className="text-xs font-bold text-[#2563EB] hover:underline inline-flex items-center gap-1 font-mono uppercase pt-4 border-t border-gray-100"
+              >
+                <span>Explore Deliverables</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 3: Veluno Products */}
             <div className="rounded-xl bg-[#14B8A6] text-[#0B1F3A] p-7 md:p-8 shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-1 border border-[#A6F242]">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
@@ -93,7 +118,7 @@ const Services = () => {
                   Veluno Products
                 </h3>
                 <p className="text-xs text-[#0B1F3A]/80 leading-relaxed font-medium mb-5">
-                  Full-stack SaaS applications, customer onboarding portals, subscription billing engines, and mobile-responsive products.
+                  Full-stack SaaS applications, conversational AI voice systems, customer onboarding portals, and subscription billing engines.
                 </p>
               </div>
               <Link 
@@ -105,7 +130,7 @@ const Services = () => {
               </Link>
             </div>
 
-            {/* Card 3: Dark Charcoal (#0B1F3A) with Lime Icon */}
+            {/* Card 4: Veluno Systems */}
             <div className="rounded-xl bg-[#0B1F3A] text-white p-7 md:p-8 shadow-sm flex flex-col justify-between transition-transform hover:-translate-y-1 border border-slate-800">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-[#14B8A6] text-[#0B1F3A] flex items-center justify-center mb-5 shadow-xs">
@@ -127,29 +152,51 @@ const Services = () => {
               </Link>
             </div>
 
-            {/* Card 4: Light White Card */}
+            {/* Card 5: Veluno Growth (Digital Marketing & Social Media) */}
             <div className="rounded-xl bg-white border border-gray-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1 hover:border-[#14B8A6]">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <TrendingUp className="w-6 h-6 stroke-[2.2]" />
+                  <Share2 className="w-6 h-6 stroke-[2.2]" />
                 </div>
                 <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
                   Veluno Growth
                 </h3>
                 <p className="text-xs text-gray-500 leading-relaxed font-light mb-5">
-                  Technical Core Web Vitals SEO, product telemetry, conversion rate optimization (CRO), and attribution modeling.
+                  Full-funnel digital marketing, dedicated social media handling (LinkedIn, X, Meta), technical SEO, and conversion optimization.
                 </p>
               </div>
               <Link 
                 to="/services/veluno-growth" 
-                className="text-xs font-bold text-[#0B1F3A] hover:text-black hover:underline inline-flex items-center gap-1 font-mono uppercase pt-4 border-t border-gray-100"
+                className="text-xs font-bold text-[#2563EB] hover:underline inline-flex items-center gap-1 font-mono uppercase pt-4 border-t border-gray-100"
               >
                 <span>Explore Deliverables</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
-            {/* Card 5: Light White Card */}
+            {/* Card 6: Veluno Branding (Pro Branding & Design Systems) */}
+            <div className="rounded-xl bg-white border border-gray-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1 hover:border-[#14B8A6]">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
+                  <Palette className="w-6 h-6 stroke-[2.2]" />
+                </div>
+                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
+                  Veluno Branding
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed font-light mb-5">
+                  Pro corporate brand identity, trademark vector logos, Figma design systems, pitch decks, and brand governance.
+                </p>
+              </div>
+              <Link 
+                to="/services/veluno-branding" 
+                className="text-xs font-bold text-[#2563EB] hover:underline inline-flex items-center gap-1 font-mono uppercase pt-4 border-t border-gray-100"
+              >
+                <span>Explore Deliverables</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Card 7: Veluno Care */}
             <div className="rounded-xl bg-white border border-gray-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1 hover:border-[#14B8A6]">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-slate-100 border border-gray-200 text-[#0B1F3A] flex items-center justify-center mb-5 shadow-xs">
@@ -171,7 +218,7 @@ const Services = () => {
               </Link>
             </div>
 
-            {/* Card 6: Light White Card */}
+            {/* Card 8: Dedicated Squads */}
             <div className="rounded-xl bg-white border border-gray-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1 hover:border-[#14B8A6]">
               <div>
                 <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">

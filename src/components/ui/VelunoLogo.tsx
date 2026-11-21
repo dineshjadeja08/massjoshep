@@ -21,7 +21,7 @@ export const VelunoLogo: React.FC<VelunoLogoProps> = ({
 }) => {
   const [imgFailed, setImgFailed] = useState(false);
   const isDarkBg = variant === 'light' || variant === 'white';
-  const logoSrc = isDarkBg ? '/logo-white.svg' : '/logo.svg';
+  const logoSrc = isDarkBg ? '/veluno-logo-white.png' : '/veluno-logo.png';
 
   return (
     <div className={`inline-flex flex-col select-none opacity-100 visible ${className}`}>

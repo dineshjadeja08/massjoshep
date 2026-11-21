@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               <VelunoLogo variant="white" size="md" showTagline={true} />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-6 max-w-xs font-light">
-              Veluno Softtech is an enterprise software engineering company. We engineer production conversational AI systems, distributed cloud backends, and digital commerce architectures.
+              We build digital solutions that move businesses forward. From custom software and mobile applications to high-performing web platforms and AI automation.
             </p>
 
             {/* Social Links (Rendered only when genuine verified URLs are configured) */}
@@ -125,37 +125,47 @@ const Footer: React.FC = () => {
           {/* Column 3: Capabilities */}
           <div>
             <h4 className="text-xs font-bold text-white mb-5 font-heading uppercase tracking-wider">
-              Capabilities
+              Core Services
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
-                <Link to="/services/veluno-products" className="hover:text-[#14B8A6] transition-colors">
-                  Conversational Voice AI
+                <Link to="/services/website-development" className="hover:text-[#14B8A6] transition-colors">
+                  Website Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/veluno-products" className="hover:text-[#14B8A6] transition-colors">
-                  SaaS Platform Engineering
+                <Link to="/services/web-application-development" className="hover:text-[#14B8A6] transition-colors">
+                  Web Application Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/veluno-systems" className="hover:text-[#14B8A6] transition-colors">
-                  Distributed Cloud Microservices
+                <Link to="/services/mobile-app-development" className="hover:text-[#14B8A6] transition-colors">
+                  Mobile App Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/veluno-web" className="hover:text-[#14B8A6] transition-colors">
-                  Headless E-Commerce
+                <Link to="/services/ecommerce-development" className="hover:text-[#14B8A6] transition-colors">
+                  E-Commerce Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/dedicated-team" className="hover:text-[#14B8A6] transition-colors">
-                  Dedicated Engineering Squads
+                <Link to="/services/ui-ux-design" className="hover:text-[#14B8A6] transition-colors">
+                  UI/UX Design & Branding
                 </Link>
               </li>
               <li>
-                <Link to="/security" className="hover:text-[#14B8A6] transition-colors">
-                  Zero-Trust Cloud Security
+                <Link to="/services/custom-software-development" className="hover:text-[#14B8A6] transition-colors">
+                  Custom Software Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/crm-erp-development" className="hover:text-[#14B8A6] transition-colors">
+                  CRM & ERP Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/ai-automation" className="hover:text-[#14B8A6] transition-colors">
+                  AI & Business Automation
                 </Link>
               </li>
             </ul>
@@ -169,22 +179,16 @@ const Footer: React.FC = () => {
             <div className="space-y-3.5 text-xs text-slate-300">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#14B8A6] shrink-0 mt-0.5" />
-                <span>Chennai, Tamil Nadu, India</span>
+                <span>Chennai, India</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-[#14B8A6] shrink-0" />
-                <span>Timezone: UTC+5:30 (IST)</span>
+                <span>Response SLA: Under 4 Hours</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#14B8A6] shrink-0" />
                 <a href="mailto:contact@velunosofttech.com" className="hover:text-[#14B8A6] transition-colors">
                   contact@velunosofttech.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#14B8A6] shrink-0" />
-                <a href="tel:+919080824626" className="hover:text-[#14B8A6] transition-colors">
-                  +91 90808 24626
                 </a>
               </div>
               <div className="pt-2">

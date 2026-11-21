@@ -26,27 +26,32 @@ import {
   ShoppingBag,
   FileCheck,
   CheckCircle2,
-  ShieldAlert
+  Smartphone,
+  Palette,
+  Sparkles,
+  Search,
+  CheckCircle,
+  MessageSquare
 } from 'lucide-react';
 
 const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Veluno Softtech | Enterprise Software Engineering & Autonomous AI</title>
+        <title>Veluno Softtech | Custom Software & Web Development Company</title>
         <meta 
           name="description" 
-          content="Veluno Softtech is an enterprise software engineering company. We engineer production conversational AI systems, distributed cloud backends, and digital commerce architectures." 
+          content="Veluno Softtech builds digital solutions that grow your business. We engineer high-performing websites, custom web apps, mobile applications, and AI business automation." 
         />
         <link rel="canonical" href="https://www.velunosofttech.com/" />
       </Helmet>
 
       {/* =========================================================================
-          HERO BANNER: EXECUTIVE TECH NAVY & TEAL (OFFICIAL BRAND IDENTITY)
+          HERO SECTION: CONVERSION-FOCUSED (MASTER PROMPT SPEC)
           ========================================================================= */}
-      <section className="pt-28 md:pt-36 pb-10 bg-white">
+      <section className="pt-28 md:pt-36 pb-12 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="rounded-xl bg-[#0B1F3A] text-white p-8 md:p-14 lg:p-16 text-center relative overflow-hidden shadow-md border border-slate-800">
+          <div className="rounded-2xl bg-[#0B1F3A] text-white p-8 md:p-14 lg:p-16 text-center relative overflow-hidden shadow-lg border border-slate-800">
             
             {/* Subtle engineering grid background */}
             <div className="absolute inset-0 tech-grid-dark opacity-35 pointer-events-none" />
@@ -57,59 +62,57 @@ const Home = () => {
 
             <div className="relative z-10 max-w-4xl mx-auto">
               
-              {/* Brand Identity Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
+              {/* Supporting Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
                 <span className="w-2 h-2 rounded-full bg-[#14B8A6] animate-pulse"></span>
-                <span>VELUNO SOFTTECH</span>
-                <span className="text-slate-400">·</span>
-                <span className="text-[#14B8A6]">GLOBAL ENGINEERING & DELIVERY</span>
+                <span>Let's turn your next big idea into reality</span>
               </div>
 
-              {/* Headline matching the exact brand typography */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[1.08] tracking-tight mb-5">
-                Software that moves{' '}
+              {/* Exact Master Headline */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[1.08] tracking-tight mb-6">
+                We Build Digital Solutions That{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#14B8A6]">
-                  business
+                  Grow
                 </span>{' '}
-                forward.
+                Your Business.
               </h1>
 
-              {/* Subheading */}
+              {/* Exact Master Supporting Text */}
               <p className="text-sm sm:text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
-                We engineer scalable web platforms, conversational AI voice agents, and high-concurrency cloud backends that help high-growth companies work smarter and scale faster.
+                From high-performing websites to custom software and mobile applications, Veluno Softtech helps businesses turn ideas into powerful digital experiences.
               </p>
 
-              {/* Action Buttons */}
+              {/* Primary & Secondary CTAs */}
               <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
                 <Link 
                   to="/contact" 
-                  className="btn-teal px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-sm w-full sm:w-auto"
+                  className="btn-teal px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-sm w-full sm:w-auto hover:scale-102 transition-transform"
                 >
-                  Schedule Technical Discovery
+                  Start Your Project
                 </Link>
                 <Link 
-                  to="/work" 
+                  to="/services" 
                   className="px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-colors w-full sm:w-auto"
                 >
-                  Explore 7 Case Studies
+                  Explore Our Services
                 </Link>
               </div>
 
-              {/* Engineering Guarantees Strip */}
+              {/* Software Engineering Guarantees Strip */}
               <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs font-mono font-medium text-slate-300">
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]"></span>
-                  Sub-600ms Conversational AI
+                  Custom Code Architecture
                 </span>
                 <span className="text-slate-600">·</span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]"></span>
-                  Multi-AZ Cloud Microservices
+                  Mobile & Cloud Native
                 </span>
                 <span className="text-slate-600">·</span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]"></span>
-                  Sub-100ms Latency Budget
+                  Sub-100ms API SLA
                 </span>
                 <span className="text-slate-600">·</span>
                 <span className="flex items-center gap-1.5">
@@ -125,7 +128,7 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
-          ENTERPRISE CLOUD ECOSYSTEM & INTEGRATION PARTNERS (MNC TECH STRIP)
+          ENTERPRISE INFRASTRUCTURE & TOOLCHAINS (OFFICIAL VECTOR LOGOS)
           ========================================================================= */}
       <section className="py-8 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
@@ -140,320 +143,302 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
-          GLOBAL DELIVERY BENCHMARKS (MNC STATS BAR)
-          ========================================================================= */}
-      <section className="py-12 bg-[#F5F7FA] border-b border-slate-200">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-heading font-black text-[#0B1F3A] mb-1">
-                40+
-              </div>
-              <div className="text-xs font-mono text-[#2563EB] font-bold uppercase tracking-wider mb-1">
-                Production Releases
-              </div>
-              <div className="text-xs text-slate-500 font-light">
-                Enterprise & High-Growth Cloud Platforms
-              </div>
-            </div>
-
-            <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-heading font-black text-[#0B1F3A] mb-1">
-                99.99%
-              </div>
-              <div className="text-xs font-mono text-[#14B8A6] font-bold uppercase tracking-wider mb-1">
-                Target Availability
-              </div>
-              <div className="text-xs text-slate-500 font-light">
-                Multi-AZ Failover & Continuous Monitoring
-              </div>
-            </div>
-
-            <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-heading font-black text-[#0B1F3A] mb-1">
-                &lt; 100ms
-              </div>
-              <div className="text-xs font-mono text-[#2563EB] font-bold uppercase tracking-wider mb-1">
-                API Latency SLA
-              </div>
-              <div className="text-xs text-slate-500 font-light">
-                P99 Response Target on Edge & Backends
-              </div>
-            </div>
-
-            <div className="p-4">
-              <div className="text-3xl sm:text-4xl font-heading font-black text-[#0B1F3A] mb-1">
-                100%
-              </div>
-              <div className="text-xs font-mono text-[#14B8A6] font-bold uppercase tracking-wider mb-1">
-                Client IP Ownership
-              </div>
-              <div className="text-xs text-slate-500 font-light">
-                Full Repository & Cloud Environment Transfer
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 2: CORE ENGINEERING CAPABILITIES (EXECUTIVE TECH CARDS)
+          SECTION 2: 8 SERVICES PREVIEW (EXACT PROMPT SPECIFICATION)
           ========================================================================= */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           
           {/* Centered Heading */}
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
-              Solutions & Engineering Practice
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-2">
+              Comprehensive Capabilities
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight">
-              Production Software Engineered for Growth & Concurrency
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight mb-4">
+              Services Built to Power Modern Businesses
             </h2>
+            <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+              From web platforms and native mobile apps to custom enterprise ERPs and conversational AI, we deliver end-to-end technical execution.
+            </p>
           </div>
 
-          {/* 6-Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 8-Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Card 1: Conversational Voice AI */}
-            <div className="rounded-xl bg-[#F5F7FA] border border-slate-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-all hover:border-[#14B8A6] hover:shadow-md">
+            {/* Card 1: Website Development */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <PhoneCall className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Globe className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
-                  Conversational Voice AI
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  Website Development
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-5">
-                  Sub-second speech-to-speech AI pipelines, multilingual natural language understanding, and automated telephony booking agents.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  High-speed corporate websites, headless CMS architectures, and Next.js platforms built for SEO authority and lead conversion.
                 </p>
               </div>
-              <Link to="/services/veluno-products" className="text-xs font-bold text-[#2563EB] hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore Voice AI</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/website-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Card 2: Full-Stack SaaS Engineering */}
-            <div className="rounded-xl bg-[#0B1F3A] text-white p-7 md:p-8 shadow-md flex flex-col justify-between transition-all hover:shadow-lg border border-slate-800">
+            {/* Card 2: Web Application Development */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-white/10 text-[#14B8A6] flex items-center justify-center mb-5 border border-white/10">
-                  <Cpu className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Layers className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-white mb-2.5">
-                  Full-Stack SaaS Engineering
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  Web Application Development
                 </h3>
-                <p className="text-xs text-slate-300 leading-relaxed font-light mb-5">
-                  End-to-end multi-tenant web platforms, secure role-based access control, PostgreSQL relational data schemas, and billing engines.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Multi-tenant SaaS products, customer onboarding portals, subscription billing engines, and high-concurrency cloud backends.
                 </p>
               </div>
-              <Link to="/services/veluno-products" className="text-xs font-bold text-[#14B8A6] hover:underline inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore SaaS</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/web-application-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Card 3: System Architecture & APIs */}
-            <div className="rounded-xl bg-[#F5F7FA] border border-slate-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-all hover:border-[#14B8A6] hover:shadow-md">
+            {/* Card 3: Mobile App Development */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <Workflow className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Smartphone className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
-                  System Architecture & APIs
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  Mobile App Development
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-5">
-                  High-throughput distributed microservices, webhook synchronizations, event streaming, and mission-critical cloud backends.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Native iOS (Swift), Android (Kotlin), and cross-platform React Native / Flutter apps with offline-first synchronization.
                 </p>
               </div>
-              <Link to="/engineering" className="text-xs font-bold text-[#2563EB] hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore Architecture</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/mobile-app-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Card 4: Cloud Infrastructure & DevOps */}
-            <div className="rounded-xl bg-[#F5F7FA] border border-slate-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-all hover:border-[#14B8A6] hover:shadow-md">
+            {/* Card 4: E-Commerce Development */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <Server className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <ShoppingBag className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
-                  Cloud DevOps & Reliability
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  E-Commerce Development
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-5">
-                  Zero-downtime CI/CD pipelines, Kubernetes container orchestration, AWS/Vercel serverless clusters, and 24/7 SLA monitoring.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Custom Shopify Plus storefronts, headless commerce, inventory synchronizations, and secure global payment gateways.
                 </p>
               </div>
-              <Link to="/services/veluno-care" className="text-xs font-bold text-[#2563EB] hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore DevOps</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/ecommerce-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Card 5: Headless E-Commerce */}
-            <div className="rounded-xl bg-[#F5F7FA] border border-slate-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-all hover:border-[#14B8A6] hover:shadow-md">
+            {/* Card 5: UI/UX Design & Branding */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <Globe className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Palette className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
-                  Headless E-Commerce
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  UI/UX Design
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-5">
-                  Editorial storefronts, atomic multi-warehouse inventory reconciliation, frictionless mobile checkout, and payment gateways.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Figma design systems, interactive product prototypes, user journey mapping, and authoritative corporate brand identities.
                 </p>
               </div>
-              <Link to="/services/veluno-web" className="text-xs font-bold text-[#2563EB] hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore Commerce</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/ui-ux-design" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            {/* Card 6: Technical SEO & Speed */}
-            <div className="rounded-xl bg-[#F5F7FA] border border-slate-200/90 p-7 md:p-8 shadow-xs flex flex-col justify-between transition-all hover:border-[#14B8A6] hover:shadow-md">
+            {/* Card 6: Custom Software Development */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
               <div>
-                <div className="w-11 h-11 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-5 shadow-xs">
-                  <TrendingUp className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Code2 className="w-6 h-6 stroke-[2]" />
                 </div>
-                <h3 className="text-xl font-heading font-extrabold text-[#0B1F3A] mb-2.5">
-                  Technical SEO & Velocity
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  Custom Software Development
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-5">
-                  Sub-100ms Core Web Vitals optimization, server-rendered dynamic metadata, structured data schema, and conversion funnel auditing.
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Tailored business process software, internal operations portals, automated data pipelines, and legacy modernization.
                 </p>
               </div>
-              <Link to="/services/veluno-growth" className="text-xs font-bold text-[#2563EB] hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase">
-                <span>Explore Optimization</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+              <Link 
+                to="/services/custom-software-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Card 7: CRM & ERP Solutions */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Building2 className="w-6 h-6 stroke-[2]" />
+                </div>
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  CRM & ERP Solutions
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Unified enterprise operational systems connecting sales pipelines, warehouse inventory, order dispatches, and invoicing.
+                </p>
+              </div>
+              <Link 
+                to="/services/crm-erp-development" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Card 8: AI & Business Automation */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#14B8A6] hover:shadow-md hover:-translate-y-1 group">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4 group-hover:bg-[#14B8A6] group-hover:text-[#0B1F3A] transition-colors">
+                  <Sparkles className="w-6 h-6 stroke-[2]" />
+                </div>
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  AI & Business Automation
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Sub-second conversational voice AI agents, automated telephony assistants, intelligent document processing, and workflows.
+                </p>
+              </div>
+              <Link 
+                to="/services/ai-automation" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
           </div>
 
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 3: CURATED CASE STUDIES (EXECUTIVE DARK SECTION)
-          ========================================================================= */}
-      <section className="py-16 md:py-24 bg-[#0B1F3A] text-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-slate-800 pb-6">
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
-                Delivered Engineering
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white">
-                Featured Case Studies
-              </h2>
-            </div>
+          <div className="mt-12 text-center">
             <Link 
-              to="/work" 
-              className="mt-4 md:mt-0 text-xs font-bold text-[#14B8A6] uppercase tracking-wider hover:underline inline-flex items-center gap-1.5 font-mono"
+              to="/services" 
+              className="btn-primary px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-xs"
             >
-              <span>View All 7 Portfolio Works</span>
+              <span>View All Solutions & Technical Deliverables</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 3: WHY CHOOSE VELUNO SOFTTECH? (AUTHENTIC VALUE PROPOSITIONS)
+          ========================================================================= */}
+      <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-slate-200">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
+              Our Principles
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight mb-4">
+              Why Choose Veluno Softtech?
+            </h2>
+            <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+              We stand apart through client-focused execution, modern architecture, transparent delivery, and permanent code ownership.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Case 1: Zylin Voice AI */}
-            <div className="rounded-xl bg-[#111827] border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-[#14B8A6] hover:shadow-lg transition-all duration-300">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200" 
-                    alt="Zylin Voice AI" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-3 left-3 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] shadow-xs">
-                    Conversational Voice AI
-                  </span>
-                </div>
-                <div className="p-6">
-                  <span className="text-[11px] font-mono font-bold text-[#14B8A6] block mb-1">Zylin Voice AI</span>
-                  <h3 className="text-xl font-heading font-extrabold text-white mb-2.5">Sub-Second Conversational Voice AI</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed font-light mb-4">
-                    AI-powered multilingual voice agents engineered by Veluno for automated customer support, lead qualification, and appointment booking.
-                  </p>
-                  <div className="text-xs font-mono text-[#14B8A6] font-bold p-3 rounded-lg bg-black/50 border border-slate-800">
-                    &lt; 600ms latency · 94% booking accuracy
-                  </div>
-                </div>
+            {/* 1. Client-Focused Development */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4">
+                <Users className="w-5 h-5" />
               </div>
-              <div className="p-6 pt-0">
-                <Link to="/work/zylinn-ai" className="btn-teal w-full text-center py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs">
-                  <span>View Case Study</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Client-Focused Development</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                We work as your dedicated technical partner, scoping solutions around your real business goals rather than over-engineering unnecessary complexity.
+              </p>
             </div>
 
-            {/* Case 2: LinkSynk Pro */}
-            <div className="rounded-xl bg-[#111827] border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-[#14B8A6] hover:shadow-lg transition-all duration-300">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" 
-                    alt="LinkSynk Pro" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-3 left-3 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] shadow-xs">
-                    Creator SaaS Platform
-                  </span>
-                </div>
-                <div className="p-6">
-                  <span className="text-[11px] font-mono font-bold text-[#14B8A6] block mb-1">LinkSynk Pro</span>
-                  <h3 className="text-xl font-heading font-extrabold text-white mb-2.5">High-Speed Bio-Link Platform</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed font-light mb-4">
-                    Ultra-fast bio-link infrastructure for creators and modern brands, featuring sub-100ms load speeds, multi-currency tipping, and custom routing.
-                  </p>
-                  <div className="text-xs font-mono text-[#14B8A6] font-bold p-3 rounded-lg bg-black/50 border border-slate-800">
-                    &lt; 100ms edge load · 99.98% availability
-                  </div>
-                </div>
+            {/* 2. Modern Technologies */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#2563EB] flex items-center justify-center mb-4">
+                <Cpu className="w-5 h-5" />
               </div>
-              <div className="p-6 pt-0">
-                <Link to="/work/linksync" className="btn-teal w-full text-center py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs">
-                  <span>View Case Study</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Modern Technologies</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                We build with modern frameworks (React 19, TypeScript, Next.js, Node.js, Python, PostgreSQL) ensuring high velocity, clean maintainability, and longevity.
+              </p>
             </div>
 
-            {/* Case 3: CAVVE Luxury Atelier */}
-            <div className="rounded-xl bg-[#111827] border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-[#14B8A6] hover:shadow-lg transition-all duration-300">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1200" 
-                    alt="CAVVE Luxury Atelier" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-3 left-3 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] shadow-xs">
-                    High-Fashion Storefront
-                  </span>
-                </div>
-                <div className="p-6">
-                  <span className="text-[11px] font-mono font-bold text-[#14B8A6] block mb-1">CAVVE Luxury Atelier</span>
-                  <h3 className="text-xl font-heading font-extrabold text-white mb-2.5">Editorial E-Commerce Experience</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed font-light mb-4">
-                    A premium fashion e-commerce platform engineered with editorial aesthetics, collection lookbooks, and high-performance catalog browsing.
-                  </p>
-                  <div className="text-xs font-mono text-[#14B8A6] font-bold p-3 rounded-lg bg-black/50 border border-slate-800">
-                    Sub-second transitions · Mobile-first UX
-                  </div>
-                </div>
+            {/* 3. Scalable Solutions */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4">
+                <Server className="w-5 h-5" />
               </div>
-              <div className="p-6 pt-0">
-                <Link to="/work/cavve" className="btn-teal w-full text-center py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs">
-                  <span>View Case Study</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Scalable Solutions</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                Every application is architected to scale seamlessly from your first 100 users to high-concurrency enterprise workloads with sub-100ms response times.
+              </p>
+            </div>
+
+            {/* 4. Transparent Communication */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#2563EB] flex items-center justify-center mb-4">
+                <MessageSquare className="w-5 h-5" />
               </div>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Transparent Communication</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                Direct Slack/Teams access, weekly sprint demo walkthroughs, and clear milestone tracking so you always know exactly what is built and what comes next.
+              </p>
+            </div>
+
+            {/* 5. Quality-Driven Delivery */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#14B8A6] flex items-center justify-center mb-4">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Quality-Driven Delivery</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                Rigorous automated testing, static code analysis, and staging validation before every release to guarantee stable, bug-free production rollouts.
+              </p>
+            </div>
+
+            {/* 6. Ongoing Support & Code Ownership */}
+            <div className="p-7 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div className="w-10 h-10 rounded-lg bg-[#0B1F3A] text-[#2563EB] flex items-center justify-center mb-4">
+                <Lock className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">Ongoing Support & Ownership</h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-light">
+                100% source code ownership upon milestone completion, backed by proactive post-launch maintenance, monitoring, and continuous iteration.
+              </p>
             </div>
 
           </div>
@@ -462,91 +447,197 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
-          ENTERPRISE INDUSTRY VERTICALS (MNC DOMAIN EXPERTISE)
+          SECTION 4: FEATURED PROJECTS (3–5 GENUINE PORTFOLIO WORKS)
           ========================================================================= */}
-      <section className="py-16 md:py-24 bg-white border-b border-slate-100">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
-              Industry Verticals
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight mb-4">
-              Specialized Domain Engineering for Critical Industries
-            </h2>
-            <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-              We engineer mission-critical systems complying with regional regulatory standards and high-volume transaction patterns.
-            </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-2">
+                Demonstrated Engineering
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight">
+                Featured Projects
+              </h2>
+            </div>
+            <Link 
+              to="/work" 
+              className="mt-4 md:mt-0 btn-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5"
+            >
+              <span>Explore All Projects (7)</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Industry 1: FinTech */}
-            <div className="p-6 rounded-xl bg-[#F5F7FA] border border-slate-200/90 flex flex-col justify-between hover:border-[#2563EB] transition-colors">
+            {/* Project 1: Zylin Voice AI */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
               <div>
-                <CreditCard className="w-7 h-7 text-[#2563EB] mb-4" />
-                <h4 className="font-heading font-extrabold text-base text-[#0B1F3A] mb-2">
-                  FinTech & Banking
-                </h4>
-                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4">
-                  GST-compliant invoicing engines, relational ledger accounting, automated multi-currency settlements, and payment gateway webhooks.
-                </p>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800" 
+                    alt="Zylin Voice AI" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
+                    Voice AI
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    Telephony Automation
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    Zylin Voice AI
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Sub-second speech-to-speech voice pipeline engineered for automated appointments and multilingual CRM handoffs.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['Python', 'WebRTC', 'OpenAI', 'FastAPI'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <Link to="/work/xenbill" className="text-xs font-mono font-bold text-[#2563EB] hover:underline inline-flex items-center gap-1">
-                <span>View BillSync Pro</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="p-5 pt-0">
+                <Link 
+                  to="/work/zylinn-ai" 
+                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                >
+                  View Project →
+                </Link>
+              </div>
             </div>
 
-            {/* Industry 2: Logistics */}
-            <div className="p-6 rounded-xl bg-[#F5F7FA] border border-slate-200/90 flex flex-col justify-between hover:border-[#14B8A6] transition-colors">
+            {/* Project 2: LinkSynk Pro */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
               <div>
-                <Truck className="w-7 h-7 text-[#14B8A6] mb-4" />
-                <h4 className="font-heading font-extrabold text-base text-[#0B1F3A] mb-2">
-                  Logistics & Telematics
-                </h4>
-                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4">
-                  Real-time GPS vehicle tracking, automated dispatch decision trees, auditable milestone history, and multi-node fleet routing.
-                </p>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" 
+                    alt="LinkSynk Pro" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
+                    SaaS Platform
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    Creator Infrastructure
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    LinkSynk Pro
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    High-speed bio link platform with sub-second page loads, integrated QR codes, and custom analytics.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['React', 'TypeScript', 'Tailwind', 'Vercel'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <Link to="/work/fleet-tracking-platform" className="text-xs font-mono font-bold text-[#14B8A6] hover:underline inline-flex items-center gap-1">
-                <span>View VeloFleet</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="p-5 pt-0">
+                <Link 
+                  to="/work/linksync" 
+                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                >
+                  View Project →
+                </Link>
+              </div>
             </div>
 
-            {/* Industry 3: Retail & E-Commerce */}
-            <div className="p-6 rounded-xl bg-[#F5F7FA] border border-slate-200/90 flex flex-col justify-between hover:border-[#2563EB] transition-colors">
+            {/* Project 3: CAVVE Luxury Atelier */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
               <div>
-                <ShoppingBag className="w-7 h-7 text-[#2563EB] mb-4" />
-                <h4 className="font-heading font-extrabold text-base text-[#0B1F3A] mb-2">
-                  Retail & Connected Commerce
-                </h4>
-                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4">
-                  Headless storefront architectures, real-time warehouse stock synchronization, atomic reservation locks, and sub-second checkout.
-                </p>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" 
+                    alt="CAVVE Luxury Atelier" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
+                    E-Commerce
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    Luxury Retail
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    CAVVE Luxury Atelier
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Minimalist luxury fashion storefront with fluid micro-interactions, custom cart, and headless Stripe checkout.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['Next.js', 'React', 'Stripe', 'Tailwind'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <Link to="/work/commerce-platform-concept" className="text-xs font-mono font-bold text-[#2563EB] hover:underline inline-flex items-center gap-1">
-                <span>View OmniSync</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="p-5 pt-0">
+                <Link 
+                  to="/work/cavve" 
+                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                >
+                  View Project →
+                </Link>
+              </div>
             </div>
 
-            {/* Industry 4: AI & Conversational Automation */}
-            <div className="p-6 rounded-xl bg-[#F5F7FA] border border-slate-200/90 flex flex-col justify-between hover:border-[#14B8A6] transition-colors">
+            {/* Project 4: VeloFleet Telematics */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
               <div>
-                <PhoneCall className="w-7 h-7 text-[#14B8A6] mb-4" />
-                <h4 className="font-heading font-extrabold text-base text-[#0B1F3A] mb-2">
-                  Voice AI & Media
-                </h4>
-                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4">
-                  Sub-600ms WebRTC voice processing, regional trilingual LLMs, automated CRM calendar appointments, and WhatsApp dispatch.
-                </p>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" 
+                    alt="VeloFleet Telematics" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
+                    Enterprise IoT
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    Logistics & Fleets
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    VeloFleet Telematics
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Real-time fleet tracking dashboard monitoring 1,500+ commercial vehicles with live GPS ingestion and geofence alerts.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['Node.js', 'PostgreSQL', 'Redis', 'WebSockets'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <Link to="/work/zylinn-ai" className="text-xs font-mono font-bold text-[#14B8A6] hover:underline inline-flex items-center gap-1">
-                <span>View Zylin Voice AI</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="p-5 pt-0">
+                <Link 
+                  to="/work/fleet-tracking-platform" 
+                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                >
+                  View Project →
+                </Link>
+              </div>
             </div>
 
           </div>
@@ -555,208 +646,168 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
-          SECTION 4: ENGAGEMENT FRAMEWORKS (ENTERPRISE DELIVERY MODELS)
+          SECTION 5: 5-STEP DEVELOPMENT PROCESS (EXACT PROMPT SPECIFICATION)
           ========================================================================= */}
-      <section className="py-16 md:py-24 bg-[#F5F7FA] border-t border-slate-200">
+      <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-slate-200">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           
-          {/* Centered Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
-              Engagement Frameworks
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-2">
+              Our Methodology
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight mb-4">
-              Engineering Partnerships Built for Velocity, Security, and Scale
+              Our 5-Step Development Process
             </h2>
             <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-              We operate as your dedicated technical arm — offering predictable milestone delivery, embedded senior developer pods, and enterprise systems modernization.
+              A structured, transparent engineering lifecycle designed to eliminate guesswork and deliver verified results.
             </p>
           </div>
 
-          {/* 3 High-Impact Engagement Models */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
             
-            {/* Model 1: Dedicated Engineering Pods */}
-            <div className="rounded-xl bg-[#0B1F3A] text-white p-7 md:p-8 shadow-md flex flex-col justify-between border border-slate-800 transition-transform hover:-translate-y-1">
+            {/* Step 1: Discovery & Consultation */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] inline-block mb-4">
-                  Most Popular For Scale
-                </span>
-                <h3 className="text-2xl font-heading font-extrabold text-white mb-2">
-                  Dedicated Pods
-                </h3>
-                <p className="text-xs text-slate-300 leading-relaxed font-light mb-6">
-                  Autonomous engineering pods (Staff Architect, Senior Full-Stack Engineers, QA & DevOps) integrated directly into your sprint backlog.
+                <span className="text-xs font-mono font-bold text-[#14B8A6] block mb-3">STEP 01</span>
+                <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2">Discovery & Consultation</h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed">
+                  We analyze your core business objectives, user requirements, technical constraints, and competitive landscape.
                 </p>
-
-                <ul className="space-y-3 text-xs text-slate-300 mb-8 border-t border-slate-800 pt-5">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#14B8A6] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>2-week agile sprint delivery cadence</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#14B8A6] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Direct Slack/Discord & GitHub PR access</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#14B8A6] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Daily asynchronous standups & Linear sync</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#14B8A6] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Scale capacity up or down with 30-day flexibility</span>
-                  </li>
-                </ul>
               </div>
-
-              <Link 
-                to="/contact" 
-                className="btn-teal w-full text-center py-3 rounded-lg font-bold text-xs uppercase tracking-wider block shadow-xs"
-              >
-                Inquire For Dedicated Pod
-              </Link>
             </div>
 
-            {/* Model 2: Milestone-Based Architecture */}
-            <div className="rounded-xl bg-white border border-slate-200 text-[#0B1F3A] p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1">
+            {/* Step 2: Planning & UI/UX Design */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 inline-block mb-4">
-                  Predictable Scope & Timeline
-                </span>
-                <h3 className="text-2xl font-heading font-extrabold text-[#0B1F3A] mb-2">
-                  Fixed Milestones
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-6">
-                  Complete end-to-end execution of a scoped application, AI voice agent, or headless storefront with contractual deliverables and milestone billing.
+                <span className="text-xs font-mono font-bold text-[#2563EB] block mb-3">STEP 02</span>
+                <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2">Planning & UI/UX Design</h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed">
+                  We architect data schemas, craft interactive Figma prototypes, and establish responsive component design systems.
                 </p>
-
-                <ul className="space-y-3 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-5">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Locked architectural specs & schema validation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Payment tied to staging acceptance milestones</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>100% intellectual property & code ownership</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>30-day post-launch warranty & handover support</span>
-                  </li>
-                </ul>
               </div>
-
-              <Link 
-                to="/contact" 
-                className="btn-primary w-full text-center py-3 rounded-lg font-bold text-xs uppercase tracking-wider block shadow-xs"
-              >
-                Request Fixed-Scope Scoping
-              </Link>
             </div>
 
-            {/* Model 3: Architecture Audit & Modernization */}
-            <div className="rounded-xl bg-white border border-slate-200 text-[#0B1F3A] p-7 md:p-8 shadow-xs flex flex-col justify-between transition-transform hover:-translate-y-1">
+            {/* Step 3: Development */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
               <div>
-                <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 inline-block mb-4">
-                  Performance & Reliability
-                </span>
-                <h3 className="text-2xl font-heading font-extrabold text-[#0B1F3A] mb-2">
-                  Systems Audit
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-light mb-6">
-                  High-intensity 2-week technical assessment to unblock database concurrency bottlenecks, reduce runaway cloud costs, and harden security.
+                <span className="text-xs font-mono font-bold text-[#14B8A6] block mb-3">STEP 03</span>
+                <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2">Development</h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed">
+                  Our engineers build modular, type-safe frontends and robust backends in bi-weekly agile development sprints.
                 </p>
-
-                <ul className="space-y-3 text-xs text-slate-600 mb-8 border-t border-slate-100 pt-5">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Deep-dive database, query & latency analysis</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Cloud architecture & security vulnerability scan</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Actionable refactoring & cost reduction roadmap</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-[#2563EB] mr-2.5 flex-shrink-0 mt-0.5" />
-                    <span>Hands-on execution of critical path bottlenecks</span>
-                  </li>
-                </ul>
-              </div>
-
-              <Link 
-                to="/engineering" 
-                className="btn-primary w-full text-center py-3 rounded-lg font-bold text-xs uppercase tracking-wider block shadow-xs"
-              >
-                Explore Architecture Audit
-              </Link>
-            </div>
-
-          </div>
-
-          {/* Client Acquisition Guarantees Bar */}
-          <div className="mt-12 rounded-xl bg-white border border-slate-200 p-6 md:p-8 shadow-xs">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
-              <div>
-                <div className="font-mono text-xs font-bold text-[#14B8A6] uppercase mb-1">01 / Ownership</div>
-                <div className="font-heading font-bold text-sm text-[#0B1F3A]">100% IP Transfer</div>
-                <p className="text-xs text-slate-500 font-light mt-0.5">Your repo, your cloud, zero vendor lock-in.</p>
-              </div>
-              <div>
-                <div className="font-mono text-xs font-bold text-[#14B8A6] uppercase mb-1">02 / Direct Access</div>
-                <div className="font-heading font-bold text-sm text-[#0B1F3A]">Staff Architects</div>
-                <p className="text-xs text-slate-500 font-light mt-0.5">Speak directly with technical leads, not salespeople.</p>
-              </div>
-              <div>
-                <div className="font-mono text-xs font-bold text-[#14B8A6] uppercase mb-1">03 / Speed & Scale</div>
-                <div className="font-heading font-bold text-sm text-[#0B1F3A]">Sub-100ms Latency</div>
-                <p className="text-xs text-slate-500 font-light mt-0.5">High-concurrency systems built for real scale.</p>
-              </div>
-              <div>
-                <div className="font-mono text-xs font-bold text-[#14B8A6] uppercase mb-1">04 / Security</div>
-                <div className="font-heading font-bold text-sm text-[#0B1F3A]">Zero-Trust Standard</div>
-                <p className="text-xs text-slate-500 font-light mt-0.5">SOC2 & ISO-aligned controls, RBAC, and audit logs.</p>
               </div>
             </div>
+
+            {/* Step 4: Testing & QA */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono font-bold text-[#2563EB] block mb-3">STEP 04</span>
+                <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2">Testing & Quality Assurance</h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed">
+                  Comprehensive functional testing, security scans, cross-browser audits, and load simulations on staging.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5: Launch & Support */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-mono font-bold text-[#14B8A6] block mb-3">STEP 05</span>
+                <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2">Launch & Ongoing Support</h3>
+                <p className="text-xs text-slate-600 font-light leading-relaxed">
+                  Smooth production cutover, DNS routing, full IP transfer, and dedicated ongoing maintenance and SLA monitoring.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 5: CLOSING BANNER
+          SECTION 6: BUILT AROUND YOUR BUSINESS GOALS (AUTHENTIC CLIENT COMMITMENT)
           ========================================================================= */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="rounded-xl bg-[#0B1F3A] text-white p-8 md:p-14 text-center relative overflow-hidden shadow-sm border border-slate-800">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white mb-3 tracking-tight">
-              Ready to move your business forward?
+          
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-2">
+              Client Trust & Standards
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight mb-4">
+              Built Around Your Business Goals
             </h2>
-            <p className="text-sm md:text-base text-slate-300 max-w-xl mx-auto mb-8 font-light">
-              Schedule a technical discovery call with our solutions architects to scope your upcoming project, review your stack, or build an MVP.
+            <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+              We replace guesswork and fabricated testimonials with contractual guarantees: transparent sprints, zero vendor lock-in, and full intellectual property ownership.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3.5 justify-center">
-              <Link 
-                to="/contact" 
-                className="btn-teal px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-sm"
-              >
-                Schedule Technical Discovery
-              </Link>
-              <Link 
-                to="/engineering" 
-                className="px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/10 text-white hover:bg-white/20 transition-colors"
-              >
-                View System Architecture
-              </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-xl bg-[#0B1F3A] text-white border border-slate-800">
+              <span className="text-xs font-mono font-bold text-[#14B8A6] uppercase tracking-wider block mb-2">Commitment 01</span>
+              <h3 className="text-xl font-heading font-bold text-white mb-3">100% Code Ownership</h3>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                You receive full repository transfer, deployment credentials, and complete intellectual property rights from the moment code is written. No proprietary lock-in.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-[#0B1F3A] text-white border border-slate-800">
+              <span className="text-xs font-mono font-bold text-[#14B8A6] uppercase tracking-wider block mb-2">Commitment 02</span>
+              <h3 className="text-xl font-heading font-bold text-white mb-3">Direct Technical Communication</h3>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                Work directly with senior developers and solutions architects who write your code—not account managers or commissioned salespeople.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-xl bg-[#0B1F3A] text-white border border-slate-800">
+              <span className="text-xs font-mono font-bold text-[#14B8A6] uppercase tracking-wider block mb-2">Commitment 03</span>
+              <h3 className="text-xl font-heading font-bold text-white mb-3">Milestone-Driven Delivery</h3>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                Every project stage has verifiable acceptance criteria. You review and test functioning software on staging before approving any milestone release.
+              </p>
             </div>
           </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 7: FINAL CTA (EXACT PROMPT SPECIFICATION)
+          ========================================================================= */}
+      <section className="py-16 md:py-24 bg-[#0B1F3A] text-white border-t border-slate-800">
+        <div className="container mx-auto px-4 md:px-8 max-w-5xl text-center">
+          
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#14B8A6] block mb-3">
+            Ready to Begin?
+          </span>
+
+          {/* Exact Master Headline */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white mb-4 tracking-tight">
+            Have an Idea? Let's Build Something Great.
+          </h2>
+
+          {/* Exact Master Supporting Text */}
+          <p className="text-sm md:text-base text-slate-300 max-w-xl mx-auto mb-8 font-light leading-relaxed">
+            Tell us about your project. Our team will help you find the right digital solution.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+            {/* Exact Master Button Label */}
+            <Link 
+              to="/contact" 
+              className="btn-teal px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider shadow-sm w-full sm:w-auto hover:scale-102 transition-transform"
+            >
+              Get a Free Consultation
+            </Link>
+            <Link 
+              to="/services" 
+              className="px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/10 text-white hover:bg-white/20 transition-colors w-full sm:w-auto"
+            >
+              Explore Solutions
+            </Link>
+          </div>
+
         </div>
       </section>
     </>
