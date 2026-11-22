@@ -482,16 +482,16 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Project 1: Zylin Voice AI */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
+            {/* Project 1: Zylo Voice */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
               <div>
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800" 
-                    alt="Zylin Voice AI" 
+                    alt="Zylo Voice" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
                     Voice AI
                   </span>
                 </div>
@@ -500,10 +500,10 @@ const Home = () => {
                     Telephony Automation
                   </span>
                   <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    Zylin Voice AI
+                    Zylo Voice
                   </h3>
                   <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    Sub-second speech-to-speech voice pipeline engineered for automated appointments and multilingual CRM handoffs.
+                    Sub-second speech-to-speech voice pipeline engineered for automated appointments, lead qualification, and multilingual CRM handoffs.
                   </p>
                   <div className="flex flex-wrap gap-1 mb-2">
                     {['Python', 'WebRTC', 'OpenAI', 'FastAPI'].map(t => (
@@ -524,31 +524,31 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Project 2: LinkSynk Pro */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
+            {/* Project 2: Staffly */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
               <div>
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" 
-                    alt="LinkSynk Pro" 
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" 
+                    alt="Staffly" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
-                    SaaS Platform
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
+                    Agile HRMS
                   </span>
                 </div>
                 <div className="p-5">
                   <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
-                    Creator Infrastructure
+                    Resource Management
                   </span>
                   <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    LinkSynk Pro
+                    Staffly
                   </h3>
                   <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    High-speed bio link platform with sub-second page loads, integrated QR codes, and custom analytics.
+                    Centralized employee directory, sprint capacity tracking, and multi-stage leave approvals built for agile engineering squads.
                   </p>
                   <div className="flex flex-wrap gap-1 mb-2">
-                    {['React', 'TypeScript', 'Tailwind', 'Vercel'].map(t => (
+                    {['React', 'TypeScript', 'Node.js', 'PostgreSQL'].map(t => (
                       <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
                         {t}
                       </span>
@@ -558,7 +558,7 @@ const Home = () => {
               </div>
               <div className="p-5 pt-0">
                 <Link 
-                  to="/work/linksync" 
+                  to="/work/xenstaff" 
                   className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
                 >
                   View Project →
@@ -566,31 +566,31 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Project 3: CAVVE Luxury Atelier */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
+            {/* Project 3: Paylane */}
+            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
               <div>
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800" 
-                    alt="CAVVE Luxury Atelier" 
+                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800" 
+                    alt="Paylane" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
-                    E-Commerce
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
+                    Financial SaaS
                   </span>
                 </div>
                 <div className="p-5">
                   <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
-                    Luxury Retail
+                    Commercial Accounting
                   </span>
                   <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    CAVVE Luxury Atelier
+                    Paylane
                   </h3>
                   <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    Minimalist luxury fashion storefront with fluid micro-interactions, custom cart, and headless Stripe checkout.
+                    Automated GST invoicing, real-time inventory ledger synchronization, and supplier balances built for growing commercial businesses.
                   </p>
                   <div className="flex flex-wrap gap-1 mb-2">
-                    {['Next.js', 'React', 'Stripe', 'Tailwind'].map(t => (
+                    {['React', 'TypeScript', 'PostgreSQL', 'Tailwind'].map(t => (
                       <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
                         {t}
                       </span>
@@ -600,7 +600,7 @@ const Home = () => {
               </div>
               <div className="p-5 pt-0">
                 <Link 
-                  to="/work/cavve" 
+                  to="/work/xenbill" 
                   className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
                 >
                   View Project →

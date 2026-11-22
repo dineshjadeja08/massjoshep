@@ -34,11 +34,13 @@ const SERVICES = [
 ];
 
 const BUDGET_RANGES = [
-  'Under $5,000',
-  '$5,000 – $15,000',
-  '$15,000 – $30,000',
-  '$30,000+',
-  'Flexible / To be determined'
+  'Under ₹50,000',
+  '₹50,000 – ₹1,50,000',
+  '₹1,50,000 – ₹3,00,000',
+  '₹3,00,000 – ₹5,00,000',
+  '₹5,00,000 – ₹10,00,000',
+  '₹10,00,000+',
+  'Flexible / To be discussed'
 ];
 
 const Contact = () => {
@@ -72,18 +74,42 @@ const Contact = () => {
     setErrorMessage(null);
 
     try {
-      // In production with EmailJS configured or API backend
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const response = await fetch('https://formspree.io/f/moedngpg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company || 'N/A',
+          service: data.service,
+          budget: data.budget,
+          preferredMethod: data.preferredMethod,
+          message: data.message,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData?.error || 'Unable to submit enquiry. Please try again.');
+      }
+
       setIsSuccess(true);
       if (typeof window !== 'undefined' && (window as any).fbq) {
         (window as any).fbq('track', 'Lead', {
           content_name: data.service,
           value: data.budget,
+          currency: 'INR',
         });
       }
       reset();
     } catch (err: any) {
-      setErrorMessage('Unable to dispatch enquiry automatically. Please email contact@velunosofttech.com or message us on WhatsApp.');
+      setErrorMessage(
+        err.message || 'Unable to dispatch enquiry automatically. Please email contact@velunosofttech.com or message us on WhatsApp.'
+      );
     } finally {
       setIsSubmitting(false);
     }

@@ -28,13 +28,13 @@ export const caseStudySchema = z.object({
 export type CaseStudy = z.infer<typeof caseStudySchema>;
 
 export const caseStudies: CaseStudy[] = [
-  // 1. ZYLIN VOICE AI
+  // 1. ZYLO VOICE
   {
     slug: 'zylinn-ai',
     category: 'product',
     categoryLabel: 'Voice AI',
     status: 'Live Beta',
-    clientName: 'Zylin Voice AI',
+    clientName: 'Zylo Voice',
     industry: 'Multilingual Voice Intelligence & Telephony Automation',
     services: [
       'Conversational AI Voice Architecture',
@@ -45,9 +45,9 @@ export const caseStudies: CaseStudy[] = [
     region: 'Global / Multilingual',
     heroImage: '/zylin-voice-ai.svg',
     summary: 'AI-powered multilingual voice agents engineered by Veluno for automated customer support, lead qualification, appointment booking, and enterprise workflow automation.',
-    challenge: 'Businesses lose high-intent customer leads and face surging support costs when constrained by standard office hours and manual call agents. Traditional IVR telephone trees frustrate users with rigid numbered menus. Zylin Voice AI delivers natural, human-speed conversational agents fluent in regional accents and business logic.',
-    velunoRole: 'Veluno is the architect and core engineering partner for Zylin Voice AI, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
-    xenFirmRole: 'Veluno is the architect and core engineering partner for Zylin Voice AI, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
+    challenge: 'Businesses lose high-intent customer leads and face surging support costs when constrained by standard office hours and manual call agents. Traditional IVR telephone trees frustrate users with rigid numbered menus. Zylo Voice delivers natural, human-speed conversational agents fluent in regional accents and business logic.',
+    velunoRole: 'Veluno is the architect and core engineering partner for Zylo Voice, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
+    xenFirmRole: 'Veluno is the architect and core engineering partner for Zylo Voice, developing real-time sub-second audio pipelines, multilingual natural language understanding, automated CRM webhooks, and executive telemetry dashboards.',
     approach: [
       {
         title: 'Sub-Second Voice Processing Engine',
@@ -273,13 +273,13 @@ export const caseStudies: CaseStudy[] = [
     relatedCaseStudies: ['commerce-platform-concept', 'xenstaff', 'xenbill']
   },
 
-  // 5. BILLSYNC PRO
+  // 5. PAYLANE
   {
     slug: 'xenbill',
     category: 'product',
     categoryLabel: 'Financial & ERP Software',
     status: 'Beta / Active Validation',
-    clientName: 'BillSync Pro',
+    clientName: 'Paylane',
     industry: 'GST Invoicing, Inventory & Commercial Accounting',
     services: [
       'Financial Software Architecture',
@@ -290,9 +290,9 @@ export const caseStudies: CaseStudy[] = [
     region: 'India & Global MSMEs',
     heroImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200',
     summary: 'A simple and powerful billing and inventory management solution engineered by Veluno for small and medium businesses to manage GST invoicing, stock levels, and sales analytics.',
-    challenge: 'Small businesses often outgrow manual spreadsheets but cannot justify the steep learning curves and high monthly costs of enterprise ERP platforms. BillSync Pro provides structured, predictable invoicing and stock control without administrative complexity.',
-    velunoRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine.',
-    xenFirmRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine.',
+    challenge: 'Small businesses often outgrow manual spreadsheets but cannot justify the steep learning curves and high monthly costs of enterprise ERP platforms. Paylane provides structured, predictable invoicing and stock control without administrative complexity.',
+    velunoRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine for Paylane.',
+    xenFirmRole: 'In-house product development. Veluno architects the data schema, designs the UI/UX dashboard, and builds the invoice generation, inventory tracking, and calculation engine for Paylane.',
     approach: [
       {
         title: 'GST-Compliant Invoicing Engine',
@@ -335,13 +335,13 @@ export const caseStudies: CaseStudy[] = [
     relatedCaseStudies: ['xenstaff', 'linksync', 'commerce-platform-concept']
   },
 
-  // 6. STAFFPULSE HRMS
+  // 6. STAFFLY
   {
     slug: 'xenstaff',
     category: 'product',
     categoryLabel: 'Agile Resource Management',
     status: 'In Active Engineering',
-    clientName: 'StaffPulse HRMS',
+    clientName: 'Staffly',
     industry: 'Agile Technical Pod Capacity & Team Management OS',
     services: [
       'Team Management Software',
@@ -352,9 +352,9 @@ export const caseStudies: CaseStudy[] = [
     region: 'Internal / Multi-Market',
     heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200',
     summary: 'A modular HRMS and agile team management platform engineered to streamline employee directories, leave requests, attendance tracking, and internal technical pod capacity.',
-    challenge: 'Early-stage and growing companies often coordinate leave, attendance, and team directories across informal chat apps and spreadsheets, leading to scheduling conflicts and lost records. Veluno is engineering StaffPulse HRMS to provide a centralized internal console.',
-    velunoRole: 'Veluno is designing and building StaffPulse HRMS as a proprietary internal tool and upcoming SaaS platform for agile teams.',
-    xenFirmRole: 'Veluno is designing and building StaffPulse HRMS as a proprietary internal tool and upcoming SaaS platform for agile teams.',
+    challenge: 'Early-stage and growing companies often coordinate leave, attendance, and team directories across informal chat apps and spreadsheets, leading to scheduling conflicts and lost records. Veluno is engineering Staffly to provide a centralized internal console.',
+    velunoRole: 'Veluno is designing and building Staffly as a proprietary internal tool and upcoming SaaS platform for agile teams.',
+    xenFirmRole: 'Veluno is designing and building Staffly as a proprietary internal tool and upcoming SaaS platform for agile teams.',
     approach: [
       {
         title: 'Role-Based Permission Matrix',
