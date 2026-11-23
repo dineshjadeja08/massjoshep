@@ -150,7 +150,7 @@ const Contact = () => {
 
               {isSuccess ? (
                 <div className="bg-emerald-50 border border-emerald-200 p-8 rounded-xl text-center animate-fadeIn">
-                  <div className="w-14 h-14 rounded-full bg-[#0B1F3A] text-emerald-400 flex items-center justify-center mx-auto mb-4 font-bold text-2xl shadow-sm">
+                  <div className="w-14 h-14 rounded-sm bg-[#0B1F3A] text-emerald-400 flex items-center justify-center mx-auto mb-4 font-bold text-2xl shadow-sm">
                     <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                   </div>
                   <h3 className="text-xl font-heading font-bold text-[#0B1F3A] mb-2">Enquiry Received</h3>

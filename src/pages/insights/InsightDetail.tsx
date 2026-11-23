@@ -52,7 +52,7 @@ const InsightDetail = () => {
         
         <div className="mb-12 border-b border-gray-200 pb-8">
           <div className="flex items-center space-x-4 mb-6 text-sm text-gray-500">
-            <span className="font-semibold text-accent-700 bg-accent-100 px-3 py-1 rounded-full uppercase tracking-wider">{post.category}</span>
+            <span className="font-semibold text-accent-700 bg-accent-100 px-3 py-1 rounded-xs uppercase tracking-wider">{post.category}</span>
             <span>{post.date}</span>
             <span>{post.readTime}</span>
           </div>

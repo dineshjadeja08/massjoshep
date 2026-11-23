@@ -73,7 +73,7 @@ const Home = () => {
             <div className="relative z-10 max-w-4xl mx-auto">
               
               {/* Supporting Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xs bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
                 <span className="w-2 h-2 rounded-full bg-[#14B8A6] animate-pulse"></span>
                 <span>Let's turn your next big idea into reality</span>
               </div>

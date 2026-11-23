@@ -91,9 +91,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
             <div className="p-4 text-center">
               <p className="text-sm text-gray-400 font-medium mb-4 uppercase tracking-wider">Algolia Integration Ready</p>
               <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('Web')}>Web Apps</span>
-                <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('Design')}>UX Design</span>
-                <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('UAE')}>UAE Logistics</span>
+                <span className="px-3 py-1 bg-white border border-gray-200 rounded-xs text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('Web')}>Web Apps</span>
+                <span className="px-3 py-1 bg-white border border-gray-200 rounded-xs text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('Design')}>UX Design</span>
+                <span className="px-3 py-1 bg-white border border-gray-200 rounded-xs text-xs font-medium text-gray-600 cursor-pointer hover:border-accent-500" onClick={() => setQuery('UAE')}>UAE Logistics</span>
               </div>
             </div>
           )}

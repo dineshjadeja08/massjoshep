@@ -27,6 +27,16 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Sora', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+
+  /* Sharp Enterprise Precision Radius Scale */
+  --radius-xs: 0px;
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 3px;
+  --radius-3xl: 3px;
+  --radius-4xl: 4px;
 }
 
 @layer base {
@@ -44,7 +54,12 @@
     color: #0B1F3A;
   }
 
-  /* High-Authority Veluno Brand Buttons */
+  /* Sharp Form Elements */
+  input, select, textarea {
+    border-radius: 2px !important;
+  }
+
+  /* High-Authority Veluno Brand Buttons - Sharp Engineered Edges */
   .btn-primary {
     background-color: #0B1F3A;
     color: #FFFFFF;
@@ -52,7 +67,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-radius: 0.5rem; /* rounded-lg */
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
@@ -73,7 +88,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-radius: 0.5rem;
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
@@ -93,7 +108,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-radius: 0.5rem;
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
@@ -114,7 +129,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border: 1px solid #CBD5E1;
-    border-radius: 0.5rem;
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
@@ -134,7 +149,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-radius: 0.5rem;
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
@@ -154,7 +169,7 @@
     font-size: 0.8125rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-radius: 0.5rem;
+    border-radius: 2px;
     padding: 0.75rem 1.75rem;
     display: inline-flex;
     align-items: center;
