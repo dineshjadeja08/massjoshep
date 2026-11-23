@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import EngagementModels from '../../components/ui/EngagementModels';
 import { 
   Globe, 
   Layers, 
@@ -394,6 +395,9 @@ const Services = () => {
 
         </div>
       </section>
+
+      {/* Flexible Engagement Models */}
+      <EngagementModels />
 
       {/* =========================================================================
           SECTION 3: CLOSING CALLOUT

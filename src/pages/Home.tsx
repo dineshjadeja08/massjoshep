@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { EnterpriseLogos } from '../components/ui/EnterpriseLogos';
+import ProjectCostEstimator from '../components/ui/ProjectCostEstimator';
+import EngagementModels from '../components/ui/EngagementModels';
 import { 
   WebsiteDevIcon, 
   WebAppIcon, 
@@ -72,10 +74,12 @@ const Home = () => {
 
             <div className="relative z-10 max-w-4xl mx-auto">
               
-              {/* Supporting Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xs bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
+              {/* Supporting Live Availability Badge */}
+              <div className="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 rounded-xs bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs border border-white/10">
                 <span className="w-2 h-2 rounded-full bg-[#14B8A6] animate-pulse"></span>
-                <span>Let's turn your next big idea into reality</span>
+                <span>Active Engineering Hub · Chennai (IST)</span>
+                <span className="text-white/40">·</span>
+                <span className="text-[#14B8A6]">UK, US & EU Sync Available</span>
               </div>
 
               {/* Exact Master Headline */}
@@ -656,6 +660,11 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
+          SECTION 4.5: ENGAGEMENT MODELS & IP GOVERNANCE
+          ========================================================================= */}
+      <EngagementModels />
+
+      {/* =========================================================================
           SECTION 5: 5-STEP DEVELOPMENT PROCESS (EXACT PROMPT SPECIFICATION)
           ========================================================================= */}
       <section className="py-16 md:py-24 bg-[#F8FAFC] border-t border-b border-slate-200">
@@ -781,6 +790,11 @@ const Home = () => {
 
         </div>
       </section>
+
+      {/* =========================================================================
+          SECTION 6.5: INTERACTIVE PROJECT SCOPE & COST ESTIMATOR
+          ========================================================================= */}
+      <ProjectCostEstimator />
 
       {/* =========================================================================
           SECTION 7: FINAL CTA (EXACT PROMPT SPECIFICATION)

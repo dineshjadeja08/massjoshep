@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useSearchParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -33,7 +34,7 @@ const SERVICES = [
   'Other / Technical Consultation'
 ];
 
-const BUDGET_RANGES = [
+const BUDGET_RANGES_INR = [
   'Under ₹50,000',
   '₹50,000 – ₹1,50,000',
   '₹1,50,000 – ₹3,00,000',
@@ -43,10 +44,24 @@ const BUDGET_RANGES = [
   'Flexible / To be discussed'
 ];
 
+const BUDGET_RANGES_USD = [
+  'Under $2,500',
+  '$2,500 – $7,500',
+  '$7,500 – $15,000',
+  '$15,000 – $30,000',
+  '$30,000+',
+  'Flexible / To be discussed'
+];
+
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const initialCurrency = searchParams.get('currency')?.toUpperCase() === 'USD' ? 'USD' : 'INR';
+  const [currency, setCurrency] = useState<'INR' | 'USD'>(initialCurrency);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const budgetOptions = currency === 'INR' ? BUDGET_RANGES_INR : BUDGET_RANGES_USD;
 
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '919080824626';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -56,17 +71,26 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: { 
-      service: '', 
-      budget: '',
+      service: searchParams.get('service') || '', 
+      budget: searchParams.get('budget') || '',
       preferredMethod: 'Email',
       honeypot: '' 
     }
   });
+
+  // Keep in sync if search params change
+  useEffect(() => {
+    const s = searchParams.get('service');
+    const b = searchParams.get('budget');
+    if (s) setValue('service', s);
+    if (b) setValue('budget', b);
+  }, [searchParams, setValue]);
 
   const onSubmit = async (data: ContactFormValues) => {
     if (data.honeypot) return;
@@ -86,6 +110,7 @@ const Contact = () => {
           phone: data.phone,
           company: data.company || 'N/A',
           service: data.service,
+          currency: currency,
           budget: data.budget,
           preferredMethod: data.preferredMethod,
           message: data.message,
@@ -102,7 +127,7 @@ const Contact = () => {
         (window as any).fbq('track', 'Lead', {
           content_name: data.service,
           value: data.budget,
-          currency: 'INR',
+          currency: currency,
         });
       }
       reset();
@@ -137,7 +162,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             {/* Form Column */}
-            <div className="lg:col-span-7 bg-[#F8F9FA] rounded-xl p-8 md:p-12 border border-gray-200 shadow-xs">
+            <div className="lg:col-span-7 bg-[#F8F9FA] rounded-xs p-8 md:p-12 border border-gray-200 shadow-xs">
               <span className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider block mb-2">
                 Project Intake Form
               </span>
@@ -149,8 +174,8 @@ const Contact = () => {
               </p>
 
               {isSuccess ? (
-                <div className="bg-emerald-50 border border-emerald-200 p-8 rounded-xl text-center animate-fadeIn">
-                  <div className="w-14 h-14 rounded-sm bg-[#0B1F3A] text-emerald-400 flex items-center justify-center mx-auto mb-4 font-bold text-2xl shadow-sm">
+                <div className="bg-emerald-50 border border-emerald-200 p-8 rounded-xs text-center animate-fadeIn">
+                  <div className="w-14 h-14 rounded-xs bg-[#0B1F3A] text-emerald-400 flex items-center justify-center mx-auto mb-4 font-bold text-2xl shadow-sm">
                     <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                   </div>
                   <h3 className="text-xl font-heading font-bold text-[#0B1F3A] mb-2">Enquiry Received</h3>
@@ -159,7 +184,7 @@ const Contact = () => {
                   </p>
                   <button 
                     onClick={() => setIsSuccess(false)}
-                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#2563EB] hover:underline"
+                    className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#2563EB] hover:underline cursor-pointer"
                   >
                     Submit another enquiry
                   </button>
@@ -176,7 +201,7 @@ const Contact = () => {
                       <input 
                         {...register('name')} 
                         placeholder="e.g. Alex Henderson" 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       />
                       {errors.name && <span className="text-xs text-rose-500 mt-1 block font-medium">{errors.name.message}</span>}
                     </div>
@@ -189,7 +214,7 @@ const Contact = () => {
                         {...register('email')} 
                         type="email" 
                         placeholder="alex@company.com" 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       />
                       {errors.email && <span className="text-xs text-rose-500 mt-1 block font-medium">{errors.email.message}</span>}
                     </div>
@@ -204,8 +229,8 @@ const Contact = () => {
                       <input 
                         {...register('phone')} 
                         type="tel" 
-                        placeholder="+1 (555) 000-0000" 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        placeholder="+91 98765 43210 / +1 (555) 000-0000" 
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       />
                       {errors.phone && <span className="text-xs text-rose-500 mt-1 block font-medium">{errors.phone.message}</span>}
                     </div>
@@ -217,12 +242,12 @@ const Contact = () => {
                       <input 
                         {...register('company')} 
                         placeholder="Acme Corporation" 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       />
                     </div>
                   </div>
 
-                  {/* Required Service & Estimated Budget */}
+                  {/* Required Service & Estimated Budget with Currency Switcher */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-[#0B1F3A] uppercase tracking-wide mb-1.5">
@@ -230,7 +255,7 @@ const Contact = () => {
                       </label>
                       <select 
                         {...register('service')} 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       >
                         <option value="">Select a service</option>
                         {SERVICES.map(srv => (
@@ -241,16 +266,39 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#0B1F3A] uppercase tracking-wide mb-1.5">
-                        Estimated Budget <span className="text-rose-500">*</span>
-                      </label>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <label className="block text-xs font-bold text-[#0B1F3A] uppercase tracking-wide">
+                          Estimated Budget <span className="text-rose-500">*</span>
+                        </label>
+                        <div className="inline-flex rounded-xs border border-gray-200 bg-white p-0.5 text-[10px] font-mono">
+                          <button
+                            type="button"
+                            onClick={() => setCurrency('INR')}
+                            className={`px-2 py-0.5 rounded-xs transition-colors cursor-pointer ${
+                              currency === 'INR' ? 'bg-[#0B1F3A] text-white font-bold' : 'text-slate-600 hover:text-[#0B1F3A]'
+                            }`}
+                          >
+                            ₹ INR
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setCurrency('USD')}
+                            className={`px-2 py-0.5 rounded-xs transition-colors cursor-pointer ${
+                              currency === 'USD' ? 'bg-[#0B1F3A] text-white font-bold' : 'text-slate-600 hover:text-[#0B1F3A]'
+                            }`}
+                          >
+                            $ USD
+                          </button>
+                        </div>
+                      </div>
+
                       <select 
                         {...register('budget')} 
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm text-[#0B1F3A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                        className="w-full bg-white border border-gray-300 rounded-xs px-4 py-3 text-sm text-[#0B1F3A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                       >
-                        <option value="">Select budget range</option>
-                        {BUDGET_RANGES.map(rng => (
-                          <option key={rng} value={rng}>{rng}</option>
+                        <option value="">Select budget range ({currency})</option>
+                        {budgetOptions.map(rng => (
+                          <option key={rng} value={`${rng} (${currency})`}>{rng}</option>
                         ))}
                       </select>
                       {errors.budget && <span className="text-xs text-rose-500 mt-1 block font-medium">{errors.budget.message}</span>}
@@ -264,7 +312,7 @@ const Contact = () => {
                     </label>
                     <div className="flex flex-wrap gap-4 text-xs font-medium text-slate-700">
                       {['Email', 'WhatsApp', 'Phone Call'].map((method) => (
-                        <label key={method} className="inline-flex items-center gap-2 cursor-pointer bg-white px-3.5 py-2 rounded-lg border border-gray-200 hover:border-slate-400">
+                        <label key={method} className="inline-flex items-center gap-2 cursor-pointer bg-white px-3.5 py-2 rounded-xs border border-gray-200 hover:border-slate-400">
                           <input
                             type="radio"
                             value={method}
@@ -286,7 +334,7 @@ const Contact = () => {
                       {...register('message')} 
                       rows={4} 
                       placeholder="Outline your project scope, core features, target audience, or desired launch timeline..." 
-                      className="w-full bg-white border border-gray-300 rounded-lg p-4 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
+                      className="w-full bg-white border border-gray-300 rounded-xs p-4 text-sm text-[#0B1F3A] placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors"
                     />
                     {errors.message && <span className="text-xs text-rose-500 mt-1 block font-medium">{errors.message.message}</span>}
                   </div>
@@ -295,7 +343,7 @@ const Contact = () => {
                   <input type="text" {...register('honeypot')} className="hidden" tabIndex={-1} autoComplete="off" />
 
                   {errorMessage && (
-                    <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-700 font-medium">
+                    <div className="p-3 rounded-xs bg-rose-50 border border-rose-200 text-xs text-rose-700 font-medium">
                       {errorMessage}
                     </div>
                   )}
@@ -303,7 +351,7 @@ const Contact = () => {
                   <button 
                     type="submit" 
                     disabled={isSubmitting} 
-                    className="w-full bg-[#0B1F3A] hover:bg-[#1E3A5F] text-white font-bold uppercase tracking-wider text-xs py-4 px-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="w-full bg-[#0B1F3A] hover:bg-[#1E3A5F] text-white font-bold uppercase tracking-wider text-xs py-4 px-6 rounded-xs shadow-sm hover:shadow-md transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <span>Sending Your Request...</span>
@@ -328,7 +376,7 @@ const Contact = () => {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Direct Info Card */}
-              <div className="bg-[#0B1F3A] text-white p-8 md:p-10 rounded-xl shadow-xl">
+              <div className="bg-[#0B1F3A] text-white p-8 md:p-10 rounded-xs shadow-xl">
                 <span className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider block mb-2">
                   Direct Channels
                 </span>
@@ -338,7 +386,7 @@ const Contact = () => {
 
                 <ul className="space-y-6 text-sm">
                   <li className="flex items-start">
-                    <div className="w-10 h-10 rounded-lg bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
+                    <div className="w-10 h-10 rounded-xs bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
                       <Mail className="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
@@ -350,7 +398,7 @@ const Contact = () => {
                   </li>
 
                   <li className="flex items-start">
-                    <div className="w-10 h-10 rounded-lg bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
+                    <div className="w-10 h-10 rounded-xs bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
                       <Clock className="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
@@ -362,7 +410,7 @@ const Contact = () => {
                   </li>
 
                   <li className="flex items-start">
-                    <div className="w-10 h-10 rounded-lg bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
+                    <div className="w-10 h-10 rounded-xs bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
                       <MapPin className="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
@@ -383,7 +431,7 @@ const Contact = () => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2.5 w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-xs uppercase tracking-wider py-3.5 px-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-150"
+                    className="inline-flex items-center justify-center gap-2.5 w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-xs uppercase tracking-wider py-3.5 px-5 rounded-xs shadow-sm hover:shadow-md transition-all duration-150"
                   >
                     <MessageSquare className="w-4 h-4 fill-current" />
                     <span>Chat on WhatsApp</span>
@@ -392,14 +440,14 @@ const Contact = () => {
               </div>
 
               {/* Timezone Guarantee Card */}
-              <div className="bg-[#F8F9FA] border border-gray-200 text-[#0B1F3A] p-8 rounded-xl shadow-xs">
+              <div className="bg-[#F8F9FA] border border-gray-200 text-[#0B1F3A] p-8 rounded-xs shadow-xs">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider block mb-2 text-[#2563EB]">
                   Global Client Coverage
                 </span>
                 <h4 className="text-lg font-heading font-extrabold mb-2">
                   Guaranteed Timezone Overlap
                 </h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed font-light">
                   We schedule daily recurring syncs and provide active engineering hours overlapping 3.5 to 5 hours with clients across the UK, Europe, USA, Canada, UAE, and Australia.
                 </p>
               </div>
