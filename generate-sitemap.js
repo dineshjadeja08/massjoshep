@@ -38,8 +38,6 @@ const staticRoutes = [
   '/industries/agriculture',
   '/industries/e-commerce',
   '/industries/logistics',
-  '/insights',
-  '/blog',
   '/careers',
   '/contact',
   '/trust',
@@ -72,9 +70,7 @@ const insights = [
 const urls = [
   ...staticRoutes,
   ...caseStudies.map(slug => `/work/${slug}`),
-  ...caseStudies.map(slug => `/projects/${slug}`),
-  ...insights.map(slug => `/insights/${slug}`),
-  ...insights.map(slug => `/blog/${slug}`)
+  ...caseStudies.map(slug => `/projects/${slug}`)
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

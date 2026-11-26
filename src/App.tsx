@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
@@ -81,13 +81,13 @@ function App() {
             <Route path="/projects" element={<Work />} />
             <Route path="/projects/:slug" element={<CaseStudyDetail />} />
             
-            {/* Blog & Insights */}
-            <Route path="/blog" element={<Insights />} />
+            {/* Blog & Insights - Temporarily hidden / redirected */}
+            <Route path="/blog" element={<Navigate to="/" replace />} />
             <Route path="/blog/studio" element={<BlogStudio />} />
-            <Route path="/blog/:slug" element={<InsightDetail />} />
-            <Route path="/insights" element={<Insights />} />
+            <Route path="/blog/:slug" element={<Navigate to="/" replace />} />
+            <Route path="/insights" element={<Navigate to="/" replace />} />
             <Route path="/insights/studio" element={<BlogStudio />} />
-            <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/insights/:slug" element={<Navigate to="/" replace />} />
             <Route path="/admin" element={<NetlifyAdminRedirect />} />
             
             <Route path="/careers" element={<Careers />} />

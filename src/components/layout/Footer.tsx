@@ -115,11 +115,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-[#14B8A6] transition-colors flex items-center gap-1.5">
-                  <span className="text-[#14B8A6] font-bold">›</span> Engineering Blog
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="hover:text-[#14B8A6] transition-colors flex items-center gap-1.5">
                   <span className="text-[#14B8A6] font-bold">›</span> Contact & Technical Scoping
                 </Link>

@@ -117,6 +117,9 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
+# Cloudflare Wrangler
+.wrangler/
+
 # System files
 .DS_Store
 Thumbs.db

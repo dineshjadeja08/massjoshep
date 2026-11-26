@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "node generate-sitemap.js && tsc -b && vite build",
     "lint": "oxlint src",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
