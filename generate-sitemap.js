@@ -32,6 +32,7 @@ const staticRoutes = [
   '/europe',
   '/middle-east',
   '/australia',
+  '/industries',
   '/industries/fintech',
   '/industries/healthcare',
   '/industries/agriculture',

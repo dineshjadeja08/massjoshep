@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { EnterpriseLogos } from '../components/ui/EnterpriseLogos';
 import ProjectCostEstimator from '../components/ui/ProjectCostEstimator';
 import EngagementModels from '../components/ui/EngagementModels';
+import SystemHealthBenchmark from '../components/ui/SystemHealthBenchmark';
 import { 
   WebsiteDevIcon, 
   WebAppIcon, 
@@ -483,6 +484,11 @@ const Home = () => {
               </p>
             </div>
 
+          </div>
+
+          {/* Real-Time Observability & Health Benchmark */}
+          <div className="mt-14">
+            <SystemHealthBenchmark />
           </div>
 
         </div>

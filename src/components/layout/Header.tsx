@@ -15,16 +15,19 @@ import {
   Landmark,
   Truck,
   HeartPulse,
-  Wheat
+  Wheat,
+  Search
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import VelunoLogo from '../ui/VelunoLogo';
+import CommandPalette from '../ui/CommandPalette';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<'solutions' | 'industries' | null>(null);
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const location = useLocation();
   const navRef = useRef<HTMLElement>(null);
 
@@ -43,7 +46,10 @@ export const Header: React.FC = () => {
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        setCommandPaletteOpen(prev => !prev);
+      } else if (event.key === 'Escape') {
         setOpenDropdown(null);
         setMobileMenuOpen(false);
       }
@@ -375,22 +381,43 @@ export const Header: React.FC = () => {
           </Link>
         </nav>
 
-        {/* Right CTA Button */}
-        <div className="hidden lg:flex items-center space-x-4">
+        {/* Search & Right CTA Button */}
+        <div className="hidden lg:flex items-center space-x-3">
+          <button
+            type="button"
+            onClick={() => setCommandPaletteOpen(true)}
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-xs bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-mono transition-colors border border-slate-200 cursor-pointer"
+            title="Search specifications, services & case studies (Ctrl+K)"
+          >
+            <Search className="w-3.5 h-3.5 text-slate-500" />
+            <span className="text-slate-500">Search...</span>
+            <kbd className="text-[10px] bg-white border border-slate-300 rounded-xs px-1.5 py-0.5 text-slate-500 font-bold">
+              ⌘K
+            </kbd>
+          </button>
+
           <Link
             to="/contact"
-            className="btn-primary text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-lg shadow-xs"
+            className="btn-primary text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xs shadow-xs"
           >
             Schedule Scoping
           </Link>
         </div>
 
-        {/* Mobile menu trigger */}
-        <div className="lg:hidden flex items-center">
+        {/* Mobile controls */}
+        <div className="lg:hidden flex items-center gap-1">
+          <button
+            type="button"
+            onClick={() => setCommandPaletteOpen(true)}
+            className="p-2 text-slate-600 hover:text-[#0B1F3A]"
+            aria-label="Search"
+          >
+            <Search className="w-5 h-5" />
+          </button>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-slate-800 hover:text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] rounded-lg"
+            className="p-2 text-slate-800 hover:text-[#0B1F3A] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] rounded-xs"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -514,6 +541,12 @@ export const Header: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Global Command Palette */}
+      <CommandPalette 
+        isOpen={commandPaletteOpen} 
+        onClose={() => setCommandPaletteOpen(false)} 
+      />
     </header>
   );
 };

@@ -14,6 +14,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 import PageBanner from '../components/ui/PageBanner';
+import InternationalCollaborationHub from '../components/ui/InternationalCollaborationHub';
 
 const CORE_STACK = [
   { category: 'Frontend Platforms', technologies: ['React 19', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vite'] },
@@ -340,6 +341,12 @@ export const About: React.FC = () => {
             </div>
 
           </div>
+
+          {/* Interactive World Clocks & Client Collaboration Toolchain */}
+          <div className="mt-12">
+            <InternationalCollaborationHub />
+          </div>
+
         </div>
       </section>
 

@@ -8,6 +8,7 @@ import Services from './pages/services/Services';
 import ServiceDetail from './pages/services/ServiceDetail';
 import DedicatedTeam from './pages/services/DedicatedTeam';
 import IndustryDetail from './pages/industries/IndustryDetail';
+import Industries from './pages/industries/Industries';
 import Work from './pages/work/Work';
 import CaseStudyDetail from './pages/work/CaseStudyDetail';
 import Insights from './pages/insights/Insights';
@@ -50,6 +51,7 @@ function App() {
             <Route path="/australia" element={<Australia />} />
             
             {/* Industry Pages */}
+            <Route path="/industries" element={<Industries />} />
             <Route path="/industries/:slug" element={<IndustryDetail />} />
             
             <Route path="/services" element={<Services />} />

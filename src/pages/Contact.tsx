@@ -6,6 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Mail, Clock, MapPin, Send, MessageSquare, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 import PageBanner from '../components/ui/PageBanner';
+import InternationalCollaborationHub from '../components/ui/InternationalCollaborationHub';
+import InteractiveProjectPlanner from '../components/ui/InteractiveProjectPlanner';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'Full name is required (min 2 characters)' }),
@@ -178,9 +180,19 @@ const Contact = () => {
         breadcrumb="Contact" 
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          {/* Interactive Project Scoping & Architecture Planner */}
+          <div className="mb-14">
+            <InteractiveProjectPlanner 
+              onSelectService={(svcName) => {
+                setValue('service', svcName, { shouldValidate: true });
+              }} 
+            />
+          </div>
+
+          <div id="contact-form-section" className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             {/* Form Column */}
             <div className="lg:col-span-7 bg-[#F8F9FA] rounded-xs p-8 md:p-12 border border-gray-200 shadow-xs">
@@ -460,22 +472,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Timezone Guarantee Card */}
-              <div className="bg-[#F8F9FA] border border-gray-200 text-[#0B1F3A] p-8 rounded-xs shadow-xs">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider block mb-2 text-[#2563EB]">
-                  Global Client Coverage
-                </span>
-                <h4 className="text-lg font-heading font-extrabold mb-2">
-                  Guaranteed Timezone Overlap
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-light">
-                  We schedule daily recurring syncs and provide active engineering hours overlapping 3.5 to 5 hours with clients across the UK, Europe, USA, Canada, UAE, and Australia.
-                </p>
-              </div>
-
             </div>
 
           </div>
+
+          {/* International Collaboration & Live Timezone Clocks */}
+          <div className="mt-14">
+            <InternationalCollaborationHub />
+          </div>
+
         </div>
       </section>
     </>
