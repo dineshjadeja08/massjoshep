@@ -361,9 +361,37 @@ const Home = () => {
               to="/services" 
               className="btn-primary px-8 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-xs"
             >
-              <span>View All Solutions & Technical Deliverables</span>
+              <span>Explore All 34+ SME & Enterprise Offerings</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+
+          {/* Quick Access to High-Demand SME & Enterprise Modules */}
+          <div className="mt-8 pt-8 border-t border-slate-200/80 max-w-4xl mx-auto text-center">
+            <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block mb-3 font-semibold">
+              Popular SME & Enterprise Solutions:
+            </span>
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              {[
+                { name: 'Business Websites & CMS', link: '/services#complete-offerings' },
+                { name: 'E-Commerce & Online Stores', link: '/services#complete-offerings' },
+                { name: 'Custom CRM & Sales Pipelines', link: '/services#complete-offerings' },
+                { name: 'Billing, Invoicing & GST', link: '/services#complete-offerings' },
+                { name: 'Inventory & POS Software', link: '/services#complete-offerings' },
+                { name: 'WhatsApp & Process Automation', link: '/services#complete-offerings' },
+                { name: 'School & Hospital Management', link: '/services#complete-offerings' },
+                { name: 'Full ERP & Supply Chain (SCM/WMS)', link: '/services#complete-offerings' },
+                { name: 'Reels, Video Editing & Brand Identity', link: '/services#complete-offerings' },
+              ].map((pill, idx) => (
+                <Link
+                  key={idx}
+                  to={pill.link}
+                  className="px-3 py-1.5 rounded-xs bg-slate-100 hover:bg-[#0B1F3A] hover:text-white text-slate-700 transition-colors font-medium text-[11px]"
+                >
+                  {pill.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
         </div>

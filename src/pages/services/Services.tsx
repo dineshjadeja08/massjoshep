@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import EngagementModels from '../../components/ui/EngagementModels';
+import ComprehensiveOfferings from '../../components/services/ComprehensiveOfferings';
 import { 
   Globe, 
   Layers, 
@@ -245,6 +246,11 @@ const Services = () => {
 
         </div>
       </section>
+
+      {/* =========================================================================
+          FULL-SPECTRUM SERVICES & ENTERPRISE MODULES DIRECTORY
+          ========================================================================= */}
+      <ComprehensiveOfferings />
 
       {/* =========================================================================
           SECTION 2: ENGAGEMENT FRAMEWORK (ENTERPRISE DELIVERY MODELS)

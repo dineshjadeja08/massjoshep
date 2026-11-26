@@ -234,7 +234,7 @@ export const Header: React.FC = () => {
                       onClick={() => setOpenDropdown(null)}
                       className="block p-2 text-xs font-bold text-[#2563EB] hover:bg-slate-50 rounded-lg text-center"
                     >
-                      All Enterprise Capabilities →
+                      All 34+ SME & Enterprise Solutions →
                     </Link>
                   </motion.div>
                 </div>
