@@ -16,7 +16,11 @@ export interface BlogPost {
   isCustom?: boolean;
 }
 
-export const initialInsights: BlogPost[] = [
+// Auto-load posts managed via Netlify CMS in src/content/blog/
+const cmsModules = import.meta.glob<{ default: BlogPost }>('../content/blog/*.json', { eager: true });
+const cmsPosts: BlogPost[] = Object.values(cmsModules).map((m) => m.default);
+
+export const initialInsights: BlogPost[] = cmsPosts.length > 0 ? cmsPosts : [
   {
     slug: 'the-true-cost-of-legacy-software',
     title: 'The Hidden Costs of Legacy Software in Enterprise Operations',

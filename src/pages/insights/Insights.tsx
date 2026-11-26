@@ -108,12 +108,18 @@ const Insights = () => {
                 </p>
               </div>
               <div className="shrink-0 flex items-center gap-3">
-                <Link
-                  to="/blog/studio"
+                <a
+                  href="/admin/"
                   className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-xs font-semibold text-sm transition-all shadow-md hover:shadow-lg"
                 >
                   <PenLine className="w-4 h-4" />
-                  Publish Article
+                  Netlify CMS
+                </a>
+                <Link
+                  to="/blog/studio"
+                  className="inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-gray-200 border border-navy-700 px-4 py-2.5 rounded-xs font-semibold text-sm transition-all"
+                >
+                  Quick Studio
                 </Link>
               </div>
             </div>
@@ -315,18 +321,26 @@ const Insights = () => {
         {/* Bottom CTA for no-code publishing */}
         <div className="mt-20 bg-linear-to-r from-navy-900 to-navy-800 text-white p-8 md:p-12 rounded-xs border-l-4 border-accent-500 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div className="max-w-2xl">
-            <span className="text-accent-400 font-mono text-xs uppercase tracking-wider block mb-1">Internal CMS & Contributor Hub</span>
-            <h3 className="text-2xl font-bold font-heading mb-2">Publish an Engineering Article</h3>
+            <span className="text-accent-400 font-mono text-xs uppercase tracking-wider block mb-1">Decap / Netlify CMS Integration</span>
+            <h3 className="text-2xl font-bold font-heading mb-2">Publish Articles with Netlify CMS</h3>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              Use the built-in publishing studio to write in Markdown, preview live with SEO tags, and publish directly to the live blog without touching source code.
+              Login to Netlify CMS at <span className="font-mono text-accent-300">/admin/</span> to manage articles with rich markdown, media uploads, and automatic GitHub deployment without touching source code.
             </p>
           </div>
-          <Link
-            to="/blog/studio"
-            className="shrink-0 bg-accent-500 hover:bg-accent-600 text-white font-semibold text-sm px-6 py-3 rounded-xs inline-flex items-center gap-2 transition-colors shadow-sm"
-          >
-            <PenLine className="w-4 h-4" /> Open Blog Studio
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/admin/"
+              className="shrink-0 bg-accent-500 hover:bg-accent-600 text-white font-semibold text-sm px-6 py-3 rounded-xs inline-flex items-center gap-2 transition-colors shadow-sm"
+            >
+              <PenLine className="w-4 h-4" /> Open Netlify CMS
+            </a>
+            <Link
+              to="/blog/studio"
+              className="shrink-0 bg-navy-800 hover:bg-navy-700 text-gray-200 border border-navy-700 font-semibold text-sm px-5 py-3 rounded-xs inline-flex items-center gap-2 transition-colors"
+            >
+              Quick Studio
+            </Link>
+          </div>
         </div>
       </div>
     </>

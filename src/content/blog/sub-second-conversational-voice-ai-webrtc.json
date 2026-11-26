@@ -1,0 +1,22 @@
+{
+  "title": "Architecting Sub-Second Conversational Voice AI Pipelines with WebRTC",
+  "slug": "sub-second-conversational-voice-ai-webrtc",
+  "category": "Artificial Intelligence",
+  "date": "Nov 04, 2026",
+  "readTime": "7 min read",
+  "summary": "How full-duplex WebRTC audio streaming, neural speech synthesis, and real-time state management eliminate robotic conversational lag in automated phone bots.",
+  "coverImage": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=1200",
+  "tags": [
+    "Voice AI",
+    "WebRTC",
+    "FastAPI",
+    "Neural TTS",
+    "Zylo Voice"
+  ],
+  "author": {
+    "name": "AI Engineering Lead",
+    "role": "Veluno Softtech Engineering Hub, Chennai",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+  },
+  "content": "Traditional Interactive Voice Response (IVR) phone systems (\"press 1 for billing, press 2 for support\") create immense customer friction. Meanwhile, naive implementations of AI voice bots suffer from 2-to-4 second response delays, creating disjointed, robotic conversations where humans and machines continuously speak over each other.\n\n### The Sub-600ms Latency Budget\nTo achieve natural, human-grade conversational interruptions, an AI voice pipeline must execute the complete round-trip within **600 milliseconds**:\n1. **Audio Packet Ingestion (WebRTC / SIP):** Streaming raw Opus packets over UDP directly to the media server (<40ms).\n2. **Streaming Speech-to-Text (STT):** Transcribing interim tokens as the caller speaks rather than waiting for silence (<120ms).\n3. **LLM First-Token Generation:** Streaming inference using optimized semantic models (<180ms).\n4. **Streaming Neural Text-to-Speech (TTS):** Synthesizing phonemes into audio buffers on the fly (<150ms).\n5. **Jitter Buffer & Playback:** Returning audio packets over the telephony SIP trunk (<30ms).\n\n### Full-Duplex Interruptibility\nThe defining hallmark of an elite voice agent is **barge-in capability**. When a human caller interrupts with \"Wait, can you change that time to 3 PM?\", the system must instantly detect the caller's acoustic energy, cancel in-flight audio playback within 50ms, and recalculate conversational context without audio clipping.\n\nAt Veluno Softtech, we engineered this exact architecture for **Zylo Voice**, allowing automated telephony pods to qualify sales leads, confirm appointments, and synchronize CRM records in real time."
+}

@@ -32,6 +32,20 @@
     <meta name="twitter:description" content="We build websites, custom applications and connected digital systems that help businesses work smarter and grow faster." />
     <meta name="twitter:image" content="https://www.velunosofttech.com/og-image.png" />
 
+    <!-- Netlify Identity Widget for Netlify CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)

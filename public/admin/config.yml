@@ -2,33 +2,39 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: true
+site_url: https://www.velunosofttech.com
+display_url: https://www.velunosofttech.com
+logo_url: https://www.velunosofttech.com/favicon.svg
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
+publish_mode: simple
+
 collections:
   - name: "blog"
-    label: "Articles & Insights"
+    label: "Articles & Blog Posts"
+    label_singular: "Article"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     extension: "json"
     format: "json"
+    summary: "{{title}} ({{date}} - {{category}})"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "URL identifier without spaces, e.g. how-we-build-scalable-software" }
       - { label: "Category", name: "category", widget: "select", options: ["Architecture", "Engineering Process", "Artificial Intelligence", "E-Commerce", "FinTech", "Cloud & Security"] }
-      - { label: "Date", name: "date", widget: "date", format: "MMM DD, YYYY" }
+      - { label: "Publish Date", name: "date", widget: "string", default: "Nov 26, 2026" }
       - { label: "Read Time", name: "readTime", widget: "string", default: "6 min read" }
-      - { label: "Summary / Meta Description", name: "summary", widget: "text" }
-      - { label: "Cover Image URL", name: "coverImage", widget: "image", required: false }
+      - { label: "Summary / SEO Description", name: "summary", widget: "text", hint: "Used for search engine meta description and card preview" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - label: "Author"
         name: "author"
         widget: "object"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Author Name", name: "name", widget: "string", default: "Veluno Engineering Team" }
+          - { label: "Author Role / Title", name: "role", widget: "string", default: "Senior Technical Architect" }
           - { label: "Avatar URL", name: "avatar", widget: "string", required: false }
       - { label: "Body Content (Markdown)", name: "content", widget: "markdown" }

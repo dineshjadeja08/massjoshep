@@ -14,6 +14,20 @@ import CaseStudyDetail from './pages/work/CaseStudyDetail';
 import Insights from './pages/insights/Insights';
 import InsightDetail from './pages/insights/InsightDetail';
 import BlogStudio from './pages/insights/BlogStudio';
+
+// Direct redirect to static Netlify CMS dashboard
+const NetlifyAdminRedirect = () => {
+  window.location.replace('/admin/index.html');
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-[#0B1F3A] text-white">
+      <div className="text-center">
+        <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <h2 className="text-xl font-bold mb-2">Launching Netlify CMS...</h2>
+        <p className="text-gray-400 text-sm">Redirecting to content manager at /admin/</p>
+      </div>
+    </div>
+  );
+};
 import Careers from './pages/careers/Careers';
 import CareerDetail from './pages/careers/CareerDetail';
 import Contact from './pages/Contact';
@@ -69,7 +83,7 @@ function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/insights/studio" element={<BlogStudio />} />
             <Route path="/insights/:slug" element={<InsightDetail />} />
-            <Route path="/admin" element={<BlogStudio />} />
+            <Route path="/admin" element={<NetlifyAdminRedirect />} />
             
             <Route path="/careers" element={<Careers />} />
             <Route path="/careers/:slug" element={<CareerDetail />} />

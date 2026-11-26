@@ -1,0 +1,21 @@
+{
+  "title": "Why We Insist on Written Functional Scoping Before Writing Code",
+  "slug": "why-we-scope-before-we-build",
+  "category": "Engineering Process",
+  "date": "Sep 28, 2026",
+  "readTime": "5 min read",
+  "summary": "Preventing scope creep, aligning stakeholder expectations, and defining unambiguous acceptance criteria before writing the first line of code.",
+  "coverImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200",
+  "tags": [
+    "Project Scoping",
+    "Agile Governance",
+    "Sprint Planning",
+    "Client Trust"
+  ],
+  "author": {
+    "name": "Product Delivery Squad",
+    "role": "Veluno Softtech Engineering Hub, Chennai",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+  },
+  "content": "In the rush to get software products to market, many software agencies and internal engineering teams dive headfirst into writing code before aligning on explicit requirements. At Veluno Softtech, we mandate a written, mutual functional scope before development sprints begin.\n\n### Alignment Over Assumptions\n\"Build an inventory dashboard\" means something entirely different to a warehouse dock supervisor than it does to a software developer. Documenting user journeys and database relationships forces all stakeholders to confront edge-case assumptions before expensive engineering hours are consumed.\n\n### Preventing Scope Creep & Budget Blowouts\nScope creep is the quiet killer of software milestones. By clearly identifying what is in-bounds for Version 1.0—and critically, what is explicitly *out-of-bounds*—we protect project delivery timelines and financial budgets. When a valuable new feature idea emerges during development, it does not derail the active release sprint; it gets cataloged for Version 1.1.\n\n### Written Acceptance Criteria\nHow do stakeholders know when a feature is truly complete? Without an explicit written specification, \"done\" is subjective and prone to conflicting opinions. With written acceptance criteria, \"done\" means the feature passes automated unit tests, satisfies security checks, and matches the agreed Figma interaction model."
+}

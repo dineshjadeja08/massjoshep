@@ -168,12 +168,18 @@ export const BlogStudio: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-200">
           <div className="flex items-center gap-3">
             <Link 
-              to="/insights" 
+              to="/blog" 
               className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-slate-500 hover:text-[#0B1F3A]"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Back to Insights / Blog</span>
+              <span>Back to Blog</span>
             </Link>
+            <a
+              href="/admin/"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-teal-600 hover:text-teal-800 bg-teal-50 border border-teal-200 px-3 py-1 rounded-xs transition-colors"
+            >
+              <span>Open Netlify CMS (/admin) →</span>
+            </a>
           </div>
 
           {/* Tab Switcher */}
