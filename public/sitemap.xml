@@ -235,6 +235,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.velunosofttech.com/work/bill-now</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.velunosofttech.com/work/cavve</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.velunosofttech.com/work/brandmatchbot</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.velunosofttech.com/work/zylinn-ai</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -242,12 +260,6 @@
   </url>
   <url>
     <loc>https://www.velunosofttech.com/work/linksync</loc>
-    <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.velunosofttech.com/work/cavve</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

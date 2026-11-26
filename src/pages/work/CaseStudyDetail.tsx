@@ -10,7 +10,8 @@ import {
   Layers,
   CheckCircle,
   FileCode,
-  Sparkles
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import PageBanner from '../../components/ui/PageBanner';
 
@@ -98,16 +99,27 @@ const CaseStudyDetail = () => {
               </p>
               
               {/* Hero Image Showcase */}
-              <div className="rounded-lg overflow-hidden border border-slate-200 aspect-[16/9] bg-slate-900 relative">
+              <div className="rounded-xs overflow-hidden border border-slate-200 aspect-[16/9] bg-slate-900 relative">
                 <img 
                   src={study.heroImage} 
                   alt={study.clientName} 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-3 left-3">
-                  <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-md bg-[#14B8A6] text-[#0B1F3A] shadow-sm">
+                <div className="absolute top-3 left-3 flex flex-wrap items-center gap-2">
+                  <span className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-xs bg-[#14B8A6] text-[#0B1F3A] shadow-sm">
                     {study.status}
                   </span>
+                  {study.liveUrl && (
+                    <a
+                      href={study.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-xs bg-[#0B1F3A]/90 text-white border border-slate-700 shadow-sm inline-flex items-center gap-1.5 hover:bg-[#2563EB] transition-colors backdrop-blur-xs"
+                    >
+                      <span>Live Site</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               </div>
             </section>
@@ -288,11 +300,26 @@ const CaseStudyDetail = () => {
                 </div>
               </div>
 
-              {/* CTA Button (Internal Link Only) */}
+              {/* Live URL Link if available */}
+              {study.liveUrl && (
+                <div className="pt-4 border-t border-slate-800">
+                  <a 
+                    href={study.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-teal w-full text-center py-2.5 rounded-xs font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-xs group"
+                  >
+                    <span>Open Live Platform</span>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
+              )}
+
+              {/* CTA Button */}
               <div className="pt-4 border-t border-slate-800">
                 <Link 
                   to="/contact" 
-                  className="btn-teal w-full text-center py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-xs"
+                  className="w-full text-center py-2.5 rounded-xs font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-xs bg-[#2563EB] hover:bg-[#1d4ed8] text-white transition-colors"
                 >
                   <span>Build Similar System</span>
                   <ArrowRight className="w-4 h-4" />
@@ -302,7 +329,7 @@ const CaseStudyDetail = () => {
             </div>
 
             {/* Quick Contact Box */}
-            <div className="rounded-xl bg-[#F5F7FA] p-5 border border-slate-200/90 text-center">
+            <div className="rounded-xs bg-[#F5F7FA] p-5 border border-slate-200/90 text-center">
               <span className="text-xs font-mono font-bold uppercase text-[#2563EB] block mb-1">
                 Have Architecture Questions?
               </span>
@@ -311,7 +338,7 @@ const CaseStudyDetail = () => {
               </p>
               <Link 
                 to="/contact" 
-                className="btn-primary w-full py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                className="btn-primary w-full py-2.5 rounded-xs font-bold text-xs uppercase tracking-wider block"
               >
                 Schedule Scoping Call
               </Link>

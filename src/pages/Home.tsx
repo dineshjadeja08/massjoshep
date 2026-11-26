@@ -43,7 +43,8 @@ import {
   Sparkles,
   Search,
   CheckCircle,
-  MessageSquare
+  MessageSquare,
+  ExternalLink
 } from 'lucide-react';
 
 const Home = () => {
@@ -489,7 +490,7 @@ const Home = () => {
       </section>
 
       {/* =========================================================================
-          SECTION 4: FEATURED PROJECTS (3–5 GENUINE PORTFOLIO WORKS)
+          SECTION 4: FEATURED PROJECTS & LIVE CLIENT PLATFORMS
           ========================================================================= */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
@@ -497,7 +498,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-2">
-                Demonstrated Engineering
+                Demonstrated Engineering & Live Deployments
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight tracking-tight">
                 Featured Projects
@@ -505,17 +506,173 @@ const Home = () => {
             </div>
             <Link 
               to="/work" 
-              className="mt-4 md:mt-0 btn-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5"
+              className="mt-4 md:mt-0 btn-primary px-6 py-2.5 rounded-xs text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5"
             >
-              <span>Explore All Projects (7)</span>
+              <span>Explore All Projects (9)</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Project 1: Zylo Voice */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
+            {/* Project 1: Bill Now (Live Client Platform) */}
+            <div className="rounded-xs bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
+              <div>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="/projects/bill-now.jpg" 
+                    alt="Bill Now Invoicing Platform" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
+                    Live SaaS
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    FinTech / Invoicing
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    Bill Now
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Streamlined invoicing, receivable status tracking, quick line-item builder, and interactive revenue trend charts built for freelancers and SMBs.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['React', 'TypeScript', 'Tailwind', 'Chart.js'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-xs bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-0 flex items-center gap-2">
+                <Link 
+                  to="/work/bill-now" 
+                  className="btn-primary flex-1 text-center py-2 rounded-xs font-bold text-xs uppercase tracking-wider block"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://bill-now.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-2 rounded-xs bg-slate-100 hover:bg-[#14B8A6] hover:text-[#0B1F3A] text-slate-700 border border-slate-300 text-xs font-mono font-bold transition-all shrink-0 inline-flex items-center gap-1"
+                  title="Open live site for Bill Now"
+                >
+                  <span>Live</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* Project 2: Cavve (Live Client Platform) */}
+            <div className="rounded-xs bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
+              <div>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="/projects/cavve.jpg" 
+                    alt="Cavve Professional Networking Platform" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
+                    Live Platform
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    Community & Events
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    Cavve
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Curated member hub for invitation-style professional gatherings, founder mixers, smart peer discovery cards, and RSVP coordination.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['React', 'Vite', 'Tailwind', 'Node.js'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-xs bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-0 flex items-center gap-2">
+                <Link 
+                  to="/work/cavve" 
+                  className="btn-primary flex-1 text-center py-2 rounded-xs font-bold text-xs uppercase tracking-wider block"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://cavve.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-2 rounded-xs bg-slate-100 hover:bg-[#14B8A6] hover:text-[#0B1F3A] text-slate-700 border border-slate-300 text-xs font-mono font-bold transition-all shrink-0 inline-flex items-center gap-1"
+                  title="Open live site for Cavve"
+                >
+                  <span>Live</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* Project 3: BrandMatchBot (Live Client Platform) */}
+            <div className="rounded-xs bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
+              <div>
+                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <img 
+                    src="/projects/brandmatchbot.jpg" 
+                    alt="BrandMatchBot AI MarTech" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
+                    Live SaaS
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
+                    AI MarTech
+                  </span>
+                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
+                    BrandMatchBot
+                  </h3>
+                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
+                    Analytics-driven collaboration hub with a circular brand alignment score gauge and smart influencer match feed for data-backed creator campaigns.
+                  </p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {['Next.js', 'TypeScript', 'Tailwind', 'AI Scoring'].map(t => (
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-xs bg-slate-100 text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-0 flex items-center gap-2">
+                <Link 
+                  to="/work/brandmatchbot" 
+                  className="btn-primary flex-1 text-center py-2 rounded-xs font-bold text-xs uppercase tracking-wider block"
+                >
+                  Case Study
+                </Link>
+                <a
+                  href="https://brandmatchbot-8yadwwy59-dks-projects-e2d8a64c.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-2 rounded-xs bg-slate-100 hover:bg-[#14B8A6] hover:text-[#0B1F3A] text-slate-700 border border-slate-300 text-xs font-mono font-bold transition-all shrink-0 inline-flex items-center gap-1"
+                  title="Open live site for BrandMatchBot"
+                >
+                  <span>Live</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* Project 4: Zylo Voice */}
+            <div className="rounded-xs bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
               <div>
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
@@ -523,7 +680,7 @@ const Home = () => {
                     alt="Zylo Voice" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
+                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#2563EB] text-white">
                     Voice AI
                   </span>
                 </div>
@@ -539,7 +696,7 @@ const Home = () => {
                   </p>
                   <div className="flex flex-wrap gap-1 mb-2">
                     {['Python', 'WebRTC', 'OpenAI', 'FastAPI'].map(t => (
-                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-xs bg-slate-100 text-slate-600">
                         {t}
                       </span>
                     ))}
@@ -549,133 +706,7 @@ const Home = () => {
               <div className="p-5 pt-0">
                 <Link 
                   to="/work/zylinn-ai" 
-                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
-                >
-                  View Project →
-                </Link>
-              </div>
-            </div>
-
-            {/* Project 2: Staffly */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" 
-                    alt="Staffly" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
-                    Agile HRMS
-                  </span>
-                </div>
-                <div className="p-5">
-                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
-                    Resource Management
-                  </span>
-                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    Staffly
-                  </h3>
-                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    Centralized employee directory, sprint capacity tracking, and multi-stage leave approvals built for agile engineering squads.
-                  </p>
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {['React', 'TypeScript', 'Node.js', 'PostgreSQL'].map(t => (
-                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="p-5 pt-0">
-                <Link 
-                  to="/work/xenstaff" 
-                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
-                >
-                  View Project →
-                </Link>
-              </div>
-            </div>
-
-            {/* Project 3: Paylane */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#2563EB] hover:shadow-lg transition-all group">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800" 
-                    alt="Paylane" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#2563EB] text-white">
-                    Financial SaaS
-                  </span>
-                </div>
-                <div className="p-5">
-                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
-                    Commercial Accounting
-                  </span>
-                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    Paylane
-                  </h3>
-                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    Automated GST invoicing, real-time inventory ledger synchronization, and supplier balances built for growing commercial businesses.
-                  </p>
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {['React', 'TypeScript', 'PostgreSQL', 'Tailwind'].map(t => (
-                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="p-5 pt-0">
-                <Link 
-                  to="/work/xenbill" 
-                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
-                >
-                  View Project →
-                </Link>
-              </div>
-            </div>
-
-            {/* Project 4: VeloFleet Telematics */}
-            <div className="rounded-xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#14B8A6] hover:shadow-lg transition-all group">
-              <div>
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" 
-                    alt="VeloFleet Telematics" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-md bg-[#14B8A6] text-[#0B1F3A]">
-                    Enterprise IoT
-                  </span>
-                </div>
-                <div className="p-5">
-                  <span className="text-[10px] font-mono font-bold text-[#2563EB] uppercase block mb-1">
-                    Logistics & Fleets
-                  </span>
-                  <h3 className="text-base font-heading font-bold text-[#0B1F3A] mb-2 group-hover:text-[#2563EB]">
-                    VeloFleet Telematics
-                  </h3>
-                  <p className="text-xs text-slate-600 font-light line-clamp-3 mb-4">
-                    Real-time fleet tracking dashboard monitoring 1,500+ commercial vehicles with live GPS ingestion and geofence alerts.
-                  </p>
-                  <div className="flex flex-wrap gap-1 mb-2">
-                    {['Node.js', 'PostgreSQL', 'Redis', 'WebSockets'].map(t => (
-                      <span key={t} className="text-[9px] font-mono px-1.5 py-0.5 rounded-md bg-slate-100 text-slate-600">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="p-5 pt-0">
-                <Link 
-                  to="/work/fleet-tracking-platform" 
-                  className="btn-primary w-full text-center py-2 rounded-lg font-bold text-xs uppercase tracking-wider block"
+                  className="btn-primary w-full text-center py-2 rounded-xs font-bold text-xs uppercase tracking-wider block"
                 >
                   View Project →
                 </Link>

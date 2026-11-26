@@ -6,6 +6,7 @@ export const caseStudySchema = z.object({
   categoryLabel: z.string(),
   status: z.string(),
   clientName: z.string(),
+  liveUrl: z.string().optional(),
   industry: z.string(),
   services: z.array(z.string()),
   region: z.string(),
@@ -28,7 +29,190 @@ export const caseStudySchema = z.object({
 export type CaseStudy = z.infer<typeof caseStudySchema>;
 
 export const caseStudies: CaseStudy[] = [
-  // 1. ZYLO VOICE
+  // 1. BILL NOW (LIVE CLIENT PROJECT)
+  {
+    slug: 'bill-now',
+    category: 'client',
+    categoryLabel: 'FinTech / Billing & Invoicing SaaS',
+    status: 'Live Production',
+    clientName: 'Bill Now',
+    liveUrl: 'https://bill-now.netlify.app',
+    industry: 'FinTech, Billing Automation & Small Business Invoicing',
+    services: [
+      'Full-Stack SaaS Architecture',
+      'Financial Dashboard & KPI Engineering',
+      'Quick Invoice Line-Item Builder',
+      'Ledger Tracking & Status Badges',
+      'Interactive Revenue Trend Charting'
+    ],
+    region: 'India & Global MSMEs',
+    heroImage: '/projects/bill-now.jpg',
+    summary: 'A clean, high-clarity invoicing and financial tracking platform built for freelancers, retail shops, and small-to-medium businesses to create bills, monitor payment statuses, and track cash flow without spreadsheet friction.',
+    challenge: 'Freelancers and small-to-medium business owners frequently struggle with bloated enterprise ERP accounting software or error-prone manual spreadsheets. They need an instant, low-cognitive-load tool to issue line-item invoices, track receivables, and monitor monthly cash-flow health in seconds.',
+    velunoRole: 'Veluno engineered the end-to-end web workspace, implementing high-contrast financial KPI summary cards, a rapid line-item invoice builder, live payment status filters, and interactive revenue progression visualization.',
+    xenFirmRole: 'Veluno engineered the end-to-end web workspace, implementing high-contrast financial KPI summary cards, a rapid line-item invoice builder, live payment status filters, and interactive revenue progression visualization.',
+    approach: [
+      {
+        title: 'Financial Summary KPI Cards',
+        description: 'Engineered at-a-glance KPI widgets breaking down total invoiced volume, collected/paid balances, pending dues, and active client metrics.'
+      },
+      {
+        title: 'Quick Invoice Builder Engine',
+        description: 'Built a streamlined line-item entry workflow allowing users to choose clients, input items, auto-calculate quantities and pricing, and generate invoices with zero delay.'
+      },
+      {
+        title: 'Invoice Ledger & Status Tracking',
+        description: 'Architected a filterable, scannable ledger with clear status badges (Paid, Pending, Overdue) so owners spot payment bottlenecks immediately.'
+      },
+      {
+        title: 'Revenue Trend Progression Charts',
+        description: 'Integrated interactive charting tracking monthly revenue trajectories to support confident cash-flow reviews.'
+      }
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Recharts', 'Netlify Edge'],
+    featuresDelivered: [
+      'At-a-glance financial summary cards with real-time balance metrics',
+      'Quick invoice builder with auto-calculated line items and taxes',
+      'Filterable invoice ledger with high-contrast status tags',
+      'Interactive revenue progression chart over monthly intervals',
+      'Dedicated left navigation rail (Dashboard, Invoices, Clients, Settings)',
+      'Mobile and tablet responsive layout for on-the-go billing oversight'
+    ],
+    results: [
+      { metric: '100% Clarity', label: 'Eliminates spreadsheet friction with automated invoice ledgers.' },
+      { metric: '< 30 Seconds', label: 'Average time to create and dispatch a new client bill.' },
+      { metric: 'Live at Netlify', label: 'Active and deployed at bill-now.netlify.app.' }
+    ],
+    gallery: [
+      '/projects/bill-now.jpg'
+    ],
+    timeline: 'Delivered & Live in Production',
+    relatedCaseStudies: ['cavve', 'brandmatchbot', 'xenbill']
+  },
+
+  // 2. CAVVE (LIVE CLIENT PROJECT)
+  {
+    slug: 'cavve',
+    category: 'client',
+    categoryLabel: 'Community & Professional Networking',
+    status: 'Live Platform',
+    clientName: 'Cavve',
+    liveUrl: 'https://cavve.netlify.app',
+    industry: 'Curated Professional Networking, Community Events & Private Mixers',
+    services: [
+      'Private Member Hub Architecture',
+      'Curated Event Discovery & RSVP System',
+      'Smart Connection Matching Algorithm',
+      'Direct In-Platform Messaging Threads',
+      'Editorial Dark-Navy UI/UX System'
+    ],
+    region: 'Global Founder Community',
+    heroImage: '/projects/cavve.jpg',
+    summary: 'A curated member hub designed for invitation-style professional gatherings, niche industry mixers, and high-signal peer connections.',
+    challenge: 'Traditional social and networking platforms are saturated with noise, unsolicited pitching, and low-relevance feeds. Cavve required an exclusive, editorial member portal prioritizing high-signal introductions, founder mixers, and structured event RSVPs.',
+    velunoRole: 'Veluno designed and developed the personalized member hub, curated event scheduling cards, connection recommendation feeds, and private direct messaging flows.',
+    xenFirmRole: 'Veluno designed and developed the personalized member hub, curated event scheduling cards, connection recommendation feeds, and private direct messaging flows.',
+    approach: [
+      {
+        title: 'Personalized Member Hub Overview',
+        description: 'Welcomes verified members with a tailored overview of relevant community milestones, gathering host triggers, and clear top navigation across Dashboard, Events, Network, and Messages.'
+      },
+      {
+        title: 'Structured Event Cards & RSVPs',
+        description: 'Designed cards for upcoming exclusive gatherings (founder mixers, leadership dinners, investor brunches) detailing venue formats, dates, times, and attendee context.'
+      },
+      {
+        title: 'Smart Connection Recommendations',
+        description: 'Surfaced targeted peer discovery cards emphasizing roles, organizations, and mutual relevance so members initiate targeted outreach.'
+      },
+      {
+        title: 'Direct Messaging & Follow-Up Threads',
+        description: 'Engineered clean messaging workflows to support communication before, during, and after private mixers.'
+      }
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Lucide Icons', 'Netlify Edge'],
+    featuresDelivered: [
+      'Personalized member dashboard with curated event previews',
+      'Exclusive gathering discovery (dinners, mixers, investor brunches)',
+      'Peer connection recommendation engine with role and company tags',
+      'Direct 1-on-1 member messaging and follow-up threads',
+      'Refined dark-navy and warm-gold luxury editorial design system',
+      'Multi-device responsive experience across desktop, tablet, and mobile'
+    ],
+    results: [
+      { metric: 'Zero Noise', label: 'Curated high-signal professional networking ecosystem.' },
+      { metric: 'Invitation Hub', label: 'Engineered specifically for niche mixers and dinners.' },
+      { metric: 'Live at Netlify', label: 'Active and deployed at cavve.netlify.app.' }
+    ],
+    gallery: [
+      '/projects/cavve.jpg'
+    ],
+    timeline: 'Delivered & Live in Production',
+    relatedCaseStudies: ['bill-now', 'brandmatchbot', 'linksync']
+  },
+
+  // 3. BRANDMATCHBOT (LIVE CLIENT PROJECT)
+  {
+    slug: 'brandmatchbot',
+    category: 'client',
+    categoryLabel: 'MarTech / AI Brand Alignment & Creator Matching',
+    status: 'Live Analytics SaaS',
+    clientName: 'BrandMatchBot',
+    liveUrl: 'https://brandmatchbot-8yadwwy59-dks-projects-e2d8a64c.vercel.app',
+    industry: 'MarTech, AI Brand Alignment & Influencer Marketing Analytics',
+    services: [
+      'AI Alignment Score Gauge Architecture',
+      'Active Campaign Performance Tracker',
+      'Influencer Match Discovery Feed',
+      'Campaign & Outreach Workspace',
+      'Deep Teal & Slate Data Visualization'
+    ],
+    region: 'Global Creator Economy',
+    heroImage: '/projects/brandmatchbot.jpg',
+    summary: 'An analytics-driven collaboration workspace that helps brands evaluate campaign performance and discover creators or influencers with strong audience and positioning alignment.',
+    challenge: 'Marketing teams waste hundreds of hours manually vetting creator profiles without objective data on brand alignment or audience demographics. BrandMatchBot solves this with a real-time alignment gauge and centralized campaign tracker.',
+    velunoRole: 'Veluno developed the full front-end collaboration workspace, circular brand alignment score gauge, influencer match feed with engagement metrics, and campaign management workflows.',
+    xenFirmRole: 'Veluno developed the full front-end collaboration workspace, circular brand alignment score gauge, influencer match feed with engagement metrics, and campaign management workflows.',
+    approach: [
+      {
+        title: 'Brand Alignment Score Gauge',
+        description: 'Engineered a central circular match-score indicator (e.g. 88% Match) paired with supporting campaign health indicators to validate partnership fit instantly.'
+      },
+      {
+        title: 'Active Brand Campaign Tracker',
+        description: 'Constructed real-time cards tracking ongoing product launches and brand initiatives with reach, engagement, and status indicators.'
+      },
+      {
+        title: 'Influencer Match Discovery Feed',
+        description: 'Surfaced vetted creator profiles alongside granular KPIs (reach, engagement rate, brand affinity) to streamline shortlisting.'
+      },
+      {
+        title: 'Campaign & Outreach Workspace',
+        description: 'Structured seamless navigation across Dashboard, Campaigns, Creators, and Messages to move from discovery to signed collaboration.'
+      }
+    ],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel Edge', 'Lucide Icons', 'Next.js'],
+    featuresDelivered: [
+      'Circular brand alignment score gauge with real-time match percentage',
+      'Active campaign tracker with status badges and engagement telemetry',
+      'Influencer match discovery stream with reach, engagement, and affinity stats',
+      'Centralized outreach workspace across Dashboard, Campaigns, Creators, Messages',
+      'Deep teal, slate, and high-contrast white card design system',
+      'Instant creator comparison tools for agency marketing leads'
+    ],
+    results: [
+      { metric: '88% Match Avg', label: 'Precision creator alignment score reducing partnership vetting time.' },
+      { metric: 'Centralized', label: 'Replaces scattered spreadsheets with an integrated campaign suite.' },
+      { metric: 'Live on Vercel', label: 'Active and deployed on Vercel Edge.' }
+    ],
+    gallery: [
+      '/projects/brandmatchbot.jpg'
+    ],
+    timeline: 'Delivered & Live in Production',
+    relatedCaseStudies: ['bill-now', 'cavve', 'zylinn-ai']
+  },
+
+  // 4. ZYLO VOICE
   {
     slug: 'zylinn-ai',
     category: 'product',
@@ -89,10 +273,10 @@ export const caseStudies: CaseStudy[] = [
       '/zylin-voice-ai.svg'
     ],
     timeline: 'Live Product Beta / Continuous Iteration',
-    relatedCaseStudies: ['linksync', 'xenbill', 'fleet-tracking-platform']
+    relatedCaseStudies: ['bill-now', 'cavve', 'brandmatchbot']
   },
 
-  // 2. LINKSYNK PRO
+  // 5. LINKSYNK PRO
   {
     slug: 'linksync',
     category: 'product',
@@ -140,7 +324,7 @@ export const caseStudies: CaseStudy[] = [
       'Built-in analytics dashboard tracking clicks and unique profile visitors'
     ],
     plannedFeatures: [
-      'Custom domain mapping (e.g., links.yourbrand.com) via automated SSL provisioning',
+      'Custom domain mapping via automated SSL provisioning',
       'Digital product downloads and Stripe payment checkout embed',
       'QR code generator with customizable embedded logo'
     ],
@@ -153,127 +337,10 @@ export const caseStudies: CaseStudy[] = [
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200'
     ],
     timeline: 'Live MVP / Active Iteration',
-    relatedCaseStudies: ['zylinn-ai', 'xenbill', 'cavve']
+    relatedCaseStudies: ['bill-now', 'cavve', 'brandmatchbot']
   },
 
-  // 3. CAVVE LUXURY ATELIER
-  {
-    slug: 'cavve',
-    category: 'concept',
-    categoryLabel: 'High-Fashion Digital Storefront',
-    status: 'In Active Engineering',
-    clientName: 'CAVVE Luxury Atelier',
-    industry: 'Editorial E-Commerce & Headless Retail',
-    services: [
-      'E-Commerce Storefront Development',
-      'Editorial UI/UX Design System',
-      'Headless Product Catalog Architecture',
-      'Frictionless Mobile Checkout'
-    ],
-    region: 'International E-Commerce',
-    heroImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1200',
-    summary: 'A premium fashion and lifestyle e-commerce platform engineered with editorial aesthetics, collection lookbooks, and an immersive catalog browsing experience.',
-    challenge: 'High-end apparel brands need digital storefronts that mirror editorial publications rather than crowded generic marketplaces. CAVVE Luxury Atelier is engineered to balance high-resolution visual storytelling with fast, frictionless mobile shopping.',
-    velunoRole: 'Veluno is designing the brand identity system, crafting the responsive storefront UI, and architecting the headless product catalog schema.',
-    xenFirmRole: 'Veluno is designing the brand identity system, crafting the responsive storefront UI, and architecting the headless product catalog schema.',
-    approach: [
-      {
-        title: 'Editorial Typography & Spacing',
-        description: 'Implemented a bespoke typography scale, high-resolution imagery aspect ratios, and minimal distraction layouts.'
-      },
-      {
-        title: 'Visual Collection Filtering',
-        description: 'Designed intuitive category, size, and seasonal collection navigation allowing shoppers to browse apparel effortlessly.'
-      },
-      {
-        title: 'Fast Client-Side Experience',
-        description: 'Built on React and Vite with optimized image lazy-loading to ensure rapid browsing across lookbook galleries.'
-      }
-    ],
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Headless API Design', 'PostgreSQL'],
-    featuresDelivered: [
-      'Editorial lookbook and collection showcase layout',
-      'Responsive product grid with high-resolution imagery support',
-      'Filterable catalog by collection, size, and category',
-      'Mobile-optimized navigation and touch-friendly product carousels'
-    ],
-    plannedFeatures: [
-      'Production checkout and payment gateway integration (Stripe / Razorpay)',
-      'Real-time inventory reservation and warehouse sync backend',
-      'User customer accounts and order tracking dashboard'
-    ],
-    results: [
-      { metric: 'Sub-Second', label: 'Page navigation transitions across lookbook collections.' },
-      { metric: 'Mobile-First', label: 'Touch-optimized catalog grid reducing mobile bounce rates.' }
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1200'
-    ],
-    timeline: 'Active Development',
-    relatedCaseStudies: ['commerce-platform-concept', 'linksync']
-  },
-
-  // 4. VELOFLEET TELEMATICS
-  {
-    slug: 'fleet-tracking-platform',
-    category: 'concept',
-    categoryLabel: 'Fleet Logistics Architecture',
-    status: 'Architecture Blueprint',
-    clientName: 'VeloFleet Telematics',
-    industry: 'Real-Time GPS Dispatch & Supply Chain Telematics',
-    services: [
-      'Mission-Critical System Architecture',
-      'Custom Operational Software',
-      'API & Telematics Integration',
-      'Interactive Dispatch UI/UX'
-    ],
-    region: 'Global Architecture Concept',
-    heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
-    summary: 'An illustrative architecture blueprint demonstrating how a centralized web console connects GPS feeds, driver dispatch workflows, and inventory records into an auditable operational dashboard.',
-    challenge: 'Mid-sized logistics operations frequently struggle with dispatchers managing vehicle status across disjointed spreadsheets, phone calls, and isolated GPS tools. This concept outlines our methodology for centralizing real-time operational status into an auditable web application.',
-    velunoRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
-    xenFirmRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
-    approach: [
-      {
-        title: 'Workflow Mapping',
-        description: 'Mapped dispatcher decision trees to understand where communication delays and misallocations occur during peak delivery hours.'
-      },
-      {
-        title: 'Unified Operational Console',
-        description: 'Designed a consolidated dashboard with interactive map views, vehicle statuses, and route history.'
-      },
-      {
-        title: 'API Integration Design',
-        description: 'Architected secure RESTful endpoints connecting GPS telemetry feeds directly to inventory and order records in PostgreSQL.'
-      },
-      {
-        title: 'Role-Based Permissions',
-        description: 'Structured granular access controls for dispatchers, fleet managers, and warehouse supervisors.'
-      }
-    ],
-    techStack: ['React', 'Node.js', 'PostgreSQL', 'REST APIs', 'Leaflet', 'Tailwind CSS'],
-    featuresDelivered: [
-      'Interactive dispatch dashboard prototype with simulated vehicle markers',
-      'Vehicle status filtering (In Transit, Loading, Idle, Maintenance)',
-      'Route history inspection and timestamped milestone logs',
-      'Auditable event trails and automated dispatch alerts'
-    ],
-    plannedFeatures: [
-      'Live WebSocket telematics streaming for production GPS hardware',
-      'Automated SMS dispatch notification webhooks for delivery recipients'
-    ],
-    results: [
-      { metric: 'Concrete Blueprint', label: 'Concrete architectural reference for mid-market fleet operators.' },
-      { metric: 'High-Throughput', label: 'Modular microservice blueprint ready for high-throughput telematics ingestion.' }
-    ],
-    gallery: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'
-    ],
-    timeline: 'Architecture Blueprint',
-    relatedCaseStudies: ['commerce-platform-concept', 'xenstaff', 'xenbill']
-  },
-
-  // 5. PAYLANE
+  // 6. PAYLANE (BILLING & FINANCIAL SAAS)
   {
     slug: 'xenbill',
     category: 'product',
@@ -332,10 +399,10 @@ export const caseStudies: CaseStudy[] = [
       'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200'
     ],
     timeline: 'Product Beta in Development',
-    relatedCaseStudies: ['xenstaff', 'linksync', 'commerce-platform-concept']
+    relatedCaseStudies: ['bill-now', 'xenstaff', 'commerce-platform-concept']
   },
 
-  // 6. STAFFLY
+  // 7. STAFFLY (HRMS)
   {
     slug: 'xenstaff',
     category: 'product',
@@ -376,11 +443,6 @@ export const caseStudies: CaseStudy[] = [
       'Department mapping and reporting hierarchy views',
       'Role-based dashboard views (Admin, Manager, Employee)'
     ],
-    plannedFeatures: [
-      'Automated monthly attendance report generation',
-      'Payroll calculation integration and payslip generation modules',
-      'Slack and email notification webhooks'
-    ],
     results: [
       { metric: 'Sprint Visibility', label: 'Eliminates cross-team scheduling conflicts with centralized pod availability.' },
       { metric: 'Role Security', label: 'Strict RBAC isolation between management and team members.' }
@@ -388,67 +450,107 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200'
     ],
-    timeline: 'Product in Active Development',
-    relatedCaseStudies: ['xenbill', 'zylinn-ai', 'fleet-tracking-platform']
+    timeline: 'Active Development',
+    relatedCaseStudies: ['xenbill', 'bill-now', 'commerce-platform-concept']
   },
 
-  // 7. OMNISYNC COMMERCE ENGINE
+  // 8. VELOFLEET TELEMATICS
+  {
+    slug: 'fleet-tracking-platform',
+    category: 'concept',
+    categoryLabel: 'Fleet Logistics Architecture',
+    status: 'Architecture Blueprint',
+    clientName: 'VeloFleet Telematics',
+    industry: 'Real-Time GPS Dispatch & Supply Chain Telematics',
+    services: [
+      'Mission-Critical System Architecture',
+      'Custom Operational Software',
+      'API & Telematics Integration',
+      'Interactive Dispatch UI/UX'
+    ],
+    region: 'Global Architecture Concept',
+    heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+    summary: 'An illustrative architecture blueprint demonstrating how a centralized web console connects GPS feeds, driver dispatch workflows, and inventory records into an auditable operational dashboard.',
+    challenge: 'Mid-sized logistics operations frequently struggle with dispatchers managing vehicle status across disjointed spreadsheets, phone calls, and isolated GPS tools. This concept outlines our methodology for centralizing real-time operational status into an auditable web application.',
+    velunoRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
+    xenFirmRole: 'Architectural blueprint and prototype UI design illustrating Veluno’s approach to operations software.',
+    approach: [
+      {
+        title: 'Workflow Mapping',
+        description: 'Mapped dispatcher decision trees to understand where communication delays and misallocations occur during peak delivery hours.'
+      },
+      {
+        title: 'Unified Operational Console',
+        description: 'Designed a consolidated dashboard with interactive map views, vehicle statuses, and route history.'
+      },
+      {
+        title: 'API Integration Design',
+        description: 'Architected secure RESTful endpoints connecting GPS telemetry feeds directly to inventory and order records in PostgreSQL.'
+      }
+    ],
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'REST APIs', 'Leaflet', 'Tailwind CSS'],
+    featuresDelivered: [
+      'Interactive dispatch dashboard prototype with simulated vehicle markers',
+      'Vehicle status filtering (In Transit, Loading, Idle, Maintenance)',
+      'Route history inspection and timestamped milestone logs',
+      'Auditable event trails and automated dispatch alerts'
+    ],
+    results: [
+      { metric: 'Concrete Blueprint', label: 'Concrete architectural reference for mid-market fleet operators.' },
+      { metric: 'High-Throughput', label: 'Modular microservice blueprint ready for high-throughput telematics ingestion.' }
+    ],
+    gallery: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'
+    ],
+    timeline: 'Architecture Blueprint',
+    relatedCaseStudies: ['commerce-platform-concept', 'xenstaff', 'xenbill']
+  },
+
+  // 9. CONNECTED COMMERCE
   {
     slug: 'commerce-platform-concept',
     category: 'concept',
-    categoryLabel: 'Retail Architecture Blueprint',
+    categoryLabel: 'Connected Commerce & Inventory Workflow',
     status: 'Architecture Blueprint',
-    clientName: 'OmniSync Commerce Engine',
-    industry: 'Multi-Channel Retail & Real-Time Warehouse Synchronization',
+    clientName: 'Connected Commerce & Inventory Workflow',
+    industry: 'Multi-Storefront Commerce, Warehousing & Order Logistics',
     services: [
-      'Headless Storefront Architecture',
-      'Central Inventory Reconciliation',
-      'Backend & API Integrations',
-      'Transactional Database Design'
+      'Headless Commerce Architecture',
+      'Inventory Sync Logic',
+      'Automated Order Dispatch Routing',
+      'Unified Operational UI/UX'
     ],
-    region: 'Global Architecture Concept',
-    heroImage: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200',
-    summary: 'An illustrative architecture blueprint demonstrating how headless storefronts, central inventory databases, and payment workflows synchronize without manual data re-entry or stock overselling.',
-    challenge: 'Retail businesses that outgrow standard storefronts often suffer from inventory discrepancies between physical stock and online channels, requiring tedious manual reconciliation and leading to order fulfillment delays.',
-    velunoRole: 'System design and data schema blueprint created by Veluno to guide custom retail software builds.',
-    xenFirmRole: 'System design and data schema blueprint created by Veluno to guide custom retail software builds.',
+    region: 'Omnichannel Architecture Concept',
+    heroImage: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=1200',
+    summary: 'A comprehensive engineering blueprint demonstrating how modern retail brands synchronize online storefronts, physical retail POS terminals, and regional warehouse dispatch queues in sub-second intervals.',
+    challenge: 'Growing omnichannel brands often face inventory synchronization lag between their web store, physical counters, and third-party marketplaces. This architecture blueprint models sub-second distributed inventory locking.',
+    velunoRole: 'Architectural blueprint and UI/UX prototype engineering detailing Veluno’s approach to scalable commerce workflows.',
+    xenFirmRole: 'Architectural blueprint and UI/UX prototype engineering detailing Veluno’s approach to scalable commerce workflows.',
     approach: [
       {
-        title: 'Domain Modeling',
-        description: 'Mapped entity relationships between products, warehouse stock levels, payment intents, and fulfillment states.'
+        title: 'Real-Time Inventory Reconciliation',
+        description: 'Modeled event-driven distributed inventory locking preventing duplicate sales across online and retail channels.'
       },
       {
-        title: 'Event-Driven Synchronization',
-        description: 'Outlined webhook-based syncing between payment gateways and inventory allocation services to eliminate stock over-selling.'
-      },
-      {
-        title: 'Modular Backend APIs',
-        description: 'Designed documented REST endpoints decoupling frontend customer experience from underlying database logic.'
-      },
-      {
-        title: 'Audit & Reconciliation',
-        description: 'Created transactional logs to trace every price adjustment and inventory mutation.'
+        title: 'Unified Dispatch Console',
+        description: 'Designed warehouse picking, packing, and courier dispatch milestone tracking.'
       }
     ],
-    techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe API', 'Tailwind CSS'],
+    techStack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Stripe', 'Tailwind CSS'],
     featuresDelivered: [
-      'Headless inventory allocation schema blueprint',
-      'Multi-warehouse stock reservation logic flowcharts',
-      'Payment intent webhook error-handling specifications',
-      'Real-time reconciliation pipeline architecture'
-    ],
-    plannedFeatures: [
-      'Multi-currency automated settlement reporting',
-      'Barcode scanner mobile integration endpoints'
+      'Omnichannel inventory synchronization blueprint',
+      'Warehouse dispatch queue and courier handover management',
+      'High-performance product catalog with multi-variant handling',
+      'Customer order milestone telemetry'
     ],
     results: [
-      { metric: 'Zero Overselling', label: 'Architectural blueprint preventing overselling via atomic stock reservations.' },
-      { metric: 'Modular Decoupling', label: 'Decoupled storefront enabling independent UI refreshes and API scaling.' }
+      { metric: 'Zero Overselling', label: 'Distributed inventory locking blueprint prevents double-allocation.' },
+      { metric: 'Sub-Second', label: 'Event-driven reconciliation across multi-channel retail terminals.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200'
+      'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=80&w=1200'
     ],
     timeline: 'Architecture Blueprint',
-    relatedCaseStudies: ['cavve', 'xenbill', 'fleet-tracking-platform']
+    relatedCaseStudies: ['bill-now', 'cavve', 'brandmatchbot']
   }
 ];

@@ -50,9 +50,11 @@ const staticRoutes = [
 ];
 
 const caseStudies = [
+  'bill-now',
+  'cavve',
+  'brandmatchbot',
   'zylinn-ai',
   'linksync',
-  'cavve',
   'fleet-tracking-platform',
   'xenbill',
   'xenstaff',
