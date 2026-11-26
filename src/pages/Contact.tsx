@@ -435,9 +435,9 @@ const Contact = () => {
                       <MapPin className="w-5 h-5 text-blue-400" />
                     </div>
                     <div>
-                      <span className="text-xs text-gray-400 uppercase font-mono block">Delivery Hub</span>
-                      <span className="text-gray-200 font-medium">
-                        Chennai, India
+                      <span className="text-xs text-gray-400 uppercase font-mono block">Delivery Hub / Office</span>
+                      <span className="text-gray-200 font-medium leading-relaxed block text-xs">
+                        Vivekananda Nagar, Thoraipakkam, Chennai, Tamil Nadu 600097
                       </span>
                     </div>
                   </li>

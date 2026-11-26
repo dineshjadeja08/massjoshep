@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3.5 text-xs text-slate-300">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#14B8A6] shrink-0 mt-0.5" />
-                <span>Chennai, India</span>
+                <span className="leading-relaxed">Vivekananda Nagar, Thoraipakkam, Chennai, Tamil Nadu 600097</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-[#14B8A6] shrink-0" />

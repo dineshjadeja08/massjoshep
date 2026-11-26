@@ -301,7 +301,7 @@ export const About: React.FC = () => {
                   <div className="w-7 h-7 rounded-lg bg-white/10 text-[#14B8A6] flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <span><strong>Delivery Center:</strong> Chennai, Tamil Nadu, India</span>
+                  <span><strong>Delivery Center:</strong> Vivekananda Nagar, Thoraipakkam, Chennai, Tamil Nadu 600097</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-7 h-7 rounded-lg bg-white/10 text-[#14B8A6] flex items-center justify-center shrink-0">
@@ -373,7 +373,7 @@ export const About: React.FC = () => {
             <div className="space-y-4 text-xs sm:text-sm">
               <div>
                 <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Registered Office</span>
-                <span className="text-slate-700 font-medium">Chennai, India</span>
+                <span className="text-slate-700 font-medium">Vivekananda Nagar, Thoraipakkam, Chennai, Tamil Nadu 600097</span>
               </div>
               <div>
                 <span className="font-mono font-bold text-slate-500 uppercase text-xs block">Official Inquiry Email</span>
