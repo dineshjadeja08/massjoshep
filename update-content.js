@@ -67,7 +67,7 @@ footerContent = footerContent.replace(
 footerContent = footerContent.replace(
   /<a href="#" className="text-gray-400 hover:text-accent-500 transition-colors"><Linkedin className="w-5 h-5" \/><\/a>\s*<a href="#" className="text-gray-400 hover:text-accent-500 transition-colors"><Twitter className="w-5 h-5" \/><\/a>\s*<a href="#" className="text-gray-400 hover:text-accent-500 transition-colors"><Github className="w-5 h-5" \/><\/a>/,
   `<a href="https://www.linkedin.com/company/xenfirm-technologies" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-accent-500 transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="https://wa.me/919080824626" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-accent-500 transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="https://wa.me/918428392629" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-accent-500 transition-colors"><Twitter className="w-5 h-5" /></a>
               <a href="https://github.com/dineshjadeja08/xenfirm_Tech" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-accent-500 transition-colors"><Github className="w-5 h-5" /></a>`
 );
 
@@ -79,8 +79,8 @@ footerContent = footerContent.replace(
               <li><Link to="/services/automation" className="text-gray-400 hover:text-white transition-colors">AI & Automation</Link></li>`
 );
 
-footerContent = footerContent.replace(/\+91 98765 43210/g, '+91 90808 24626');
-footerContent = footerContent.replace(/tel:\+919876543210/g, 'tel:+919080824626');
+footerContent = footerContent.replace(/\+91 98765 43210/g, '+91 84283 92629');
+footerContent = footerContent.replace(/tel:\+919876543210/g, 'tel:+918428392629');
 fs.writeFileSync(footerPath, footerContent);
 
 // 4. Update Services.tsx
@@ -109,8 +109,8 @@ fs.writeFileSync(servicesPath, servicesContent);
 // 5. Update Contact.tsx
 const contactPath = path.join(basePath, 'pages/Contact.tsx');
 let contactContent = fs.readFileSync(contactPath, 'utf8');
-contactContent = contactContent.replace(/\+91 98765 43210/g, '+91 90808 24626');
-contactContent = contactContent.replace(/tel:\+919876543210/g, 'tel:+919080824626');
+contactContent = contactContent.replace(/\+91 98765 43210/g, '+91 84283 92629');
+contactContent = contactContent.replace(/tel:\+919876543210/g, 'tel:+918428392629');
 fs.writeFileSync(contactPath, contactContent);
 
 // 6. Append case study to caseStudies.ts

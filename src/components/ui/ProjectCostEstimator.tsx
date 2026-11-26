@@ -164,7 +164,7 @@ export const ProjectCostEstimator: React.FC = () => {
   const totalWeeksMax = Math.max(3, Math.round((activePlatform.weeksMax + featuresWeeks) * timeFactor));
 
   // WhatsApp Pre-fill URL
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '919080824626';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '918428392629';
   const whatsappMsg = encodeURIComponent(
     `Hello Veluno Softtech! I generated an estimate for a ${activePlatform.name} project with ${selectedFeatures.length} features (${currency === 'INR' ? `₹${totalInrMin.toLocaleString('en-IN')} - ₹${totalInrMax.toLocaleString('en-IN')}` : `$${totalUsdMin.toLocaleString()} - $${totalUsdMax.toLocaleString()}`}, ~${totalWeeksMin}-${totalWeeksMax} weeks). I'd like to discuss architectural scoping.`
   );

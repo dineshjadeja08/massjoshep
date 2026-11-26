@@ -4,7 +4,7 @@ export const FloatingWhatsApp: React.FC = () => {
   const [hovered, setHovered] = useState(false);
 
   // Configurable WhatsApp phone number via Vite env var, falling back to corporate contact
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '919080824626';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '918428392629';
   const defaultMessage = encodeURIComponent(
     "Hello Veluno Softtech! I'm interested in your software development services. I'd like to discuss my project."
   );

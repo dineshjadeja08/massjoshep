@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, Clock, MapPin, Send, MessageSquare, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Clock, MapPin, Send, MessageSquare, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 import PageBanner from '../components/ui/PageBanner';
 import InternationalCollaborationHub from '../components/ui/InternationalCollaborationHub';
 import InteractiveProjectPlanner from '../components/ui/InteractiveProjectPlanner';
@@ -86,7 +86,7 @@ const Contact = () => {
 
   const budgetOptions = currency === 'INR' ? BUDGET_RANGES_INR : BUDGET_RANGES_USD;
 
-  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '919080824626';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '918428392629';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     "Hello Veluno Softtech! I'm interested in your software development services. I'd like to discuss my project."
   )}`;
@@ -444,6 +444,18 @@ const Contact = () => {
                 </h3>
 
                 <ul className="space-y-6 text-sm">
+                  <li className="flex items-start">
+                    <div className="w-10 h-10 rounded-xs bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
+                      <Phone className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <span className="text-xs text-gray-400 uppercase font-mono block">Direct Phone / Call</span>
+                      <a href="tel:+918428392629" className="font-bold text-white hover:text-blue-400 transition-colors">
+                        +91 84283 92629
+                      </a>
+                    </div>
+                  </li>
+
                   <li className="flex items-start">
                     <div className="w-10 h-10 rounded-xs bg-white/10 text-[#2563EB] flex items-center justify-center mr-4 shrink-0">
                       <Mail className="w-5 h-5 text-blue-400" />

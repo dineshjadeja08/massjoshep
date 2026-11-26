@@ -191,6 +191,12 @@ const Footer: React.FC = () => {
                 <span>Response SLA: Under 4 Hours</span>
               </div>
               <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-[#14B8A6] shrink-0" />
+                <a href="tel:+918428392629" className="hover:text-[#14B8A6] transition-colors font-medium">
+                  +91 84283 92629
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#14B8A6] shrink-0" />
                 <a href="mailto:contact@velunosofttech.com" className="hover:text-[#14B8A6] transition-colors">
                   contact@velunosofttech.com

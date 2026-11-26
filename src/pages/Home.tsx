@@ -72,7 +72,7 @@ const Home = () => {
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+91-9489249051",
+          "telephone": "+91-8428392629",
           "contactType": "sales & technical support",
           "areaServed": ["Worldwide", "UK", "US", "EU", "India"],
           "availableLanguage": ["English", "Tamil"]

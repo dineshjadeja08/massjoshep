@@ -34,7 +34,7 @@ const ServiceDetail: React.FC = () => {
   const whatsappMessage = encodeURIComponent(
     `Hello Veluno Softtech, I would like to scope a project for ${service.name}.`
   );
-  const whatsappUrl = `https://wa.me/919489249051?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/918428392629?text=${whatsappMessage}`;
 
   const canonicalUrl = `https://vusofttech.netlify.app/services/${service.id}`;
   const seoTitle = service.seoTitle || `${service.title} | Veluno Softtech`;
