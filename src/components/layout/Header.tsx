@@ -379,6 +379,17 @@ export const Header: React.FC = () => {
           >
             Security
           </Link>
+
+          <Link
+            to="/blog"
+            className={`text-sm font-semibold transition-colors py-1 ${
+              isActive('/blog') || isActive('/insights')
+                ? 'border-b-2 border-[#14B8A6] text-[#0B1F3A] font-bold'
+                : 'text-slate-600 hover:text-[#0B1F3A]'
+            }`}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* Search & Right CTA Button */}
@@ -518,6 +529,14 @@ export const Header: React.FC = () => {
                 className={`text-base font-bold ${isActive('/security') ? 'text-[#2563EB]' : 'text-slate-800'}`}
               >
                 Security & Trust
+              </Link>
+
+              <Link
+                to="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-base font-bold ${isActive('/blog') || isActive('/insights') ? 'text-[#2563EB]' : 'text-slate-800'}`}
+              >
+                Blog & Insights
               </Link>
 
               <Link

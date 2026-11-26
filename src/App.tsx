@@ -13,6 +13,7 @@ import Work from './pages/work/Work';
 import CaseStudyDetail from './pages/work/CaseStudyDetail';
 import Insights from './pages/insights/Insights';
 import InsightDetail from './pages/insights/InsightDetail';
+import BlogStudio from './pages/insights/BlogStudio';
 import Careers from './pages/careers/Careers';
 import CareerDetail from './pages/careers/CareerDetail';
 import Contact from './pages/Contact';
@@ -61,8 +62,14 @@ function App() {
             <Route path="/work" element={<Work />} />
             <Route path="/work/:slug" element={<CaseStudyDetail />} />
             
+            {/* Blog & Insights */}
+            <Route path="/blog" element={<Insights />} />
+            <Route path="/blog/studio" element={<BlogStudio />} />
+            <Route path="/blog/:slug" element={<InsightDetail />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/studio" element={<BlogStudio />} />
             <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/admin" element={<BlogStudio />} />
             
             <Route path="/careers" element={<Careers />} />
             <Route path="/careers/:slug" element={<CareerDetail />} />

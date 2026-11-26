@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Articles & Insights"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Architecture", "Engineering Process", "Artificial Intelligence", "E-Commerce", "FinTech", "Cloud & Security"] }
+      - { label: "Date", name: "date", widget: "date", format: "MMM DD, YYYY" }
+      - { label: "Read Time", name: "readTime", widget: "string", default: "6 min read" }
+      - { label: "Summary / Meta Description", name: "summary", widget: "text" }
+      - { label: "Cover Image URL", name: "coverImage", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - label: "Author"
+        name: "author"
+        widget: "object"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Avatar URL", name: "avatar", widget: "string", required: false }
+      - { label: "Body Content (Markdown)", name: "content", widget: "markdown" }
