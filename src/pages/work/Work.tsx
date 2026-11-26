@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
-import { ArrowRight, ShieldCheck, ExternalLink } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import PageBanner from '../../components/ui/PageBanner';
 
 type FilterCategory = 'all' | 'client' | 'product' | 'concept';
@@ -169,26 +169,14 @@ const Work: React.FC = () => {
               </div>
 
               {/* Card Footer Actions */}
-              <div className="p-6 pt-0 flex items-center gap-2">
+              <div className="p-6 pt-0">
                 <Link
                   to={`/work/${cs.slug}`}
-                  className="btn-primary flex-1 text-center py-2.5 rounded-xs font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs group-hover:bg-[#2563EB] transition-all"
+                  className="btn-primary w-full text-center py-2.5 rounded-xs font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-1.5 shadow-xs group-hover:bg-[#2563EB] transition-all"
                 >
                   <span>Read Case Study</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                {cs.liveUrl && (
-                  <a
-                    href={cs.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xs bg-slate-100 hover:bg-[#14B8A6] hover:text-[#0B1F3A] text-slate-800 border border-slate-300 text-xs font-bold font-mono transition-all uppercase tracking-wider shrink-0"
-                    title={`Open live site for ${cs.clientName}`}
-                  >
-                    <span>Live Demo</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                )}
               </div>
             </div>
           ))}
