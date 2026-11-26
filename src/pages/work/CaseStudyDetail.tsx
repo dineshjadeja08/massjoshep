@@ -27,12 +27,52 @@ const CaseStudyDetail = () => {
     study.relatedCaseStudies.includes(cs.slug) && cs.slug !== study.slug
   );
 
+  const canonicalUrl = `https://vusofttech.netlify.app/work/${study.slug}`;
+  const seoTitle = `${study.clientName} | ${study.categoryLabel} | Veluno Softtech`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vusofttech.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://vusofttech.netlify.app/projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": study.clientName,
+        "item": canonicalUrl
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>{study.clientName} | {study.categoryLabel} | Veluno Softtech</title>
+        <title>{seoTitle}</title>
         <meta name="description" content={study.summary} />
-        <link rel="canonical" href={`https://www.velunosofttech.com/work/${study.slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={study.summary} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={study.heroImage || "https://vusofttech.netlify.app/og-image.png"} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={study.summary} />
+        <meta name="twitter:image" content={study.heroImage || "https://vusofttech.netlify.app/og-image.png"} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       
       {/* Top Banner */}

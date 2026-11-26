@@ -14,22 +14,61 @@ const Work: React.FC = () => {
     ? caseStudies
     : caseStudies.filter(cs => cs.category === filter);
 
+  const canonicalUrl = "https://vusofttech.netlify.app/projects";
+  const seoTitle = "Software Development Portfolio | SaaS, AI & Web Projects | Veluno Softtech";
+  const seoDesc = "Explore Veluno Softtech's software development portfolio: SaaS invoicing (Bill Now), community platform (Cavve), AI MarTech (BrandMatchBot), and Voice AI (Zylo Voice).";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vusofttech.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": canonicalUrl
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>Portfolio & Case Studies | Veluno Softtech</title>
-        <meta
-          name="description"
-          content="Explore Veluno Softtech's live client platforms, production software, conversational AI voice agents, and enterprise architecture blueprints."
-        />
-        <link rel="canonical" href="https://www.velunosofttech.com/work" />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDesc} />
+        <meta name="keywords" content="software development company portfolio, SaaS development case study, voice AI project case study, invoicing SaaS development" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDesc} />
+        <meta name="twitter:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
-      {/* Top Banner */}
+      {/* Top Banner (Single H1) */}
       <PageBanner
-        title="Portfolio Works"
-        breadcrumb="Case Studies"
-        subtitle="Software that moves business forward — from live FinTech billing platforms and curated community networks to sub-second conversational voice AI."
+        title="Software Development Portfolio and Live Deployments"
+        breadcrumb="Portfolio"
+        subtitle="Explore our software development company portfolio featuring SaaS development case studies, voice AI project case studies, and live production deployments."
       />
 
       {/* Main Portfolio Grid */}
@@ -42,8 +81,11 @@ const Work: React.FC = () => {
               Curated Deliveries & Systems
             </span>
             <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-[#0B1F3A]">
-              Featured Client Platforms & Products
+              Featured Client Platforms, SaaS & AI Case Studies
             </h2>
+            <p className="text-xs text-slate-600 mt-1 font-light max-w-xl">
+              From our <Link to="/services/web-application-development" className="text-[#2563EB] hover:underline font-medium">invoicing SaaS development</Link> to sub-second <Link to="/services/ai-automation" className="text-[#2563EB] hover:underline font-medium">voice AI project case studies</Link>, review our verified code deliveries.
+            </p>
           </div>
 
           {/* Category Filter Pills */}
@@ -95,7 +137,7 @@ const Work: React.FC = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img
                     src={cs.heroImage}
-                    alt={cs.clientName}
+                    alt={`${cs.clientName} - Software Development Company Portfolio Case Study`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />

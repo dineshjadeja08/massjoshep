@@ -4,6 +4,12 @@ export interface ServiceItem {
   pillar: string;
   title: string;
   tagline: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  h1?: string;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
+  relatedServices?: string[];
   capabilities: string[];
   deliverables: string[];
   techStack?: string[];
@@ -21,6 +27,16 @@ export const servicesData: ServiceItem[] = [
     pillar: "Web Platforms",
     aliases: ["veluno-web", "web-development"],
     title: "Website Development — High-Performance Corporate & Marketing Websites",
+    seoTitle: "Custom Website Development Company | Next.js & Headless CMS | Veluno Softtech",
+    seoDescription: "High-speed corporate websites and headless CMS platforms built with Next.js for SEO authority and lead conversion. 100% code ownership. Get a quote.",
+    h1: "Custom Website Development Company for High-Speed, SEO-Ready Websites",
+    primaryKeyword: "custom website development company",
+    secondaryKeywords: [
+      "Next.js development agency",
+      "headless CMS development",
+      "SEO-friendly corporate website development"
+    ],
+    relatedServices: ["web-application-development", "ui-ux-design"],
     tagline: "Custom business websites, high-converting landing pages, and headless CMS architectures engineered for commercial authority, 95+ PageSpeed scores, and predictable lead generation.",
     capabilities: [
       "Modern Corporate & Enterprise Websites",
@@ -41,7 +57,9 @@ export const servicesData: ServiceItem[] = [
     relatedCaseStudies: ["bill-now", "cavve", "commerce-platform-concept"],
     content: `## Modern Web Experiences Built for Commercial Results
 
-At Veluno Softtech, we view your website as your most critical digital asset and primary commercial engine. Many growing businesses struggle with:
+As a premier **custom website development company**, Veluno Softtech engineers web platforms that elevate your commercial presence and turn organic search traffic into qualified business pipeline. Working as a specialized **Next.js development agency**, we eliminate the technical debt of outdated themes, delivering fast, resilient digital storefronts and marketing engines.
+
+Many growing businesses struggle with:
 - **Clunky legacy websites:** Outdated designs that fail to reflect the caliber, trust, and maturity of your organization.
 - **Slow loading speeds:** Bloated themes and plugins that cause 40%+ bounce rates before visitors even see your offer.
 - **Rigid content management:** Complete reliance on external developers for simple copy, blog, or pricing page updates.
@@ -49,7 +67,7 @@ At Veluno Softtech, we view your website as your most critical digital asset and
 
 Veluno Softtech delivers custom, clean, and blazingly fast websites engineered on modern frameworks that position your company as a commanding market leader.
 
-## What Is Included
+## What Is Included in Our Website Engineering
 
 ### 1. Discovery & Conversion Architecture
 We analyze your target market, competitors, and buyer personas to craft a visual hierarchy that naturally steers high-intent prospects toward conversion.
@@ -57,11 +75,11 @@ We analyze your target market, competitors, and buyer personas to craft a visual
 ### 2. Custom Responsive Frontend Engineering
 Every page is hand-crafted with React, Next.js, and modern CSS—completely free of bloated page builders, unnecessary scripts, or fragile dependencies.
 
-### 3. Headless CMS Integration
-We empower your marketing team with a modern headless CMS dashboard so you can publish blog articles, modify text, and launch new landing pages in minutes without touching code.
+### 3. Headless CMS Development
+Through advanced **headless CMS development**, we empower your marketing team with intuitive authoring flows (Sanity, Strapi, Decap) so you can publish blog articles, modify copy, and launch landing pages in minutes without touching code.
 
-### 4. Technical SEO Foundation
-Every site launches with pre-configured JSON-LD structured schema, dynamic Open Graph social cards, XML sitemaps, and optimized asset delivery for search engines.
+### 4. SEO-Friendly Corporate Website Development
+Every deployment includes comprehensive **SEO-friendly corporate website development** with pre-configured JSON-LD structured schema, dynamic Open Graph social cards, XML sitemaps, and optimized asset delivery for search engines.
 
 ## Frequently Asked Questions
 
@@ -82,6 +100,16 @@ Yes. Upon project completion and final milestone approval, full source code and 
     pillar: "Custom SaaS",
     aliases: ["veluno-products", "web-apps", "saas-development"],
     title: "Web Application Development — Scalable SaaS & Client Portals",
+    seoTitle: "Custom Web Application Development Services | SaaS & Multi-Tenant | Veluno Softtech",
+    seoDescription: "Multi-tenant SaaS products, onboarding portals, and subscription billing engines built with React, Node.js, and PostgreSQL. Sub-100ms API SLA.",
+    h1: "Custom Web Application Development Services for SaaS and High-Concurrency Platforms",
+    primaryKeyword: "custom web application development services",
+    secondaryKeywords: [
+      "multi-tenant SaaS development company",
+      "subscription billing platform development",
+      "high-concurrency backend development"
+    ],
+    relatedServices: ["custom-software-development", "website-development"],
     tagline: "Multi-tenant SaaS products, customer portals, subscription billing systems, and cloud web apps engineered for high concurrency, rock-solid security, and effortless scaling.",
     capabilities: [
       "Multi-Tenant SaaS Platform Engineering",
@@ -102,7 +130,9 @@ Yes. Upon project completion and final milestone approval, full source code and 
     relatedCaseStudies: ["bill-now", "cavve", "xenstaff", "xenbill"],
     content: `## Scalable Web Applications Built for High Concurrency
 
-Turning a product concept into a scalable web application requires disciplined software architecture, secure data modeling, and seamless user experiences. Common challenges include:
+Veluno Softtech provides end-to-end **custom web application development services** for startups, scale-ups, and established enterprises. As a battle-tested **multi-tenant SaaS development company**, we architect resilient cloud platforms, secure client portals, and mission-critical web tools engineered to handle high concurrency with guaranteed sub-100ms API response budgets.
+
+Common challenges product teams face include:
 - **Architectural bottlenecks:** Applications built on fragile shortcuts that crash under moderate user concurrency.
 - **Security vulnerabilities:** Unvetted authorization checks allowing horizontal privilege escalation across accounts.
 - **Complex billing logic:** Prorated subscriptions, failed payment recovery, and invoice generation causing churn.
@@ -110,19 +140,19 @@ Turning a product concept into a scalable web application requires disciplined s
 
 Veluno Softtech engineers enterprise-grade web applications with modular microservices, resilient data stores, and intuitive user interfaces.
 
-## What Is Included
+## Core Engineering Pillars
 
-### 1. Data Schema & Architecture Blueprinting
-We model domain entities, define database foreign keys, and establish caching strategies to ensure sub-100ms API response budgets.
+### 1. High-Concurrency Backend Development
+Through rigorous **high-concurrency backend development**, we design modular microservices and event-driven architectures with Node.js, Python FastAPI, PostgreSQL, and Redis caching.
 
-### 2. Full-Stack Product Engineering
-Complete frontend and backend development with modern component architectures, type-safe API contracts, and real-time state synchronization.
+### 2. Multi-Tenant SaaS Architecture & Tenant Isolation
+We enforce strict tenant-scoped database queries, foreign key isolation, and automated authorization middleware on every API endpoint.
 
-### 3. Enterprise Authentication & Security
-Multi-factor authentication (MFA), role-based permission matrices, tenant data isolation, and cryptographic secret management.
+### 3. Subscription Billing Platform Development
+Our engineers specialize in **subscription billing platform development**, building seamless integrations with Stripe Billing, multi-tier pricing, prorated upgrades, and automated tax and invoice reconciliation.
 
-### 4. Subscription & Financial Workflows
-End-to-end integration with Stripe Billing, automated tax calculations, tier upgrades, and automated invoice PDF generation.
+### 4. Enterprise Authentication & Security
+Multi-factor authentication (MFA), role-based permission matrices, tenant data isolation, and cryptographic secret management aligned with SOC 2.
 
 ## Frequently Asked Questions
 
@@ -140,6 +170,16 @@ We enforce strict tenant-scoped database queries, foreign key isolation, and aut
     pillar: "Mobile Engineering",
     aliases: ["veluno-mobile", "mobile-apps", "ios-android"],
     title: "Mobile App Development — Native iOS, Android & Cross-Platform Applications",
+    seoTitle: "Mobile App Development Company | React Native, Flutter, Native iOS & Android",
+    seoDescription: "Native iOS (Swift), Android (Kotlin), and cross-platform React Native / Flutter apps with offline-first sync. Hire a mobile app development company in India.",
+    h1: "Mobile App Development Company for Native and Cross-Platform Apps",
+    primaryKeyword: "mobile app development company",
+    secondaryKeywords: [
+      "React Native app development",
+      "Flutter app development",
+      "native iOS Android app development India"
+    ],
+    relatedServices: ["web-application-development", "ui-ux-design"],
     tagline: "Consumer and enterprise mobile apps engineered for fluid 60fps performance, offline-first reliability, biometric security, and rapid App Store & Google Play distribution.",
     capabilities: [
       "Cross-Platform React Native & Flutter Engineering",
@@ -160,7 +200,9 @@ We enforce strict tenant-scoped database queries, foreign key isolation, and aut
     relatedCaseStudies: ["cavve", "fleet-tracking-platform", "zylinn-ai"],
     content: `## Mission-Critical Mobile Applications Built for Scale
 
-In today's mobile-first market, substandard mobile applications cause immediate user uninstalls and damage brand trust. Common mobile development bottlenecks include:
+Veluno Softtech is an experienced **mobile app development company** delivering fluid, high-retention mobile software for iOS and Android. Whether you require cross-platform **React Native app development**, high-velocity **Flutter app development**, or deep **native iOS Android app development India**, our mobile engineers build applications engineered for 60fps performance and offline-first reliability.
+
+Common mobile development bottlenecks include:
 - **Janky frame rates and sluggish UI:** Slow render cycles that frustrate users and hurt store ratings.
 - **Offline failures:** Applications that crash or become unusable when network connectivity drops or fluctuates.
 - **Store rejection delays:** Lengthy review cycles caused by non-compliant permissions, privacy policies, or unoptimized assets.
@@ -198,6 +240,16 @@ Veluno Softtech handles the entire submission process, including metadata config
     pillar: "Commerce Solutions",
     aliases: ["ecommerce", "shopify", "headless-commerce"],
     title: "E-Commerce Development — Headless & High-Converting Commerce Platforms",
+    seoTitle: "Custom E-Commerce Development Agency | Shopify Plus & Headless Commerce",
+    seoDescription: "Custom Shopify Plus storefronts, headless commerce, inventory sync, and secure global payment gateways. Build a conversion-focused store with Veluno Softtech.",
+    h1: "Custom E-Commerce Development Agency for Shopify Plus and Headless Commerce",
+    primaryKeyword: "custom e-commerce development agency",
+    secondaryKeywords: [
+      "Shopify Plus development",
+      "headless commerce development",
+      "global payment gateway integration"
+    ],
+    relatedServices: ["website-development", "crm-erp-development"],
     tagline: "Fast, frictionless e-commerce platforms, custom shopping carts, inventory integrations, and multi-currency checkout experiences engineered to maximize average order value.",
     capabilities: [
       "Custom Shopify Plus & Headless Commerce Stores",
@@ -218,7 +270,9 @@ Veluno Softtech handles the entire submission process, including metadata config
     relatedCaseStudies: ["commerce-platform-concept", "bill-now"],
     content: `## Modern E-Commerce Engineered for Maximum Conversion
 
-Standard off-the-shelf themes often become slow, rigid, and cluttered with third-party plugins that drag down conversions. E-commerce merchants routinely battle:
+As a dedicated **custom e-commerce development agency**, Veluno Softtech builds online stores engineered for rapid catalog browsing, high average order value, and effortless checkout. From specialized **Shopify Plus development** to custom **headless commerce development**, we eliminate theme bloat and empower brands with global commerce capability.
+
+E-commerce merchants routinely battle:
 - **Abandoned carts:** Slow checkout steps and clunky forms causing shoppers to drop off at the payment step.
 - **Inventory discrepancies:** Selling items that are out of stock due to disconnected inventory systems.
 - **Slow mobile catalog browsing:** Heavy JavaScript bundles causing shoppers on mobile networks to bounce.
@@ -231,8 +285,8 @@ Veluno Softtech engineers custom, fast e-commerce platforms that deliver smooth 
 ### 1. High-Speed Storefront Architecture
 Next.js and modern frontend architectures that load product pages instantly, ensuring shoppers browse without waiting.
 
-### 2. Frictionless Checkout & Payment Gateways
-Streamlined checkout flows supporting Apple Pay, Google Pay, credit cards, and local payment methods with automated fraud detection.
+### 2. Global Payment Gateway Integration
+Frictionless checkout experiences with comprehensive **global payment gateway integration** supporting Stripe, PayPal, Razorpay, Apple Pay, and local currency payment methods with automated fraud detection.
 
 ### 3. Inventory & ERP Webhooks
 Real-time bidirectional synchronization between your storefront, warehouse fulfillment centers, and ERP systems.
@@ -256,6 +310,16 @@ All payment data is tokenized and processed via PCI-DSS Level 1 compliant gatewa
     pillar: "Digital Design",
     aliases: ["veluno-branding", "branding", "design-systems"],
     title: "UI/UX Design & Pro Brand Identity — Authority-Building Systems",
+    seoTitle: "UI/UX Design Agency | Figma Design Systems & Prototypes | Veluno Softtech",
+    seoDescription: "Figma design systems, interactive prototypes, user journey mapping, and corporate brand identities. UI/UX design agency for SaaS and enterprise products.",
+    h1: "UI/UX Design Agency for Design Systems and Product Prototypes",
+    primaryKeyword: "UI UX design agency",
+    secondaryKeywords: [
+      "Figma design system development",
+      "product prototype design",
+      "corporate brand identity design"
+    ],
+    relatedServices: ["web-application-development", "website-development"],
     tagline: "Strategic UI/UX design, interactive Figma prototypes, design systems, and cohesive corporate visual identities that turn digital products into intuitive, trustworthy experiences.",
     capabilities: [
       "Intuitive Product UI/UX Architecture & Wireframing",
@@ -276,7 +340,9 @@ All payment data is tokenized and processed via PCI-DSS Level 1 compliant gatewa
     relatedCaseStudies: ["cavve", "brandmatchbot", "bill-now"],
     content: `## Design That Communicates Authority and Converts
 
-Great software is defined by how effortlessly users can achieve their goals. When design is neglected, software products face:
+Veluno Softtech is a specialized **UI UX design agency** focused on enterprise SaaS products, fintech interfaces, and corporate digital experiences. We bridge the gap between design theory and software engineering through disciplined **Figma design system development**, interactive **product prototype design**, and comprehensive **corporate brand identity design**.
+
+When design is neglected, software products face:
 - **User confusion & high support tickets:** Users getting stuck on simple tasks due to poor visual hierarchy.
 - **Disjointed user interfaces:** Different screens looking like they were built by different companies.
 - **Amateur branding:** Visual identities that fail to communicate the enterprise caliber of your services.
@@ -295,7 +361,7 @@ Realistic Figma prototypes that allow you to click through, test, and refine you
 ### 3. Comprehensive Design Systems
 A modular library of buttons, form inputs, modals, navigation bars, and data tables that streamline development and ensure visual harmony.
 
-### 4. Corporate Brand Identity
+### 4. Corporate Brand Identity Design
 Clean, geometric vector logos, cohesive color palettes, typography guidelines, and branded collateral tailored for commercial leadership.
 
 ## Frequently Asked Questions
@@ -314,6 +380,16 @@ Yes. We redesign user experiences while preserving underlying database schemas a
     pillar: "Custom Engineering",
     aliases: ["custom-software", "veluno-systems"],
     title: "Custom Software Development — Tailored Business Engines",
+    seoTitle: "Custom Software Development Company | Legacy Modernization & Automation",
+    seoDescription: "Tailored business process software, internal operations portals, automated data pipelines, and legacy modernization. 100% source code ownership.",
+    h1: "Custom Software Development Company for Tailored Business Software",
+    primaryKeyword: "custom software development company",
+    secondaryKeywords: [
+      "legacy software modernization services",
+      "automated data pipeline development",
+      "internal operations portal development"
+    ],
+    relatedServices: ["crm-erp-development", "ai-automation"],
     tagline: "Purpose-built business software, internal operations portals, automated data processing pipelines, and proprietary tools engineered around your exact commercial workflow.",
     capabilities: [
       "Bespoke Business Process Automation",
@@ -334,7 +410,9 @@ Yes. We redesign user experiences while preserving underlying database schemas a
     relatedCaseStudies: ["xenbill", "xenstaff", "fleet-tracking-platform"],
     content: `## Software Tailored to How Your Business Actually Operates
 
-Off-the-shelf software often forces growing companies into rigid operational constraints, charging exorbitant per-seat licensing fees. Growing organizations face:
+Veluno Softtech is an elite **custom software development company** that transforms disjointed manual operations into automated, scalable software assets. Our engineering squads deliver **internal operations portal development**, mission-critical **legacy software modernization services**, and resilient **automated data pipeline development** designed around your exact business requirements.
+
+Off-the-shelf software often forces growing companies into rigid operational constraints, charging exorbitant per-seat licensing fees:
 - **Manual spreadsheet coordination:** Hours wasted copying data across disjointed spreadsheets and desktop apps.
 - **Ballooning software subscriptions:** Paying thousands of dollars each month for bloated SaaS tools where you use only 10% of features.
 - **Operational blind spots:** Inability to generate real-time reports tailored to your specific business KPIs.
@@ -356,6 +434,9 @@ Clean, ergonomic web interfaces for operations managers, field agents, and execu
 ### 4. Automated Reporting & Business Intelligence
 Automated dashboards and scheduled email reports that summarize revenue, labor hours, and delivery metrics in real time.
 
+### 5. 100% Source Code Ownership and No Vendor Lock-In
+As a **software development company with full code ownership**, Veluno Softtech ensures that all intellectual property, source code repositories, automated CI/CD configurations, and database schemas belong entirely to you from day one. You retain complete freedom to host, scale, or transition your software stack without proprietary vendor lock-in or recurring agency licensing fees.
+
 ## Frequently Asked Questions
 
 #### What are the cost advantages of custom software vs off-the-shelf SaaS?
@@ -370,8 +451,18 @@ You do. We provide 100% source code ownership, repository access, and database c
     id: "crm-erp-development",
     name: "CRM & ERP Solutions",
     pillar: "Enterprise Systems",
-    aliases: ["crm-erp", "enterprise-software", "api-integrations"],
+    aliases: ["crm-erp", "enterprise-software", "api-integrations", "crm-erp-solutions"],
     title: "CRM & ERP Solutions — Centralized Enterprise Operations",
+    seoTitle: "Custom CRM & ERP Development Services | Enterprise Solutions | Veluno Softtech",
+    seoDescription: "Unified CRM and ERP systems connecting sales pipelines, warehouse inventory, order dispatch, and invoicing. Custom enterprise software development.",
+    h1: "Custom CRM & ERP Development Services for Unified Enterprise Operations",
+    primaryKeyword: "custom CRM ERP development services",
+    secondaryKeywords: [
+      "enterprise ERP software development",
+      "sales pipeline CRM development",
+      "warehouse inventory management software"
+    ],
+    relatedServices: ["custom-software-development", "ai-automation"],
     tagline: "Custom CRM and lightweight ERP solutions that integrate inventory, customer relationships, order fulfillment, and financial accounting into one unified single source of truth.",
     capabilities: [
       "Custom CRM Pipeline & Lead Tracking Systems",
@@ -392,7 +483,9 @@ You do. We provide 100% source code ownership, repository access, and database c
     relatedCaseStudies: ["xenstaff", "xenbill", "fleet-tracking-platform"],
     content: `## Centralize Operations with a Unified Single Source of Truth
 
-When departments use disconnected systems, information gaps create delays, duplicate work, and billing errors. Organizations often struggle with:
+Veluno Softtech provides specialized **custom CRM ERP development services** that bring sales, inventory, procurement, and accounting under one unified digital roof. Through modern **enterprise ERP software development**, tailored **sales pipeline CRM development**, and multi-location **warehouse inventory management software**, we eliminate data silos and manual coordination friction.
+
+When departments use disconnected systems, information gaps create delays, duplicate work, and billing errors:
 - **Fragmented customer records:** Sales, support, and billing teams holding contradictory customer information.
 - **Delayed inventory synchronization:** Sales teams promising items that warehouse staff have already dispatched.
 - **Manual invoice reconciliation:** Accounting teams spending days matching bank deposits to physical receipts.
@@ -428,8 +521,18 @@ Significantly easier. Because we design the interface specifically around your c
     id: "ai-automation",
     name: "AI & Business Automation",
     pillar: "Artificial Intelligence",
-    aliases: ["ai-systems", "voice-ai", "automation"],
+    aliases: ["ai-systems", "voice-ai", "automation", "ai-business-automation"],
     title: "AI & Business Automation — Conversational Voice & Intelligent Workflows",
+    seoTitle: "AI Business Automation Services | Voice AI Agents & Workflow Automation",
+    seoDescription: "Sub-second conversational voice AI agents, telephony assistants, intelligent document processing, and automated workflows. AI automation for business.",
+    h1: "AI Business Automation Services for Voice AI and Workflow Automation",
+    primaryKeyword: "AI business automation services",
+    secondaryKeywords: [
+      "voice AI agent development",
+      "conversational AI development company",
+      "intelligent document processing"
+    ],
+    relatedServices: ["custom-software-development", "web-application-development"],
     tagline: "Sub-second conversational voice AI agents, automated telephony assistants, intelligent document processing, and AI workflows that scale customer support and operational throughput 24/7.",
     capabilities: [
       "Sub-Second Conversational Voice AI Telephony",
@@ -450,7 +553,9 @@ Significantly easier. Because we design the interface specifically around your c
     relatedCaseStudies: ["zylinn-ai", "brandmatchbot", "linksync"],
     content: `## Put Business Operations on Intelligent Autopilot 24/7
 
-High support volumes and manual customer intake drain company resources and lead to missed opportunities during non-business hours. Common challenges include:
+Veluno Softtech delivers production-grade **AI business automation services** that automate voice customer interactions and operational backends. As an advanced **conversational AI development company**, our engineers build sub-second **voice AI agent development** pipelines, automated telephony assistants, and **intelligent document processing** engines that run 24/7.
+
+Common challenges include:
 - **Missed inbound phone calls:** High-intent prospects calling after hours and hanging up on generic answering machines.
 - **Rigid IVR menus:** Frustrating 'press 1 for sales' telephone trees that alienate high-value callers.
 - **Manual data re-entry:** Staff spending hours manually typing customer details from calls and emails into CRMs.

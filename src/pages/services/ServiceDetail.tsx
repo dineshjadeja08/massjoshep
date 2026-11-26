@@ -36,15 +36,21 @@ const ServiceDetail: React.FC = () => {
   );
   const whatsappUrl = `https://wa.me/919489249051?text=${whatsappMessage}`;
 
+  const canonicalUrl = `https://vusofttech.netlify.app/services/${service.id}`;
+  const seoTitle = service.seoTitle || `${service.title} | Veluno Softtech`;
+  const seoDesc = service.seoDescription || service.tagline;
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": service.name,
     "serviceType": service.pillar,
+    "description": seoDesc,
     "provider": {
       "@type": "Organization",
       "name": "Veluno Softtech",
-      "url": "https://www.velunosofttech.com",
+      "url": "https://vusofttech.netlify.app",
+      "logo": "https://vusofttech.netlify.app/favicon.svg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Vivekananda Nagar, Thoraipakkam",
@@ -54,24 +60,69 @@ const ServiceDetail: React.FC = () => {
         "addressCountry": "IN"
       }
     },
-    "description": service.tagline,
-    "areaServed": ["India", "United States", "United Kingdom", "Europe", "Australia", "Middle East"]
+    "areaServed": ["Worldwide", "UK", "US", "EU", "India"]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vusofttech.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://vusofttech.netlify.app/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": service.name,
+        "item": canonicalUrl
+      }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>{service.title} | Veluno Softtech</title>
-        <meta name="description" content={service.tagline} />
-        <link rel="canonical" href={`https://www.velunosofttech.com/services/${service.id}`} />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDesc} />
+        {service.primaryKeyword && (
+          <meta name="keywords" content={[service.primaryKeyword, ...(service.secondaryKeywords || [])].join(', ')} />
+        )}
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="service" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDesc} />
+        <meta name="twitter:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       
-      {/* Top Banner */}
+      {/* Top Banner with single H1 */}
       <PageBanner 
-        title={service.name} 
+        title={service.h1 || service.name} 
         breadcrumb={`Services > ${service.name}`}
         category={service.pillar}
       />
@@ -110,9 +161,9 @@ const ServiceDetail: React.FC = () => {
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-2">
                 Pillar Architecture · {service.pillar}
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-[#0B1F3A] leading-tight">
                 {service.title}
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed font-light">
                 {service.tagline}
               </p>
@@ -274,6 +325,42 @@ const ServiceDetail: React.FC = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Related Services Architecture (Internal Linking) */}
+            {service.relatedServices && service.relatedServices.length > 0 && (
+              <div className="mt-14 pt-10 border-t border-slate-200">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#2563EB] block mb-1">
+                  Connected Digital Engineering
+                </span>
+                <h3 className="text-xl md:text-2xl font-heading font-extrabold text-[#0B1F3A] mb-6">
+                  Related Services & Capabilities
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {service.relatedServices.map(relId => {
+                    const relService = servicesData.find(s => s.id === relId);
+                    if (!relService) return null;
+                    return (
+                      <Link
+                        key={relId}
+                        to={`/services/${relService.id}`}
+                        className="p-5 rounded-xs bg-[#F8FAFC] border border-slate-200 hover:border-[#14B8A6] hover:bg-white transition-all group block shadow-2xs"
+                      >
+                        <span className="text-[10px] font-mono font-bold text-[#14B8A6] uppercase tracking-wider block mb-1.5">
+                          {relService.pillar}
+                        </span>
+                        <h4 className="text-sm font-bold text-[#0B1F3A] group-hover:text-[#2563EB] transition-colors mb-1.5 flex items-center justify-between">
+                          <span>{relService.name}</span>
+                          <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </h4>
+                        <p className="text-xs text-slate-600 font-light line-clamp-2 leading-relaxed">
+                          {relService.tagline}
+                        </p>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             )}

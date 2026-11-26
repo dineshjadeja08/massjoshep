@@ -48,15 +48,85 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://vusofttech.netlify.app/#organization",
+        "name": "Veluno Softtech",
+        "url": "https://vusofttech.netlify.app/",
+        "logo": "https://vusofttech.netlify.app/favicon.svg",
+        "sameAs": [
+          "https://github.com/dineshjadeja08/massjoshep",
+          "https://linkedin.com/company/veluno-softtech",
+          "https://twitter.com/velunosofttech"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vivekananda Nagar, Thoraipakkam",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "600097",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9489249051",
+          "contactType": "sales & technical support",
+          "areaServed": ["Worldwide", "UK", "US", "EU", "India"],
+          "availableLanguage": ["English", "Tamil"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vusofttech.netlify.app/#website",
+        "url": "https://vusofttech.netlify.app/",
+        "name": "Veluno Softtech",
+        "description": "Veluno Softtech is a custom software development company in Chennai, India, building web apps, mobile apps, SaaS, CRM/ERP, and AI automation for clients in the UK, US, and EU. 100% code ownership.",
+        "publisher": {
+          "@id": "https://vusofttech.netlify.app/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vusofttech.netlify.app/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>Veluno Softtech | Custom Software & Web Development Company</title>
+        <title>Veluno Softtech | Custom Software Development Company in Chennai, India</title>
         <meta 
           name="description" 
-          content="Veluno Softtech builds digital solutions that grow your business. We engineer high-performing websites, custom web apps, mobile applications, and AI business automation." 
+          content="Veluno Softtech is a custom software development company in Chennai, India, building web apps, mobile apps, SaaS, CRM/ERP, and AI automation for clients in the UK, US, and EU. 100% code ownership." 
         />
-        <link rel="canonical" href="https://www.velunosofttech.com/" />
+        <meta 
+          name="keywords" 
+          content="custom software development company, software development company Chennai, offshore software development India, web and mobile app development company, AI business automation services" 
+        />
+        <link rel="canonical" href="https://vusofttech.netlify.app/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Veluno Softtech | Custom Software Development Company in Chennai, India" />
+        <meta property="og:description" content="Veluno Softtech is a custom software development company in Chennai, India, building web apps, mobile apps, SaaS, CRM/ERP, and AI automation for clients in the UK, US, and EU. 100% code ownership." />
+        <meta property="og:url" content="https://vusofttech.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Veluno Softtech | Custom Software Development Company in Chennai, India" />
+        <meta name="twitter:description" content="Veluno Softtech is a custom software development company in Chennai, India, building web apps, mobile apps, SaaS, CRM/ERP, and AI automation for clients in the UK, US, and EU. 100% code ownership." />
+        <meta name="twitter:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(homeSchema)}
+        </script>
       </Helmet>
 
       {/* =========================================================================
@@ -85,16 +155,16 @@ const Home = () => {
 
               {/* Exact Master Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[1.08] tracking-tight mb-6">
-                We Build Digital Solutions That{' '}
+                Custom Software Development Company That Builds Digital Solutions That{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#14B8A6]">
                   Grow
                 </span>{' '}
-                Your Business.
+                Your Business
               </h1>
 
-              {/* Exact Master Supporting Text */}
-              <p className="text-sm sm:text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
-                From high-performing websites to custom software and mobile applications, Veluno Softtech helps businesses turn ideas into powerful digital experiences.
+              {/* Supporting Text Incorporating Secondary Keywords in First 100 Words */}
+              <p className="text-sm sm:text-base md:text-lg text-slate-300 font-light max-w-3xl mx-auto mb-8 leading-relaxed">
+                Veluno Softtech is an elite <strong className="text-white font-medium">software development company Chennai</strong> and full-service <strong className="text-white font-medium">web and mobile app development company</strong>. We deliver high-velocity <strong className="text-white font-medium">offshore software development India</strong> and intelligent <strong className="text-white font-medium">AI business automation services</strong> for growth-oriented brands in the UK, US, and EU with 100% source code ownership.
               </p>
 
               {/* Primary & Secondary CTAs */}
@@ -176,8 +246,8 @@ const Home = () => {
             </p>
           </div>
 
-          {/* 8-Card Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 9-Card Grid Linking to All 9 Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Card 1: Website Development */}
             <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
@@ -348,6 +418,28 @@ const Home = () => {
               </div>
               <Link 
                 to="/services/ai-automation" 
+                className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Card 9: Dedicated Development Team */}
+            <div className="rounded-xl bg-[#F8FAFC] border border-slate-200/90 p-6 flex flex-col justify-between transition-all duration-300 hover:border-[#2563EB] hover:shadow-md hover:-translate-y-1 group">
+              <div>
+                <div className="w-13 h-13 rounded-xl bg-[#0B1F3A] text-white flex items-center justify-center mb-5 group-hover:bg-[#2563EB] transition-colors shadow-xs border border-slate-700/40">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-lg font-heading font-bold text-[#0B1F3A] mb-2">
+                  Dedicated Development Teams
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-light mb-4">
+                  Hand-picked senior engineering pods with guaranteed 4-hour daily overlap with UK, US, and EU timezones and zero recruitment overhead.
+                </p>
+              </div>
+              <Link 
+                to="/services/dedicated-team" 
                 className="text-xs font-bold text-[#2563EB] group-hover:text-[#0B1F3A] inline-flex items-center gap-1 font-mono uppercase pt-3 border-t border-slate-200"
               >
                 <span>Learn More</span>
@@ -526,7 +618,7 @@ const Home = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
                     src="/projects/bill-now.jpg" 
-                    alt="Bill Now Invoicing Platform" 
+                    alt="Bill Now Invoicing SaaS Development Case Study - Custom Software Development Company" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
@@ -568,7 +660,7 @@ const Home = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
                     src="/projects/cavve.jpg" 
-                    alt="Cavve Professional Networking Platform" 
+                    alt="Cavve Community Web and Mobile App Development - Software Development Company Chennai" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
@@ -610,7 +702,7 @@ const Home = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
                     src="/projects/brandmatchbot.jpg" 
-                    alt="BrandMatchBot AI MarTech" 
+                    alt="BrandMatchBot AI MarTech Platform - AI Business Automation Services" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#14B8A6] text-[#0B1F3A]">
@@ -652,7 +744,7 @@ const Home = () => {
                 <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800" 
-                    alt="Zylo Voice" 
+                    alt="Zylo Voice Conversational Voice AI Telephony Agent - Offshore Software Development India" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-xs bg-[#2563EB] text-white">

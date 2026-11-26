@@ -29,11 +29,38 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Engineering Services & Capabilities | Veluno Softtech</title>
+        <title>Engineering Services & Digital Capabilities | Veluno Softtech</title>
         <meta 
           name="description" 
           content="Veluno Softtech provides end-to-end software engineering: conversational AI, web platforms, SaaS applications, systems architecture, and dedicated developer pods." 
         />
+        <link rel="canonical" href="https://vusofttech.netlify.app/services" />
+        <meta property="og:title" content="Engineering Services & Digital Capabilities | Veluno Softtech" />
+        <meta property="og:description" content="Veluno Softtech provides end-to-end software engineering: conversational AI, web platforms, SaaS applications, systems architecture, and dedicated developer pods." />
+        <meta property="og:url" content="https://vusofttech.netlify.app/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://vusofttech.netlify.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://vusofttech.netlify.app/services"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Top Banner with sleek squarish border */}

@@ -166,12 +166,38 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Veluno Softtech – Enterprise Software & Digital Solutions</title>
+        <title>Contact Us | Technical Scoping & Architecture Consultation | Veluno Softtech</title>
         <meta 
           name="description" 
           content="Start a technical scoping conversation with Veluno Softtech for web applications, mobile apps, custom software, and digital solutions." 
         />
-        <link rel="canonical" href="https://www.velunosofttech.com/contact" />
+        <link rel="canonical" href="https://vusofttech.netlify.app/contact" />
+        <meta property="og:title" content="Contact Us | Technical Scoping & Architecture Consultation | Veluno Softtech" />
+        <meta property="og:description" content="Start a technical scoping conversation with Veluno Softtech for web applications, mobile apps, custom software, and digital solutions." />
+        <meta property="og:url" content="https://vusofttech.netlify.app/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://vusofttech.netlify.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://vusofttech.netlify.app/contact"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       
       {/* Top Banner */}

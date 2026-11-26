@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://www.velunosofttech.com';
+const BASE_URL = 'https://vusofttech.netlify.app';
 
 const staticRoutes = [
   '/',
@@ -18,15 +18,15 @@ const staticRoutes = [
   '/services/ui-ux-design',
   '/services/custom-software-development',
   '/services/crm-erp-development',
+  '/services/crm-erp-solutions',
   '/services/ai-automation',
+  '/services/ai-business-automation',
   '/services/digital-marketing',
   '/services/maintenance',
   '/services/dedicated-team',
-  '/services/veluno-web',
-  '/services/veluno-products',
-  '/services/veluno-systems',
-  '/services/veluno-growth',
-  '/services/veluno-care',
+  '/engagement-models',
+  '/projects',
+  '/work',
   '/engineering',
   '/security',
   '/europe',
@@ -38,7 +38,6 @@ const staticRoutes = [
   '/industries/agriculture',
   '/industries/e-commerce',
   '/industries/logistics',
-  '/work',
   '/insights',
   '/blog',
   '/careers',
@@ -73,6 +72,7 @@ const insights = [
 const urls = [
   ...staticRoutes,
   ...caseStudies.map(slug => `/work/${slug}`),
+  ...caseStudies.map(slug => `/projects/${slug}`),
   ...insights.map(slug => `/insights/${slug}`),
   ...insights.map(slug => `/blog/${slug}`)
 ];

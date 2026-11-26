@@ -71,10 +71,15 @@ function App() {
             
             <Route path="/services" element={<Services />} />
             <Route path="/services/dedicated-team" element={<DedicatedTeam />} />
+            <Route path="/engagement-models" element={<DedicatedTeam />} />
+            <Route path="/services/crm-erp-solutions" element={<ServiceDetail />} />
+            <Route path="/services/ai-business-automation" element={<ServiceDetail />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             
             <Route path="/work" element={<Work />} />
             <Route path="/work/:slug" element={<CaseStudyDetail />} />
+            <Route path="/projects" element={<Work />} />
+            <Route path="/projects/:slug" element={<CaseStudyDetail />} />
             
             {/* Blog & Insights */}
             <Route path="/blog" element={<Insights />} />

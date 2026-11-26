@@ -47,22 +47,61 @@ const DELIVERY_STEPS = [
 ];
 
 export const About: React.FC = () => {
+  const canonicalUrl = "https://vusofttech.netlify.app/about";
+  const seoTitle = "Offshore Software Development Company in Chennai, India | Veluno Softtech";
+  const seoDesc = "Veluno Softtech is an offshore software development company in Chennai, India, with 4-hour daily timezone overlap for UK, US, and EU clients. ISO 27001 & SOC 2 ready.";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vusofttech.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": canonicalUrl
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
-        <title>About Us | Enterprise Software Engineering | Veluno Softtech</title>
-        <meta
-          name="description"
-          content="Veluno Softtech is an enterprise software engineering company based in Chennai, India. We engineer scalable web platforms, conversational AI voice systems, and distributed cloud backends."
-        />
-        <link rel="canonical" href="https://www.velunosofttech.com/about" />
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDesc} />
+        <meta name="keywords" content="offshore software development company India, software development company Chennai, offshore development center India, UK US EU timezone software team" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDesc} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDesc} />
+        <meta name="twitter:image" content="https://vusofttech.netlify.app/og-image.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
-      {/* Top Banner */}
+      {/* Top Banner (Single H1) */}
       <PageBanner
-        title="About Veluno Softtech"
+        title="Offshore Software Development Company in Chennai, India"
         breadcrumb="Company Overview"
-        subtitle="Engineering depth, architectural rigor, and transparent delivery for mission-critical software platforms and autonomous AI."
+        subtitle="Veluno Softtech is a trusted offshore software development company in Chennai, India, delivering web apps, mobile apps, SaaS, and AI automation for clients across the UK, US, and EU."
       />
 
       {/* 1. Company Overview Section */}
@@ -196,6 +235,65 @@ export const About: React.FC = () => {
               <p className="text-sm text-slate-600 leading-relaxed font-light">
                 To become the most dependable software engineering partner for fast-growing global enterprises, recognized worldwide for transparent delivery governance, deep technical excellence, and rapid time-to-market.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Why Chennai, India? - Engineering Hub Advantage */}
+      <section className="py-16 md:py-24 bg-white border-b border-slate-200">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider block mb-2">
+                Global Engineering Hub
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-[#0B1F3A] leading-tight mb-6">
+                Why Chennai, India?
+              </h2>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-light mb-6">
+                Chennai is one of the premier SaaS and deep-tech software engineering capitals of the world. Operating as an established <strong>software development company Chennai</strong> and trusted <strong>offshore development center India</strong>, Veluno Softtech draws from an extraordinary talent ecosystem of seasoned full-stack engineers, cloud architects, and AI researchers.
+              </p>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-light mb-6">
+                Our Thoraipakkam delivery center is situated directly along Chennai's IT corridor, equipped with redundant high-speed fiber infrastructure, automated CI/CD staging environments, and strict physical and digital zero-trust security controls.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 bg-[#F8FAFC] border border-slate-200 rounded-lg">
+                  <h3 className="font-bold text-[#0B1F3A] text-xs font-mono uppercase mb-1">UK, US & EU Timezone Sync</h3>
+                  <p className="text-xs text-slate-600 font-light leading-relaxed">
+                    Our <strong>UK US EU timezone software team</strong> provides a guaranteed 4-hour daily overlap with London, New York, and European business hubs.
+                  </p>
+                </div>
+                <div className="p-4 bg-[#F8FAFC] border border-slate-200 rounded-lg">
+                  <h3 className="font-bold text-[#0B1F3A] text-xs font-mono uppercase mb-1">World-Class Economics</h3>
+                  <p className="text-xs text-slate-600 font-light leading-relaxed">
+                    Save 50-60% in overhead compared to Western domestic agency rates while working with vetted senior technical talent.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-5 bg-[#0B1F3A] p-8 rounded-2xl text-white border border-slate-800">
+              <span className="text-xs font-mono font-bold text-[#14B8A6] uppercase tracking-wider block mb-2">
+                Chennai Delivery Center
+              </span>
+              <h3 className="text-xl font-bold font-heading mb-4">Strategic Location Advantage</h3>
+              <p className="text-xs text-slate-300 font-light leading-relaxed mb-6">
+                Vivekananda Nagar, Thoraipakkam, Chennai, Tamil Nadu 600097 — at the heart of South India's software corridor.
+              </p>
+              <ul className="space-y-3 text-xs text-slate-300">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]" />
+                  <span>Over 100,000+ STEM & software graduates annually</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]" />
+                  <span>Headquarters for global SaaS unicorns and enterprise hubs</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6]" />
+                  <span>Subsea fiber cable landing points for sub-120ms global ping</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
