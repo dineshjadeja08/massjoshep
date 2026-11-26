@@ -8,6 +8,8 @@ export interface ServiceItem {
   deliverables: string[];
   techStack?: string[];
   aliases?: string[];
+  complianceBadges?: string[];
+  relatedCaseStudies?: string[];
   content: string;
 }
 
@@ -35,6 +37,8 @@ export const servicesData: ServiceItem[] = [
       "Complete DNS setup, SSL certification, and automated CI/CD pipeline"
     ],
     techStack: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Sanity / Strapi", "Vercel / Netlify"],
+    complianceBadges: ["W3C Web Standards", "WCAG 2.1 AA Accessibility", "Core Web Vitals LCP < 2.0s", "GDPR Cookie Consent", "SSL / TLS 1.3"],
+    relatedCaseStudies: ["bill-now", "cavve", "commerce-platform-concept"],
     content: `## Modern Web Experiences Built for Commercial Results
 
 At Veluno Softtech, we view your website as your most critical digital asset and primary commercial engine. Many growing businesses struggle with:
@@ -94,6 +98,8 @@ Yes. Upon project completion and final milestone approval, full source code and 
       "Automated automated staging and production deployment pipelines"
     ],
     techStack: ["React", "TypeScript", "Node.js", "Python / FastAPI", "PostgreSQL", "Redis", "Docker"],
+    complianceBadges: ["OWASP Top 10 Security", "SOC 2 Type II Ready", "Multi-Tenant RBAC", "AES-256 Encryption", "ISO/IEC 27001 Aligned"],
+    relatedCaseStudies: ["bill-now", "cavve", "xenstaff", "xenbill"],
     content: `## Scalable Web Applications Built for High Concurrency
 
 Turning a product concept into a scalable web application requires disciplined software architecture, secure data modeling, and seamless user experiences. Common challenges include:
@@ -150,6 +156,8 @@ We enforce strict tenant-scoped database queries, foreign key isolation, and aut
       "Clean architecture repository with 100% source code ownership"
     ],
     techStack: ["React Native", "Flutter", "Swift", "Kotlin", "SQLite", "Firebase / APNs", "Node.js"],
+    complianceBadges: ["Apple App Store Review Guidelines", "Google Play Developer Policy", "Biometric Local Auth (FaceID)", "SQLite Encrypted Storage", "60 FPS Fluid UI"],
+    relatedCaseStudies: ["cavve", "fleet-tracking-platform", "zylinn-ai"],
     content: `## Mission-Critical Mobile Applications Built for Scale
 
 In today's mobile-first market, substandard mobile applications cause immediate user uninstalls and damage brand trust. Common mobile development bottlenecks include:
@@ -206,6 +214,8 @@ Veluno Softtech handles the entire submission process, including metadata config
       "Customer account portals with saved addresses and re-ordering"
     ],
     techStack: ["Shopify Plus", "Next.js Commerce", "React", "Node.js", "Stripe API", "PostgreSQL", "Tailwind CSS"],
+    complianceBadges: ["PCI-DSS Level 1 Gateway Abstraction", "GDPR / CCPA Privacy", "TaxJar / Avalara Automated Tax", "WCAG 2.1 AA Accessibility"],
+    relatedCaseStudies: ["commerce-platform-concept", "bill-now"],
     content: `## Modern E-Commerce Engineered for Maximum Conversion
 
 Standard off-the-shelf themes often become slow, rigid, and cluttered with third-party plugins that drag down conversions. E-commerce merchants routinely battle:
@@ -262,6 +272,8 @@ All payment data is tokenized and processed via PCI-DSS Level 1 compliant gatewa
       "Comprehensive Brand Guidelines Document (PDF)"
     ],
     techStack: ["Figma", "Design Tokens", "Tailwind CSS", "WCAG 2.1", "SVG Vector"],
+    complianceBadges: ["WCAG 2.1 AA Accessibility Standards", "W3C Design Tokens Community Group", "Auto-Layout Figma Components", "Corporate Brand Vector Asset Suite"],
+    relatedCaseStudies: ["cavve", "brandmatchbot", "bill-now"],
     content: `## Design That Communicates Authority and Converts
 
 Great software is defined by how effortlessly users can achieve their goals. When design is neglected, software products face:
@@ -318,6 +330,8 @@ Yes. We redesign user experiences while preserving underlying database schemas a
       "Comprehensive deployment documentation and staff training session"
     ],
     techStack: ["Node.js", "Python", "React", "PostgreSQL", "Docker", "AWS / Azure", "Redis"],
+    complianceBadges: ["100% IP & Git Ownership Transfer", "Role-Based Access Control (RBAC)", "Audit Log Immutability", "Strict Mutual Non-Disclosure (NDA)"],
+    relatedCaseStudies: ["xenbill", "xenstaff", "fleet-tracking-platform"],
     content: `## Software Tailored to How Your Business Actually Operates
 
 Off-the-shelf software often forces growing companies into rigid operational constraints, charging exorbitant per-seat licensing fees. Growing organizations face:
@@ -374,6 +388,8 @@ You do. We provide 100% source code ownership, repository access, and database c
       "Full role-based security permissions and administrative activity logs"
     ],
     techStack: ["React", "Node.js", "PostgreSQL", "Redis Queues", "REST APIs", "Tailwind CSS"],
+    complianceBadges: ["GST / Invoicing Compliance", "Enterprise RBAC & SSO Ready", "ISO 27001 Information Security", "SOC 2 Type II Auditable"],
+    relatedCaseStudies: ["xenstaff", "xenbill", "fleet-tracking-platform"],
     content: `## Centralize Operations with a Unified Single Source of Truth
 
 When departments use disconnected systems, information gaps create delays, duplicate work, and billing errors. Organizations often struggle with:
@@ -430,6 +446,8 @@ Significantly easier. Because we design the interface specifically around your c
       "Complete cloud deployment architecture with scalable concurrency"
     ],
     techStack: ["Python", "FastAPI", "WebRTC", "OpenAI Realtime API", "Twilio / SIP", "PostgreSQL", "React"],
+    complianceBadges: ["Zero Client Data Training", "Sub-600ms Conversational Latency", "EU AI Act Compliance Guidelines", "Encrypted Telephony SIP & WebRTC"],
+    relatedCaseStudies: ["zylinn-ai", "brandmatchbot", "linksync"],
     content: `## Put Business Operations on Intelligent Autopilot 24/7
 
 High support volumes and manual customer intake drain company resources and lead to missed opportunities during non-business hours. Common challenges include:
@@ -486,6 +504,8 @@ Yes. We train and fine-tune models to converse fluently in English, regional lan
       "Executive bi-weekly analytics reports tracking pipeline and customer acquisition costs"
     ],
     techStack: ["Google Ads", "Meta Ads Manager", "LinkedIn Campaign Manager", "GA4", "PostHog", "GTM"],
+    complianceBadges: ["Meta Advertising Partner Standards", "Google Ads Verified Setup", "Server-Side CAPI Tracking", "CAN-SPAM & GDPR Data Privacy"],
+    relatedCaseStudies: ["brandmatchbot", "cavve"],
     content: `## Engineering-Led Digital Marketing & Social Media Management
 
 Marketing without technical rigor and clean attribution leads to wasted spend and vanity metrics. Growing businesses routinely face:
@@ -542,6 +562,8 @@ We specialize in B2B thought leadership on LinkedIn and X (Twitter), alongside b
       "Executive monthly system health and reliability reporting"
     ],
     techStack: ["AWS", "Google Cloud", "Docker", "Datadog / Sentry", "PostgreSQL", "GitHub Actions"],
+    complianceBadges: ["24/7 Incident Escalation SLA", "Automated Daily Off-Site Snapshots", "SOC 2 Disaster Recovery Testing", "Automated CVE Security Patching"],
+    relatedCaseStudies: ["bill-now", "fleet-tracking-platform"],
     content: `## Continuous Engineering & Mission-Critical Support
 
 Launching software is day one of your operational lifecycle. Without proactive maintenance, applications suffer from:
